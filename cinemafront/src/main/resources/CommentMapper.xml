@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cinema.dao.CommentMapper">
+
+    <!--获取所有的评论-->
+    <select id="getAllComments" resultType="com.cinema.entity.Comment">
+        SELECT c_id,c_date,c_score,c_word,m_name,u_name
+FROM comment,movie,user where comment.m_id=movie.m_id and comment.u_id=user.u_id and comment.m_id=#{m_id}
+    </select>
+
+    <insert id="addComment">
+        insert into comment(u_id,m_id,c_score,c_word,c_date) value(#{comment.u_id},#{comment.m_id},#{comment.c_score},#{comment.c_word},#{comment.c_date})
+    </insert>
+
+</mapper>

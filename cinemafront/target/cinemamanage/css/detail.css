@@ -1,0 +1,4082 @@
+/*
+*@Description: 被引用：影院详情页、搜索页、选座、订单、支付
+*/
+
+/* 电影详情--增加影评修改tab切换效果 */
+*html {
+  background-image: url(about:blank);
+  background-attachment: fixed;
+}
+/* 电影列表 **/.playBox {
+  width: 708px;
+  border: 1px solid #e9e9e9;
+  border-top: 0;
+  overflow: hidden;
+}
+.playList {
+  margin-top: -1px;
+}
+.playList li {
+  float: left;
+  width: 354px;
+  padding: 34px 0;
+}
+.playList li .poster {
+  float: left;
+  width: 160px;
+  height: 202px;
+  padding-top: 11px;
+  padding-left: 10px;
+  background: url("../../images/poster_bg.gif?v=20130905") left bottom no-repeat;
+}
+.playList li .poster img {
+  border-bottom: 1px solid #fff;
+}
+.playList li dl {
+  float: left;
+  width: 163px;
+}
+.playList li dl dt {
+  position: relative;
+  padding-right: 25px;
+}
+.playList li dl dt h2 {
+  height: 22px;
+  font: bold 16px "微软雅黑", "Microsoft YaHei", "黑体";
+  line-height: 22px;
+  color: #000;
+  overflow: hidden;
+  background: none;
+}
+.playList li dl dt em {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ff4b29;
+  width: 35px;
+  height: 20px;
+  overflow: hidden;
+  font: italic bold 25px/22px Arial;
+}
+.playList li dl dt em .s {
+  font-size: 20px;
+}
+.playList li dl dt h2 a,
+.playList li dl dt h2 a:link,
+.playList li dl dt h2 a:visited {
+  color: #000;
+  text-decoration: none;
+}
+.playList li dl dd.summary {
+  font-size: 12px;
+  line-height: 20px;
+  height: 38px;
+  color: #999999;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.playList li dl dd.des {
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  color: #666666;
+  overflow: hidden;
+}
+.playList li dl dd.role {
+  height: 40px;
+  overflow: hidden;
+}
+.playList li dl dd.btn {
+  margin-top: 5px;
+}
+/* 选座页面 */
+.box_gray {
+  width: 958px;
+  padding-bottom: 10px;
+  border: 1px solid #dbdbdb;
+}
+.sel_playList li {
+  padding: 0;
+  padding-top: 3px;
+  border-top: 0;
+  background: none;
+  width: 100%;
+}
+.sel_playList li dl {
+  _display: inline;
+  width: 755px;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+.sel_playList li dl dt {
+  padding-right: 0;
+}
+.sel_playList li dl dt h2 {
+  display: inline;
+  width: auto;
+  height: 26px;
+  font: bold 20px "微软雅黑", "Microsoft YaHei", "黑体";
+  line-height: 26px;
+  color: #e83a18;
+  background: none;
+}
+.sel_playList li dl dt h2 a,
+.sel_playList li dl dt h2 a:link,
+.sel_playList li dl dt h2 a:visited {
+  color: #e83a18;
+  text-decoration: none;
+}
+.sel_playList li dl dd.summary {
+  font: normal 16px "微软雅黑", "Microsoft YaHei", "黑体";
+  line-height: 23px;
+  height: 23px;
+  margin-top: 8px;
+  margin-bottom: 28px;
+  color: #999;
+  overflow: hidden;
+}
+.sel_playList li dl dd.des {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  color: #666;
+  overflow: hidden;
+}
+.sel_playList li dl dd.price {
+  color: #dd4325;
+  overflow: hidden;
+}
+.sel_playList li dl dd.price em {
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.sel_playList li dl dt .starbg {
+  display: inline-block;
+  width: 75px;
+  height: 14px;
+  margin-left: 35px;
+  background: url('../../images/icon.png?v=20130905') 0 -14px no-repeat;
+}
+.sel_playList li dl dt .star {
+  width: 90%;
+  height: 14px;
+  background: url('../../images/icon.png?v=20130905') 0 0 no-repeat;
+}
+.sel_playList li dl dt em {
+  position: static;
+  top: auto;
+  right: auto;
+  display: inline-block;
+}
+.sel_playList li dl dd .favorable {
+  margin-left: 28px;
+}
+.sel_playList li dl dd .favorable i {
+  color: #e83a18;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+.selDialog {
+  width: auto;
+  padding: 30px 0;
+  text-align: center;
+}
+.selDialog h2 {
+  height: 74px;
+  line-height: 74px;
+}
+.selDialog h2 b {
+  display: inline-block;
+  width: 77px;
+  height: 74px;
+  margin-right: 10px;
+  background: url('../../images/tip_bg.gif?v=20130905') 0 0 no-repeat;
+  vertical-align: middle;
+}
+.selDialog h2 .many {
+  display: inline-block;
+  height: 47px;
+  line-height: 22px;
+  text-align: left;
+  vertical-align: middle;
+}
+.selDialog h2 .many span {
+  float: left;
+  margin-top: 2px;
+}
+.selDialog .mDialogBtn {
+  float: none;
+  margin: 0 auto;
+}
+.sel_login {
+  width: 960px;
+  height: 150px;
+  line-height: 150px;
+  _height: 100px;
+  _line-height: 100px;
+  _padding-top: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background: #f4f4f4;
+  zoom: 1;
+}
+.sel_login b {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: url('../../images/icon.png?v=20130905') no-repeat -28px -123px;
+}
+.seatBox {
+  margin-top: 10px;
+  background: url('../../images/detail/graybg.gif?v=20130905') #f4f4f4 right top repeat-y;
+}
+.seatBox .top {
+  padding-left: 12px;
+  height: 37px;
+  line-height: 37px;
+  color: #666;
+}
+.seatBox .top em {
+  margin: 0 3px;
+  color: #e83a18;
+}
+.seatBox .bot {
+  padding: 10px 0 25px 20px;
+  color: #666;
+}
+.seatBox .bot ul {
+  width: 670px;
+}
+.seatBox .bot ul li {
+  line-height: 22px;
+}
+.seatBox .offer {
+  float: right;
+  _display: inline;
+  width: 185px;
+  margin-right: 250px;
+  height: 40px;
+  margin-top: -135px;
+}
+.seatBox .offer img {
+  border: 1px solid #ddd;
+  color: #c8c8c8;
+  margin: 0 2px;
+  vertical-align: text-bottom;
+}
+.seatBox .offer_gwl {
+  width: 97px;
+  height: 38px;
+  margin: 0 auto;
+  margin-top: 60px;
+  font-size: 0;
+}
+.seatBox .offer_wangpiao {
+  width: 180px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 60px;
+  font-size: 0;
+}
+.seatBox .offer_zhizhuwang{
+  width: 180px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 60px;
+  font-size: 0;
+}
+.choose_loading {
+  position: relative;
+  width: 950px;
+  height: 590px;
+  background: url('../../images/detail/graybg.gif?v=20130905') repeat-y scroll right top #f4f4f4;
+}
+.choose_loading .loadBox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 110px;
+  width: 100%;
+  margin-top: -55px;
+  text-align: center;
+  color: #666;
+}
+.choose_loading p {
+  margin-top: 20px;
+}
+.seatIframe {
+  visibility: hidden;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background: url('../../images/detail/graybg.gif?v=20130905') repeat-y scroll right top #f4f4f4;
+}
+.seatLoad {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  width: 200px;
+  height: 60px;
+  margin-left: -100px;
+}
+.seatLoad p {
+  margin-top: 20px;
+  color: #666;
+}
+/* 选座页面--座位区域 */
+.seatWarp_hall {
+  float: left;
+  width: 719px;
+  border: 1px solid #f4f4f4;
+  border-right: 0;
+  background: #fff;
+}
+.seatWarp_buy {
+  float: left;
+  width: 210px;
+  padding: 18px 15px 0 15px;
+  color: #333;
+}
+.seat_info .legend {
+ /* width: 647px;
+  text-align: center;*/
+  padding-top: 23px;
+  margin: 0 0 0 80px;
+  /*height:74px;*/
+}
+.seat_info .legend span {
+  /*display: inline-block;*/
+  float:left;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  margin: 12px 14px 0;
+  background: url('../images/detail/seat.gif') 0 0 no-repeat;
+}
+.seat_info .legend span.able {
+  background-position: 0 0;
+}
+.seat_info .legend span.disable {
+  background-position: 0 -20px;
+}
+.seat_info .legend span.ql {
+  background-position: 0 -60px;
+}
+.seat_info .legend span.sel {
+  background-position: 0 -40px;
+}
+.seat_info .legend span.shake {
+  background-position: 0 -80px;
+}
+.seat_info .legend span.reserve{/*网易专属座位*/
+	background:url(../../images/detail/rsvSeat.png) no-repeat;
+	height:30px;
+	line-height:30px;
+	padding-left:78px;
+}
+.seat_info .hall_name {
+  width: 559px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin: 12px auto 25px;
+  font-size: 14px;
+  color: #333;
+  background: url('../images/detail/screen.gif') 0 0 no-repeat;
+}
+.seat_area {
+  position: relative;
+  width: 680px;
+  height: 510px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  overflow: auto;
+}
+.seat_area .ableSeat,
+.seat_area .disableSeat,
+.seat_area .selSeat,
+.seat_area .aisle,
+.seat_area .qlSeat,
+.seat_area .ShakeSeat,
+.seat_area .ShakeSeat_sel{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21px;
+  height: 20px;
+  margin-top: 10px;
+  background: url('../images/detail/seat.gif?v=20130905') 0 0 no-repeat;
+  cursor: pointer;
+  z-index:1;
+}
+.seat_area .ableSeat {
+  background-position: 0 0;
+}
+.seat_area .disableSeat {
+  background-position: 0 -20px;
+  cursor: default;
+}
+.seat_area .selSeat {
+  background-position: 0 -40px;
+}
+.seat_area .aisle {
+  background: none;
+  cursor: default;
+}
+.seat_area .qlSeat {
+  background-position: 0 -60px;
+}
+.seat_area .ShakeSeat {
+  background-position: 0 -80px;
+}
+.seat_area .ShakeSeat_sel {
+  background-position: 0 -40px;
+}
+.selSeatBox {
+  margin-top: 4px;
+  border-bottom: 1px dashed #d7d7d7;
+}
+.selSeatBox dt {
+  height: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.selSeatBox dd p {
+  text-align: center;
+  color: #666;
+  padding: 10px 0 18px;
+}
+.selSeatBox dd ul {
+  overflow: hidden;
+  zoom: 1;
+  margin-left: -10px;
+  font-size: 0px;
+  *padding-bottom: 10px;
+}
+.selSeatBox dd ul li {
+  float: left;
+  display: inline;
+  width: 65px;
+  height: 26px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: center;
+  background: url('../../images/detail/pay.gif?v=20130905') no-repeat left -239px;
+}
+.selSeatBox dd ul li b {
+  float: left;
+  display: inline-block;
+  width: 17px;
+  height: 15px;
+  margin-top: 10px;
+  background: url('../../images/detail/seat.gif?v=20130905') 0 -30px no-repeat;
+}
+.selSeatBox dd ul li .txt {
+  text-align: center;
+}
+.seatWarp_buy .tel dt {
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.seatWarp_buy .tel dd .telnum {
+  float: left;
+  width: 60px;
+  margin-top: 5px;
+}
+.seatWarp_buy .tel dd input {
+  width: 208px;
+  height: 22px;
+  line-height: 22px;
+  padding: 7px 0;
+  margin: 7px 0 20px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f05335;
+  border: 1px solid #ededed;
+  border-top: 1px solid #cacaca;
+  border-bottom: 0;
+  box-shadow: 0px 1px 1px #ededed inset;
+  background: #fff;
+}
+.seatWarp_buy .tel dd .btn {
+  position: relative;
+}
+.seatWarp_buy .tel dd .btn a.btn_buy,
+.seatWarp_buy .tel dd .btn .btn_buy {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+  border: 0 none;
+  font: 22px/45px "Microsoft YaHei";
+  text-align: center;
+  background: #ff4b29 url('../../images/btns.png?v=20130905') 0 -166px;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.seatWarp_buy .tel dd .btn a.btn_buy:hover {
+  background: #ff6143;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.seatWarp_buy .tel dd .btn .btn_buy_gray {
+  background: #cccccc url('../../images/btns.png?v=20130905') 0 -211px;
+  border-radius: 0;
+  cursor: default;
+}
+.seatWarp_buy .tel dd .btn .tip {
+  position: absolute;
+  width: 222px;
+  left: -10px;
+  top: 60px;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 6px;
+  color: #999999;
+  border: 1px solid #dedede;
+  background: #fff4c8;
+}
+.seatWarp_buy .tel dd .btn .tip .up {
+  position: absolute;
+  left: 115px;
+  top: -7px;
+  width: 13px;
+  height: 7px;
+  background: url('../../images/detail/pay.gif?v=20130905') -113px -200px no-repeat;
+  overflow: hidden;
+}
+.seatShow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 65px;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  text-align: center;
+  background: url('../../images/detail/pay.gif?v=20130905') no-repeat left -239px;
+}
+/*选座页面Ajax方式加载座位图*/
+.loading_seat {
+  width: 680px;
+  height: 330px;
+  padding-top: 180px;
+  margin: 0 auto;
+  text-align: center;
+  color: #999;
+}
+/*选座页面专属座位模块样式 add by jyb*/
+.reservSec,
+.reservSec em,
+.reservSec i{
+	background: url(../images/detail/seatRsvBg.gif);
+	background-repeat:no-repeat;
+}
+.reservSec{
+	position: absolute;
+	background-repeat:repeat-x;
+	background-position:0 0;
+	height:30px;
+	z-index:0;
+}
+.reservSec em,
+.reservSec i{
+	display:block;
+	width:2px;
+	height:100%;
+	position:absolute;	
+}
+.reservSec em{
+	left:0; top:0;
+	background-position:0 -30px;
+}
+.reservSec i{
+	right:0; top:0;
+	background-position:0 -60px;
+}
+
+/* 影片详情--座位缩略图 */
+.seat_mini_wrap {
+  display: inline-block;
+  padding: 10px;
+  background: #fffcfb;
+}
+.seat_area_mini_title {
+  width: 170px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  color: #666;
+  text-align: center;
+}
+.seat_area_mini_title em {
+  font-weight: bold;
+  color: #ff4b29;
+}
+.seat_area_mini {
+  position: relative;
+  margin: 0 auto;
+}
+.seat_area_mini .ableSeat,
+.seat_area_mini .disableSeat,
+.seat_area_mini .selSeat,
+.seat_area_mini .aisle,
+.seat_area_mini .qlSeat,
+.seat_area_mini .ShakeSeat,
+.seat_area_mini .ShakeSeat_sel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 3px;
+  margin-top: 2px;
+  background: #aaa;
+  overflow: hidden;
+}
+.seat_area_mini .ableSeat {
+  background: #999;
+}
+.seat_area_mini .disableSeat {
+  background: #ff4b29;
+}
+.seat_area_mini .aisle {
+  background: none;
+}
+.seat_area_mini .selSeat {
+  background: #999;
+}
+.seat_area_mini .qlSeat {
+  background: #999;
+}
+.seat_area_mini .ShakeSeat {
+  background: #999;
+}
+.seat_area_mini .ShakeSeat_sel {
+  background: #999;
+}
+.hallShow {
+  display: inline-block;
+  width: 26px;
+  height: 17px;
+  margin-top: 16px;
+  background: url("../../images/detail/meg_icon.gif?v=20130905") 0 -233px no-repeat;
+}
+.hallWrap {
+  position: relative;
+  width: 50px;
+  height: 100%;
+  line-height: 100%;
+  z-index: 10;
+}
+.hallTip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 170px;
+  height: 98px;
+  margin-left: -61px;
+  margin-top: -98px;
+  background: #fffcfb;
+  border: 1px solid #ff907b;
+}
+.hallTip i {
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 12px;
+  height: 7px;
+  margin-left: -6px;
+  zoom: 1;
+  overflow: hidden;
+  background: #ffffff url("../../images/detail/btn_show.png?v=20130905") 0 -481px no-repeat;
+}
+.load_text {
+  width: 100%;
+  padding-top: 30px;
+  line-height: 22px;
+  color: #666;
+}
+.hallBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.sel_playList li dl dd.changeScreen {
+  position: relative;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #666;
+  z-index: 10;
+  zoom: 1;
+}
+.changeScreen .sBar {
+  position: absolute;
+  left: 20px;
+  top: 23px;
+  color: #e93a18;
+  outline: none;
+}
+.changeScreen .sBar:hover,
+.changeScreen .sBar:visited {
+  color: #e93a18;
+  text-decoration: none;
+}
+.changeScreen .sBar b {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  zoom: 1;
+  border-width: 4px 4px 0;
+  border-color: #E93A18 transparent transparent;
+  border-style: solid;
+  _border-style: solid dotted;
+}
+.active .sBar b {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  zoom: 1;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent #E93A18;
+  border-style: #E93A18 transparent transparent;
+  _border-width: 0 5px 5px;
+  _border-style: solid dotted;
+}
+.changeScreen .sList {
+  display: none;
+  position: absolute;
+  right: -2px;
+  top: 48px;
+  background: #fff;
+  border: 1px solid #bbbbbb;
+  z-index: 10;
+}
+.changeScreen .sList table {
+  width: 490px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #fff;
+}
+.changeScreen .sList table thead th {
+  height: 29px;
+  line-height: 29px;
+  font-size: 12px;
+  background: #ebebeb;
+  cursor: default;
+}
+.changeScreen .sList table tbody td {
+  height: 44px;
+  font-size: 12px;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.changeScreen .sList table tbody tr.last td {
+  border: 0;
+}
+.active .sList {
+  display: block;
+}
+.changeScreen .cinemaAdd tbody tr.active td {
+  background: #d5f2ff;
+}
+.change_overflow {
+  width: 490px;
+  height: 359px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+/* 选座--五期优化 */
+.choose_movie .poster {
+  float: left;
+  width: 70px;
+  height: 93px;
+}
+.choose_movie .info {
+  padding-left: 78px;
+  line-height: 22px;
+}
+.choose_movie .info dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff4b29;
+}
+.choose_cinema dt {
+  float: left;
+  font-weight: bold;
+  line-height: 24px;
+}
+.choose_cinema dd {
+  float: left;
+  line-height: 24px;
+}
+.choose_cinema dd .sech {
+  position: relative;
+  width: 160px;
+  height: 74px;
+  margin-top: 2px;
+  z-index: 2;
+  background: url("../../images/detail/pay.gif?v=20130905") -61px -270px no-repeat;
+}
+.choose_cinema dd .sech .date_box {
+  position: absolute;
+  left: 2px;
+  top: 24px;
+  width: 58px;
+  height: 42px;
+  border-right: 1px solid #b2b2b2;
+  text-align: center;
+}
+.choose_cinema dd .sech .time_box {
+  position: absolute;
+  left: 61px;
+  top: 24px;
+  width: 97px;
+  height: 42px;
+  text-align: center;
+}
+.row_name {
+  position: absolute;
+  left: 19px;
+  top: 174px;
+  width: 20px;
+  z-index: 5;
+  background: #fff;
+}
+.row_name span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top:5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background: #ffffff url('../images/detail/seat.gif') no-repeat left -100px;
+}
+/* 电影详情 */
+.movie_cont li {
+  padding-top: 0;
+}
+.movie_cont li .poster {
+  width: 220px;
+  height: 297px;
+  padding-top: 6px;
+  padding-left: 0;
+  background: url("../../images/detail/poster_bg2.gif?v=20130905") left bottom no-repeat;
+  position: relative;
+}
+.movie_cont li .poster i {
+  position: absolute;
+  left: -5px;
+  top: 1px;
+}
+.movie_cont li dl {
+  position: relative;
+  _display: inline;
+  width: 724px;
+}
+.movie_cont li dl dd.des {
+  width: 250px;
+  color: #666666;
+}
+.movie_cont li dl dd.role {
+  width: 310px;
+  height: 24px;
+  font-family: "宋体";
+  overflow: hidden;
+}
+.movie_cont li dl dd.summary {
+  margin-bottom: 74px;
+}
+.movie_cont li dl .player {
+  position: absolute;
+  right: 0;
+  top: 82px;
+  width: 360px;
+  height: 210px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.movie_cont li dl .player a {
+  color: #fff;
+  text-decoration: underline;
+}
+.movie_cont li dl .player a:hover,
+.movie_cont li dl .player a:visited {
+  color: #fff;
+}
+.movie_cont li dl.noPlayer dd.des {
+  width: auto;
+}
+.movie_cont li dl.noPlayer .player {
+  display: none;
+}
+.movie_cont .sanD,
+.c_movieInfo .sanD {
+  width: 57px;
+  height: 57px;
+  background: url("../images/icon.png?") 0 -171px no-repeat;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD.png?v=20130723');
+  _background-image: none;
+}
+.movie_cont .imax,
+.c_movieInfo .imax {
+  width: 57px;
+  height: 57px;
+  background: url("../../images/icon.png?v=20130905") 0 -228px no-repeat;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax.png?v=20130723');
+  _background-image: none;
+}
+.c_movieInfo .poster i {
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+/* Tab切换 */
+.movieTab {
+  height: 34px;
+  line-height: 34px;
+  border-right: 1px solid #e9e9e9;
+  background: url("../../images/bg_repeat.png?v=20130905") repeat-x scroll 0 -406px;
+}
+.movieTab li {
+  float: left;
+  width: 165px;
+  height: 34px;
+  font: bold 14px/34px "宋体";
+  color: #777;
+  text-align: center;
+  background: url("../../images/detail/tab_bg.gif?v=20130905") 0 -136px no-repeat;
+  cursor: pointer;
+}
+.movieTab li.first {
+  background-position: 0 -170px;
+}
+.movieTab li.active {
+  color: #E83A18;
+  background-position: 0 -102px;
+}
+.movieTab .right {
+  float: right;
+  width: 1px;
+  height: 32px;
+  margin-top: 1px;
+  background: #fff;
+  overflow: hidden;
+}
+.orangeLine {
+  line-height: 25px;
+  padding-left: 12px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+.orangeLine h3 a {
+  color: #333333;
+  vertical-align: middle;
+}
+.orangeLine .icon_z,
+.orangeLine .icon_q,
+.orangeLine .icon_t,
+.orangeLine .mtype_imax {
+  margin-left: 5px;
+}
+.orangeLine .c_name {
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+}
+.orangeLine .c_add {
+  margin-left: 7px;
+  font-size: 12px;
+  font-family: "宋体";
+  color: #fff;
+}
+.warningInfo {
+  font-size: 12px;
+  color: #FF4B29;
+}
+/* 电影详情--正在热映 */
+.sider_hot {
+  border: 1px solid #e9e9e9;
+  background: #f8f8f8;
+}
+.titleLine,
+.titlenoLine {
+  height: 36px;
+  line-height: 36px;
+}
+.titleLine h2,
+.titlenoLine h2 {
+  font: normal 16px/36px "微软雅黑", "Microsoft YaHei", "黑体";
+  color: #000;
+  background: none;
+}
+.titlenoLine {
+  border-bottom: 0;
+}
+.sider_hot .titleLine {
+  padding-left: 10px;
+  height: 28px;
+  overflow: hidden;
+}
+.sider_hot .titleLine h2 {
+  height: 21px;
+  line-height: 21px;
+  overflow: hidden;
+  padding-top: 5px;
+  _padding-top: 6px;
+  font: bold 14px/26px "宋体";
+  color: #333333;
+}
+.sider_hot dd {
+  padding-bottom: 7px;
+  overflow: hidden;
+  zoom: 1;
+}
+.sider_hot_playList {
+  margin-top: -1px;
+}
+.sider_hot_playList li {
+  float: none;
+  width: auto;
+  height: 95px;
+  padding: 12px 0;
+  padding-top: 11px;
+  _overflow: hidden;
+  *zoom: 1;
+  border: 0;
+  background: url("../../images/detail/s_hot_split.gif?v=20130905") 0 top repeat-x;
+}
+.sider_hot_playList li .poster {
+  width: 72px;
+  height: 93px;
+  padding-left: 7px;
+  padding-top: 0;
+  background: none;
+  position: relative;
+}
+.sider_hot_playList li .poster img {
+  border: 1px solid #fff;
+}
+.sider_hot_playList li .poster i {
+  position: absolute;
+  left: 5px;
+  top: -1px;
+}
+.sider_hot_playList li dl {
+  float: left;
+  _display: inline;
+  margin-left: 8px;
+  margin-top: -4px;
+  width: 140px;
+}
+.sider_hot_playList li dl dd {
+  padding-bottom: 0;
+  font-family: "宋体";
+}
+.sider_hot_playList li dl dt {
+  padding-top: 0;
+  border: 0;
+  height: 20px;
+}
+.sider_hot_playList li dl dt h2 {
+  width: 110px;
+  font-size: 14px;
+  color: #000;
+  font-weight: normal;
+}
+.sider_hot_playList li dl dt em {
+  font-size: 20px;
+}
+.sider_hot_playList li dl dt em .s {
+  font-size: 16px;
+}
+.sider_hot_playList li dl dd.summary {
+  margin-bottom: 0px;
+  line-height: 18px;
+  margin-top: 5px;
+}
+.sanD {
+  width: 33px;
+  height: 33px;
+  background: url("../../images/icon.png?v=20130905") -33px -286px no-repeat;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD_s.png?v=20130723');
+  _background-image: none;
+}
+.imax {
+  width: 33px;
+  height: 33px;
+  background: url("../../images/icon.png?v=20130905") 0 -286px no-repeat;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax_s.png?v=20130723');
+  _background-image: none;
+}
+/* 电影详情--影院排期 */
+.cinamaW {
+  margin-top: 25px;
+}
+.noWaiting2 {
+  color: #999999;
+  text-align: center;
+  background: url("../../images/border_line.gif?v=20130711") repeat-x scroll left top transparent;
+}
+.noWaiting {
+  position: relative;
+  width: 708px;
+  vertical-align: middle;
+  border: 1px solid #e9e9e9;
+  font: normal 14px/94px "微软雅黑", "Microsoft YaHei";
+  color: #666666;
+  text-align: center;
+  background: none;
+}
+.noWaiting b {
+  display: inline-block;
+  width: 77px;
+  height: 74px;
+  margin-right: 10px;
+  _margin-top: 20px;
+  _margin-bottom: 20px;
+  vertical-align: middle;
+  background: url("../../images/tip_bg.gif?v=20130905") 0 0 no-repeat;
+}
+.noWaiting .imp {
+  color: #E83A18;
+  font-weight: bold;
+}
+.noWaiting #see {
+  position: absolute;
+  right: 13px;
+  top: 33px;
+}
+.noWaiting #wantBtn {
+  margin-left: 50px;
+}
+.noWaiting .many {
+  display: inline-block;
+  height: 47px;
+  line-height: 22px;
+  text-align: left;
+  vertical-align: middle;
+}
+.noWaiting .many span {
+  float: left;
+  margin-top: 2px;
+  font-size: 16px;
+}
+.noWaiting .many span em {
+  float: left;
+  margin-top: 2px;
+  font-size: 14px;
+}
+.noWaiting .many i {
+  font-weight: bold;
+  color: #FF5A29;
+}
+
+#noWaiting a.disabled {
+  display: inline-block;
+  width: 113px;
+  height: 34px;
+  vertical-align: middle;
+  background: url("../../images/detail/btn.gif?v=20130905") 0 -120px no-repeat;
+}
+.noTop {
+  border-top: 0;
+}
+.noBg {
+  background: none;
+}
+/* 正在上映电影详情 */
+.hot_movie_cont li dl dd.summary {
+  margin-bottom: 19px;
+}
+.hot_movie_cont li dl dd.btn {
+  margin-top: 16px;
+}
+.hot_movie_cont li dl dd.btn .price_29 {
+  float: left;
+  color: #333333;
+  width: 245px;
+  height: 25px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.hot_movie_cont li dl dd.btn .price_29 .o {
+  float: left;
+  _display: inline;
+  margin-left: 20px;
+}
+.hot_movie_cont li dl dd.btn .price_29 .s {
+  float: left;
+  _display: inline;
+  margin-left: 10px;
+}
+.hot_movie_cont li dl dd.btn .price_29 em {
+  color: #E83A18;
+  font: bold 22px Arial;
+}
+/* 电影详情--选择区域 */.movieTabC {
+  border: 1px solid #e9e9e9;
+  border-top: 0;
+  padding-top: 8px;
+}
+.movieTabC .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  font-size: 0px;
+  background: #fff;
+  overflow: hidden;
+}
+.movieTabC .noWaiting {
+  border: 0;
+  margin: 0 auto;
+  width: 96%;
+  background: url("../../images/border_line.gif?v=20130905") repeat-x scroll left top transparent;
+}
+.movieTabC .area {
+  padding: 14px 0;
+  *padding: 16px 0;
+  margin: 0 9px;
+  overflow: hidden;
+  zoom: 1;
+  background: url("../../images/detail/mv_comm_split.png?v=20130905") left bottom repeat-x;
+}
+.movieTabC .area dt {
+  float: left;
+  width: 65px;
+  color: #333333;
+  text-align: center;
+  padding-top: 6px;
+  font-weight: bold;
+  font-family: "宋体";
+  _font-family: Tahoma;
+}
+.movieTabC .area dd {
+  float: left;
+  width: 625px;
+  _margin-right: -3px;
+}
+.movieTabC .noBorder {
+  border-bottom: 0;
+}
+.movieTabC .noBg {
+  background: none;
+}
+.movieTabC .sel_c {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  zoom: 1;
+}
+.movieTabC .sel_c_hide {
+  height: 90px;
+  padding-bottom: 42px;
+  margin-bottom: 0;
+}
+.movieTabC .sel_c .bar {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 708px;
+  height: 33px;
+  padding-top: 10px;
+  border: 0;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  background: #ffffff url("../../images/detail/mv_comm_more.png?v=20130830") left 10px no-repeat;
+}
+.movieTabC .sel_c .bar span {
+  display: inline-block;
+  width: 190px;
+  height: 33px;
+  line-height: 28px;
+  line-height: 32px\9;
+  *line-height: 32px;
+  margin-left: 248px;
+  text-align: center;
+}
+.movieTabC .sel_c .bar .upT {
+  display: none;
+}
+.movieTabC .open .bar .upT {
+  display: block;
+}
+.movieTabC .open .bar .downT {
+  display: none;
+}
+.areaList {
+  margin-left: -15px;
+  margin-top: -5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.areaList li {
+  position: relative;
+  float: left;
+  _display: inline;
+  margin: 10px 15px 0 15px;
+  font-family: "宋体";
+  _font-family: Tahoma;
+}
+.areaList li .low {
+  position: absolute;
+  right: -11px;
+  top: -5px;
+  width: 15px;
+  height: 19px;
+  background: url("../../images/tab_play_bg.gif?v=20130905") no-repeat -161px -240px;
+}
+.areaList li .low_area {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 15px;
+  height: 19px;
+  margin-top: -10px;
+  margin-bottom: 2px;
+  margin-left: -5px;
+  background: url("../../images/tab_play_bg.gif?v=20130905") no-repeat -161px -240px;
+}
+.areaList li a {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 5px;
+  color: #666666;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.areaList li a:link,
+.areaList li a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+.areaList li a:hover {
+  color: #ff5a29;
+}
+.areaList li.active a,
+.areaList li.active a:hover {
+  background: #ff5a29;
+  color: #fff;
+}
+.areaList li.active a:link,
+.areaList li.active a:visited {
+  color: #fff;
+}
+.areaList li .icon_z,
+.areaList li .icon_q,
+.areaList li .icon_t {
+  margin-right: 5px;
+  margin-top: -1px;
+  vertical-align: middle;
+  _vertical-align: top;
+}
+.areaList li .a_icon_z:link,
+.areaList li .a_icon_z:hover,
+.areaList li .a_icon_z:visited,
+.areaList li .a_icon_q:link,
+.areaList li .a_icon_q:hover,
+.areaList li .a_icon_q:visited,
+.areaList li .a_icon_t:link,
+.areaList li .a_icon_t:hover,
+.areaList li .a_icon_t:visited {
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  padding: 0;
+  padding-right: 5px;
+  border: 2px solid #fff;
+  color: #666666;
+  background: #fff;
+}
+.areaList li.active .a_icon_z:link,
+.areaList li.active .a_icon_z:hover,
+.areaList li.active .a_icon_z:visited {
+  border: 2px solid #e22500;
+  color: #666666;
+  background: #fff;
+}
+.areaList li.active .a_icon_q:link,
+.areaList li.active .a_icon_q:hover,
+.areaList li.active .a_icon_q:visited {
+  border: 2px solid #008ccc;
+  color: #666666;
+  background: #fff;
+}
+.areaList li.active .a_icon_t:link,
+.areaList li.active .a_icon_t:hover,
+.areaList li.active .a_icon_t:visited {
+  border: 2px solid #ff8400;
+  color: #666666;
+  background: #fff;
+}
+.areaList_hidden {
+  position: relative;
+  height: 30px;
+  padding-right: 20px;
+}
+/* 电影详情--选择影院 */
+.cinamaList {
+  margin: -5px 0 0 -15px;
+  *padding-bottom: 5px;
+  overflow: hidden;
+}
+.cinemaAdd thead tr th {
+  height: 30px;
+  line-height: 30px;
+  font-family: Tahoma;
+  background: #ebebeb;
+  text-align: center;
+  color: #666666;
+}
+.cinemaAdd tbody tr.active td {
+  background: #f9f9f9;
+}
+.cinemaAdd tbody tr.hide {
+  display: none;
+}
+.cinemaAdd tbody tr.hide td {
+  display: none;
+}
+.cinemaAdd tbody tr td {
+  height: 51px;
+  background: #fff;
+  text-align: center;
+  color: #666666;
+  border-top: 1px solid #e9e9e9;
+}
+.cinemaAdd tbody tr td.time {
+  font-weight: bold;
+  font-size: 16px;
+}
+.cinemaAdd tbody tr td.current {
+  background: #ffffff url("../../images/detail/btn_show.png?v=20140106") 0 -503px no-repeat;
+}
+.cinemaAdd tbody tr.active td.current {
+  background: #d5f2ff url("../../images/detail/btn_show.png?v=20140106") 0 -503px no-repeat;
+}
+.cinemaAdd tbody tr td em.old {
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.cinemaAdd tbody tr td em.fav {
+  font-size: 18px;
+  color: #e83a18;
+}
+.cinemaAdd tbody tr td em.fav i {
+  font-size: 12px;
+}
+.cinemaAdd tbody tr td p.nobuy {
+  line-height: 18px;
+}
+.cinemaAdd tbody tr td span.tip {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+  margin-left: 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  background: url("../../images/icon8.png?v=20130905") 0 -85px no-repeat;
+}
+/*更多箭头按钮---------------------------------*/
+.moreBar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e3e3e3;
+  background: #f6f6f6;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+}
+.moreBar b {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 4px 4px 0;
+  border-color: #666666 transparent transparent;
+  border-style: solid;
+  _border-style: solid dotted;
+}
+.open {
+  height: auto;
+  _zoom: 1;
+}
+.open .moreBar b {
+  left: 4px\9;
+  top: 6px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent #666666;
+  border-style: solid;
+  _border-style: solid dotted;
+  border-width: 0 5px 5px\9;
+  _border-width: 0 5px 5px;
+}
+.moreBar:hover {
+  border: 1px solid #ffcebf;
+  background: #ffe6df;
+}
+.moreBar:hover b {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 4px 4px 0;
+  border-color: #ff5a29 transparent transparent;
+  border-style: solid;
+  _border-style: solid dotted;
+}
+.open .moreBar:hover b {
+  left: 4px\9;
+  top: 6px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent #ff5a29;
+  border-style: solid;
+  border-width: 0 5px 5px\9;
+  _border-width: 0 5px 5px;
+  _border-style: solid dotted;
+}
+/*------------------------------------------------*/
+.cinamaCont {
+  /*position:relative;height:90px;overflow:hidden;zoom:1;*/
+}
+.cinamaCont .bar {
+  bottom: 8px;
+  right: 3px;
+}
+.movieTabC .open {
+  height: auto;
+}
+.movieTabC .open ul {
+  /*height:150px;overflow-y:auto;*/
+}
+.movieTabC .open .bar {
+  bottom: 0px;
+  right: 23px;
+  background-position: 0 -42px;
+}
+/* 影院详情 */
+.cinema_cont {
+  position: relative;
+}
+.cinema_cont li .poster {
+  width: 216px;
+  height: 180px;
+  background: none;
+}
+.cinema_cont li .poster .imgbox {
+  width: 206px;
+  height: 180px;
+  text-align: center;
+  overflow: hidden;
+}
+.cinema_cont li .poster .imgbox img {
+  border-bottom: 0;
+  padding: 2px;
+  border: 1px solid #ccc;
+}
+.cinema_cont li dl {
+  width: 464px;
+  margin-left: 24px;
+  margin-top: 20px;
+}
+.cinema_cont li dl dt {
+  margin-bottom: 22px;
+  overflow: hidden;
+  zoom: 1;
+  width: 680px;
+}
+.cinema_cont li dl dt h2 {
+  float: left;
+  width: auto;
+}
+.cinema_cont li dl dt span {
+  float: left;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+.cinema_cont li dl dt .starbg {
+  margin-left: 15px;
+}
+.cinema_cont li dl dd.summary {
+  position: relative;
+  height: 72px;
+  font-family: "宋体";
+  overflow: hidden;
+  margin: 0;
+}
+.cinema_cont li dl dd p {
+  height: 72px;
+  overflow: hidden;
+  background: #fff;
+  z-index: 10;
+}
+.cinema_cont li dl dd.open {
+  height: auto;
+  zoom: 1;
+  overflow: inherit;
+}
+.cinema_cont li dl dd.open p {
+  height: auto;
+  zoom: 1;
+}
+.cinema_cont li dl dd a {
+  display: none;
+}
+.cinema_cont li dl dd.more a {
+  display: block;
+}
+.cinema_cont li dl dd.more p {
+  width: 440px;
+}
+.cinema_cont .map {
+  position: absolute;
+  top: 72px;
+  right: 12px;
+}
+.cinema_cont .map .mapDiv {
+  width: 218px;
+  height: 120px;
+  border: 1px solid #ccd;
+}
+/* 影院详情--五期优化
+   2013-06-17
+   by xuying	
+ */
+/*上映影片*/
+.c_detail_movie {
+  padding: 13px 20px 6px;
+}
+.c_detail_movie .c_detail_title h2 {
+  float: left;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.c_detail_movie .c_detail_title .right {
+  float: right;
+}
+.c_detail_movie .c_detail_title .right li {
+  float: left;
+}
+.c_detail_movie .c_detail_title .right li.active a {
+  background: #fff;
+  color: #ff5a29;
+}
+.c_detail_movie .c_detail_title .right li a {
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  line-height: 24px;
+  color: #444444;
+  border: 1px solid #e3e3e3;
+  font-family: SimSun;
+  _font-family: Tahoma;
+  text-align: center;
+  text-decoration: none;
+  background: #f6f6f6;
+}
+.c_detail_movie .c_detail_title .right li a:hover {
+  color: #ff5a29;
+}
+.c_detail_movie .c_detail_poster {
+  width: 668px;
+  height: 103px;
+  margin: 12px 0;
+  background: #FBFAFA;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar {
+  float: left;
+  position: relative;
+  width: 23px;
+  height: 91px;
+  margin-top: 3px;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar b {
+  position: absolute;
+  left: 6px;
+  top: 38px;
+  width: 13px;
+  height: 17px;
+  background: url("../../images/detail/btn_show.png?v=20130723") left -159px no-repeat;
+  cursor: pointer;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar_left:hover b {
+  background-position: 0 -233px;
+  cursor: pointer;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar_left b {
+  background-position: 0 -215px;
+  cursor: pointer;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar_right:hover b {
+  background-position: 0 -177px;
+  cursor: pointer;
+}
+.c_detail_movie .c_detail_poster .photo_list_box {
+  float: left;
+  width: 612px;
+  height: 103px;
+  margin: 0 3px;
+  overflow: hidden;
+  position: relative;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list {
+  width: 10000px;
+  height: 102px;
+  padding-top: 1px;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li {
+  float: left;
+  _display: inline;
+  width: 74px;
+  height: 97px;
+  margin: 0px 14px;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 93px;
+  border: 2px solid #fff;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a i {
+  position: absolute;
+  left: -3px;
+  top: -3px;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a:hover,
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li.active a {
+  border: 2px solid #fe6245;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a:hover em,
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li.active a em {
+  position: absolute;
+  left: 31px;
+  bottom: -7px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 5px 5px 0;
+  border-color: #ff5a29 transparent transparent;
+  border-style: solid;
+  _border-style: solid dotted;
+}
+.c_detail_movie .c_detail_poster .noLeft .c_detail_movie .c_detail_poster .noLeft:hover {
+  cursor: default;
+}
+.c_detail_movie .c_detail_poster .noLeft b,
+.c_detail_movie .c_detail_poster .noLeft:hover b {
+  background-position: -1px -251px;
+  cursor: default;
+}
+.c_detail_movie .c_detail_poster .noRight .c_detail_movie .c_detail_poster .noRight:hover {
+  cursor: default;
+}
+.c_detail_movie .c_detail_poster .noRight b,
+.c_detail_movie .c_detail_poster .noRight:hover b {
+  background-position: 1px -195px;
+  cursor: default;
+}
+.c_detail_movie .noBoth .c_photo_bar {
+  display: none;
+}
+/*上映影片  end*/
+/*电影详情*/
+.movie_detail {
+  padding: 0px 0px 20px 20px;
+}
+.movie_detail .left {
+  float: left;
+  width: 450px;
+}
+.movie_detail dt {
+  /*position:relative;*/
+}
+.movie_detail dt h2 {
+  display: inline;
+  width: auto;
+  height: 26px;
+  font: bold 20px "微软雅黑", "Microsoft YaHei", "黑体";
+  line-height: 26px;
+  color: #e83a18;
+  background: none;
+}
+.movie_detail dt h2 a {
+  color: #e83a18;
+  text-decoration: none;
+}
+.movie_detail .summary {
+  font: normal 16px "微软雅黑", "Microsoft YaHei", "黑体";
+  line-height: 23px;
+  height: 23px;
+  margin: 8px 0;
+  color: #999999;
+  overflow: hidden;
+}
+.movie_detail .des {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  color: #666666;
+  overflow: hidden;
+}
+.movie_detail dd.price {
+  color: #dd4325;
+  overflow: hidden;
+}
+.movie_detail dd.price em {
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.movie_detail dt .starbg {
+  display: inline-block;
+  width: 75px;
+  height: 14px;
+  margin-left: 35px;
+  margin-right: 6px;
+  background: url("../../images/icon.png?v=20130905") 0 -14px no-repeat;
+}
+.movie_detail .star {
+  width: 90%;
+  height: 14px;
+  background: url("../../images/icon.png?v=20130905") 0 0 no-repeat;
+}
+.movie_detail dt em {
+  position: static;
+  top: auto;
+  right: auto;
+  display: inline-block;
+  width: 55px;
+  height: 20px;
+  overflow: hidden;
+  color: #FF4B29;
+  font: italic bold 25px/22px Arial;
+}
+.movie_detail dd .favorable {
+  margin-left: 28px;
+}
+.movie_detail dd .favorable i {
+  color: #e83a18;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+/*电影详情 end*/
+.sel_playList li dl dt h2 a:link,
+.sel_playList li dl dt h2 a:visited {
+  color: #e83a18;
+  text-decoration: none;
+}
+/* 影院列表 */
+.cinemaC {
+  border-top: 1px solid #e9e9e9;
+}
+.cSearch div {
+  width: 283px;
+  height: 25px;
+  padding-bottom: 1px;
+  background: #cccccc;
+  overflow: hidden;
+}
+.cSearch div .text {
+  float: left;
+  width: 208px;
+  height: 24px;
+  padding-left: 7px;
+  line-height: 24px;
+  font-family: "宋体";
+  _font-family: Tahoma;
+  border: 1px solid #dcdcdc;
+  border-right: 0 none;
+  border-bottom: 0 none;
+  color: #333333;
+}
+.cSearch div .textGray {
+  color: #c3c3c3;
+}
+.cSearch div .sub {
+  float: left;
+  width: 67px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 0;
+  border: 0 none;
+  color: #fff;
+  background: #cccccc url("../../images/detail/tab_bg.gif?v=20130905") 0 -206px no-repeat;
+  cursor: pointer;
+}
+.cinemaC .area {
+  width: 689px;
+  margin-left: 9px;
+  padding-top: 12px;
+  padding-bottom: 18px;
+  border-bottom: 0;
+  background: url("../../images/detail/s_hot_split.gif?v=20130905") left bottom repeat-x;
+}
+.cinemaC .area dt {
+  width: 76px;
+  text-align: right;
+}
+.cinemaC .area dd {
+  width: 613px;
+}
+.same li {
+  width: 75px;
+  margin-left: 20px;
+  margin-right: 0;
+  mloverflow: hidden;
+  zoom: 1;
+}
+.cinemaC .no_bg {
+  background: none;
+}
+.cinemaList {
+  padding: 0 10px;
+  border-top: 1px solid #e9e9e9;
+  zoom: 1;
+  /*修改影院列表按钮为竖向排列*/
+
+}
+.cinemaList li {
+  padding: 0 14px 24px 14px;
+  vertical-align: middle;
+  zoom: 1;
+  background: url("../../images/detail/s_hot_split.gif?v=20130905") left bottom repeat-x;
+}
+.cinemaList li ol.left {
+  float: left;
+  width: 480px;
+  padding-top: 21px;
+}
+.cinemaList li ol.left li,
+.cinemaList li ol.right li {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  height: 18px;
+  border: 0;
+  background: none;
+}
+.cinemaList li ol.left li.name {
+  height: 23px;
+  line-height: 23px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "宋体";
+  color: #000;
+}
+.cinemaList li ol.left li.name span {
+  margin-top: 2px;
+  margin-left: 5px;
+}
+.cinemaList a.cinema_name:link,
+.cinemaList a.cinema_name:visited,
+.cinemaList a.cinema_name:hover,
+.cinemaList a.cinema_name:active {
+  color: #000;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.cinemaList li ol.left li.name a em {
+  font-weight: bold;
+  color: #e83a18;
+}
+.cinemaList li ol.left li.add {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: "宋体";
+  color: #000;
+}
+.cinemaList li ol.left li .icon_z,
+.cinemaList li ol.left li .icon_q {
+  margin-left: 3px;
+}
+.cinemaList li ol.right {
+  float: right;
+  width: 76px;
+  padding-top: 15px;
+}
+.cinemaList li ol.right li {
+  height: 30px;
+}
+.cinemaList li ol.right li.price {
+  width: 76px;
+  height: 30px;
+  line-height: 30px;
+  color: #333333;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cinemaList li ol.right li.price em {
+  font-family: Arial;
+  font-size: 22px;
+  color: #e83a18;
+}
+.cinemaList li ol.right li.price i {
+  font-family: Arial;
+  font-size: 12px;
+  color: #333333;
+}
+.cinemaList li ol.right li.cinema_btn {
+  position: relative;
+  margin-top: 10px;
+  border-bottom: 5px solid #fff;
+}
+.cinemaList li ol.right li dl {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 34px;
+  border: 1px solid #ff4b29;
+  width: 99px;
+  background: #fff;
+}
+.cinemaList li ol.right li dl .arr01 {
+  position: absolute;
+  left: 58px;
+  top: -6px;
+  height: 0;
+  line-height: 0;
+  border-width: 0 5px 5px;
+  border-style: none solid solid;
+  border-color: transparent transparent #ff4b29;
+  _border-color: #fff #fff #ff4b29;
+}
+.cinemaList li ol.right li dl .arr02 {
+  position: absolute;
+  left: -5px;
+  top: 1px;
+  height: 0;
+  line-height: 0;
+  border-width: 0 5px 5px;
+  border-style: none solid solid;
+  border-color: transparent transparent #fff;
+  _border-color: tomato tomato #FFFFFF;
+  _filter: chroma(color=#ff6347);
+}
+.cinemaList li ol.right li dl dd {
+  height: 28px;
+  line-height: 28px;
+  border-bottom: 1px solid #fafafa;
+  color: #333333;
+}
+.cinemaList li ol.right li dl dd a {
+  display: inline-block;
+  width: 89px;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 10px;
+  color: #333333;
+  text-decoration: none;
+  background: url("../../images/icon_norepeat8.png?v=20130905") right -205px no-repeat;
+}
+.cinemaList li ol.right li dl dd a:hover {
+  color: #ff5a29;
+  background-position: right -241px;
+}
+.cinemaList li ol.right .active dl {
+  display: block;
+}
+.cinemaList li ol.left li.mov {
+  height: auto;
+  min-height: 18px;
+}
+.cinemaList li ol.left li.mov .t {
+  float: left;
+  width: 60px;
+  height: 18px;
+  line-height: 18px;
+}
+.cinemaList li ol.left li.mov .l {
+  position: relative;
+  float: left;
+  width: 350px;
+  margin-top: -3px\9;
+  *margin-top: -2px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  padding-right: 60px;
+  font-family: "宋体";
+}
+.cinemaList li ol.left li.mov .l .bar {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  width: 25px;
+  height: 16px;
+  border: 0;
+  outline: none;
+  font-family: "宋体";
+  color: #999999;
+  overflow: hidden;
+  background: none;
+}
+.cinemaList li ol.left li.mov .l .c {
+  display: none;
+}
+.cinemaList li ol.left li.mov .l .o {
+  display: block;
+}
+.cinemaList li ol.left li.mov .open {
+  height: auto;
+}
+.cinemaList li ol.left li.mov .open .bar {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 25px;
+  height: 16px;
+  font-family: "宋体";
+  color: #999999;
+  overflow: hidden;
+  background: none;
+}
+.cinemaList li ol.left li.mov .open .c {
+  display: block;
+}
+.cinemaList li ol.left li.mov .open .o {
+  display: none;
+}
+.cinemaList li ol.left li.mov .l a {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  padding-right: 13px;
+  white-space: nowrap;
+  color: #e83a18;
+}
+/* 影院列表--正在热映 */
+a.detail {
+  display: none;
+}
+.cinema_hot li dl dt h2 {
+  width: 80px;
+}
+.cinema_hot li dl dt em {
+  width: 30px;
+  right: 33px;
+}
+.cinema_hot li dl dt a.detail {
+  position: absolute;
+  right: -14px;
+  top: 3px;
+  width: 50px;
+  font-family: "宋体";
+  color: #fd6d52;
+  display: block;
+}
+.cinema_hot li dl dt a.detail:hover {
+  color: #fd6d52;
+}
+/* 影院详情--电影详情 */
+.sHotMovie {
+  padding: 0 10px;
+  overflow: hidden;
+}
+.sHotMovie ul {
+  margin-top: -1px;
+}
+.sHotMovie ul li {
+  padding: 15px 5px 13px 0;
+  background: url("../../images/detail/s_hot_split.gif?v=20130905") 0 top repeat-x;
+}
+.sHotMovie ul li .name {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  color: #333333;
+}
+.sHotMovie ul li .name a:link,
+.sHotMovie ul li .name a:visited {
+  color: #333333;
+}
+.sHotMovie ul li .add {
+  /*height:48px;*/
+  line-height: 20px;
+  overflow: hidden;
+  color: #858585;
+}
+.sHotMovie ul li .tel {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  color: #858585;
+}
+/* 支付 */
+.pay_playList {
+  position: relative;
+  padding-bottom: 4px;
+}
+.pay_playList li .poster {
+  width: 80px;
+  height: 95px;
+  padding-left: 14px;
+  background: url("../../images/poster_bg_86.png?v=20130905") center bottom no-repeat;
+}
+.pay_playList li .group_pic {
+  background: url("../../images/poster_bg.gif?v=20130905") 10px bottom no-repeat;
+}
+.pay_playList li dl {
+  width: 487px;
+}
+.pay_playList li dl dd.des {
+  float: left;
+  *float: none;
+  *display: inline;
+  *zoom: 1;
+  width: 243px;
+  color: #333333;
+}
+.pay_playList li dl dd.cp_des {
+  float: left;
+  height: auto;
+  text-indent: -60px;
+  padding-left: 60px;
+}
+.pay_playList li table {
+  float: left;
+  _display: inline;
+  width: 930px;
+  margin-left: 14px;
+  margin-top: 15px;
+  border: 1px solid #dedede;
+  text-align: center;
+}
+.pay_playList li dl dd.summary {
+  margin-bottom: 20px;
+}
+.pay_playList li table thead th {
+  height: 40px;
+  line-height: 40px;
+  background: #f2f2f2;
+  color: #333333;
+}
+.pay_playList li table thead th.tel div {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+.pay_playList li table thead th.tel div b {
+  position: absolute;
+  right: 70px;
+  top: 11px;
+  *top: 10px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("../images/icon8.png") 0 -85px no-repeat;
+  cursor: pointer;
+}
+.pay_playList li table thead th.tel div .notes {
+  display: none;
+  position: absolute;
+  right: -55px;
+  top: -39px;
+  height: 25px;
+  width: 160px;
+  padding: 5px;
+  line-height: 14px;
+  border: 1px solid #dedede;
+  color: #999999;
+  background: #fff4c8;
+  text-align: left;
+}
+.pay_playList li table thead th.tel div .notes em {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 32px;
+  top: 35px;
+  _top: 38px;
+  width: 12px;
+  height: 7px;
+  background: url("../../images/icon8.png?v=20130905") 0 -102px no-repeat;
+  z-index: 6;
+}
+.pay_playList li table thead th.tel div.active .notes {
+  display: block;
+}
+.pay_playList li table tbody td {
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  font-family: Arial;
+  font-size: 14px;
+}
+.pay_playList li table tbody .mk {
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.pay_playList li table tbody td.count {
+  color: #e83a18;
+}
+.pay_playList li table tbody td span.imp {
+  font-weight: bold;
+  font-size: 14px;
+  color: #f00;
+}
+.pay_playList li table tbody td span.normal {
+  color: #000;
+}
+.pay_playList li dl dd.wid {
+  width: 260px;
+}
+/* 支付--倒计时 */
+.pay_playList .timer {
+  position: absolute;
+  right: 14px;
+  top: 17px;
+  width: 323px;
+  height: 80px;
+  padding: 5px;
+  background: url("../images/detail/timer_bg.gif") 0 0 no-repeat;
+}
+.pay_playList .timer .title {
+  height: 25px;
+  line-height: 25px;
+  padding: 20px 0 15px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #666666;
+  vertical-align: middle;
+}
+.pay_playList .timer .intitle {
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #666666;
+  vertical-align: middle;
+}
+.pay_playList .timer .title b,
+.pay_playList .timer .intitle b {
+  display: inline-block;
+  width: 32px;
+  height: 40px;
+  margin-right: 10px;
+  background: url("../images/detail/pay.gif") 0 -196px no-repeat;
+  vertical-align: middle;
+}
+.pay_playList .timer .time {
+  text-align: center;
+}
+.pay_playList .timer .last {
+  padding-top: 10px;
+  text-align: center;
+}
+.pay_playList .timer .invalid {
+  text-align: center;
+  line-height: 80px;
+  _padding-top: 20px;
+}
+.pay_playList .timer .time .min,
+.pay_playList .timer .time .sec {
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+  margin-right: 3px;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #fff;
+  background: url("../images/detail/pay.gif") -32px -195px no-repeat;
+  vertical-align: middle;
+}
+.pay_playList .timer .notes {
+  _margin-top: 3px;
+  line-height: 24px;
+  color: #666666;
+  text-align: center;
+}
+.pay_playList .timer .btn {
+  text-align: center;
+  vertical-align: middle;
+}
+.pay_playList .timer .btn a {
+  display: inline-block;
+  width: 89px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #ff4b29;
+}
+.pay_playList .timer .btn a:link,
+.pay_playList .timer .btn a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.pay_playList .timer .btn .disabled {
+  background: #ccc;
+  cursor: default;
+}
+/*活动订单页样式*********************/
+.pay_playList_act{}
+.pay_playList_act .groupName{color:#333;font-size:35px;padding-left:14px;}
+.pay_playList_act .groupTips{color:#999;font-size:20px;padding-left:14px;}
+
+/*活动订单页样式 end***********************/
+
+a.btn_orange {
+  display: inline-block;
+  width: 89px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #ff4b29;
+}
+a.btn_orange:link,
+a.btn_orange:visited {
+  color: #fff;
+  text-decoration: none;
+}
+/* 支付--选择支付方式 */
+.payment {
+  margin-top: 10px;
+  border: 1px solid #e9e9e9;
+}
+.payment .title {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e9e9e9;
+  overflow: hidden;
+}
+.payment .title h2 {
+  float: left;
+  height: 46px;
+  line-height: 46px;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #eea163;
+}
+.payment .title .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: url("../images/detail/code/btns.gif") 0 -73px;
+}
+.payment dl {
+  padding-left: 27px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.payment dl dt {
+  float: left;
+  width: 130px;
+  font-size: 14px;
+  text-align: center;
+}
+.payment dl.dt_tj {
+  margin-top: 5px;
+}
+.payment dl.dt_net {
+  margin-top: 38px;
+}
+.payment dl.dt_tj dt {
+  padding-top: 19px;
+}
+.payment dl.dt_net dt {
+  padding-top: 3px;
+}
+.payment dl dd {
+  float: left;
+  width: 760px;
+}
+.payment dl dd .other {
+  height: 99px;
+  overflow: hidden;
+}
+.payment dl dd h3 {
+  padding-top: 19px;
+  font-size: 14px;
+  color: #000;
+}
+.payment dl dd .showAllBank {
+  margin-top: 20px;
+  color: #1E50A2;
+  cursor: pointer;
+  width: 100px;
+}
+.payment dl dd .showAllBank b {
+  float: left;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  margin-top: 2px;
+  overflow: hidden;
+  background: url("../../images/detail/pay.gif?v=20130905") -88px -196px no-repeat;
+}
+#payTabC_1,
+#payTabC_2 {
+  border-top: 1px solid #e9e9e9;
+  margin-top: -1px;
+  zoom: 1;
+}
+.subPay {
+  text-align: right;
+  padding-right: 29px;
+}
+.subPay .agree {
+  padding: 10px 12px 0 0;
+  *padding-right: 9px;
+}
+.subPay .agree input {
+  margin-right: 5px;
+}
+.subPay .agree a {
+  text-decoration: underline;
+}
+.subPay .sub {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+.subPay .sub input {
+  display: inline-block;
+  width: 210px;
+  height: 37px;
+  border: 0 none;
+  line-height: 37px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "宋体";
+  _font-family: Tahoma;
+  color: #fff;
+  text-align: center;
+  background: #ff6e12 url("../images/btns.png") 0 -21px no-repeat;
+  cursor: pointer;
+}
+.subPay .sub input.disabled {
+  background-position: 0 -58px;
+  cursor: default;
+}
+.payList {
+  padding-bottom: 5px;
+  overflow: hidden;
+  zoom: 1;
+}
+.payList li {
+  float: left;
+  display: inline;
+  width: 158px;
+  height: 37px;
+  margin-top: 10px;
+  margin-right: 28px;
+  overflow: hidden;
+}
+.payMethod input {
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  *margin-top: 8px;
+  margin-left: 2px;
+  margin-right: 3px;
+}
+.payMethod label {
+  float: left;
+  overflow: hidden;
+  zoom: 1;
+  cursor: pointer;
+}
+.payMethod label span {
+  float: left;
+  display: inline-block;
+  width: 132px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-indent: -9999px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  background: url("../../images/detail/bank_logo.png?v=20130905") no-repeat;
+}
+#payTabC_2 {
+  display: none;
+}
+.payMethod label span.bank_0000 {
+  background-position: 0 -545px;
+}
+/*网易宝*/
+.payMethod label span.bank_0001,
+.payMethod label span.bank_0071c {
+  background-position: 0 0;
+}
+/**中国工商银行*/
+.payMethod label span.bank_0002,
+.payMethod label span.bank_0062 {
+  background-position: 0 -36px;
+}
+/**中国农业银行*/
+.payMethod label span.bank_0003,
+.payMethod label span.bank_0067c {
+  background-position: 0 -72px;
+}
+/*招商银行*/
+.payMethod label span.bank_0004,
+.payMethod label span.bank_0061c {
+  background-position: 0 -108px;
+}
+/*中国建设银行*/
+.payMethod label span.bank_0005 {
+  background-position: 0 -144px;
+}
+/*中信银行*/
+.payMethod label span.bank_0206c,
+.payMethod label span.bank_0200,
+.payMethod label span.bank_0068c {
+  background-position: 0 -144px;
+}
+/*涓俊*/
+.payMethod label span.bank_0006 {
+  background-position: 0 -180px;
+}
+/*中国邮政*/
+.payMethod label span.bank_0007,
+.payMethod label span.bank_0066c {
+  background-position: 0 -216px;
+}
+/*兴业银行*/
+.payMethod label span.bank_0008,
+.payMethod label span.bank_0064c {
+  background-position: 0 -252px;
+}
+/*中国光大家银行*/
+.payMethod label span.bank_0009,
+.payMethod label span.bank_0060c {
+  background-position: 0 -288px;
+}
+/*中国银行*/
+.payMethod label span.bank_0010,
+.payMethod label span.bank_0065c {
+  background-position: 0 -324px;
+}
+/*深圳发展银行*/
+.payMethod label span.bank_0011,
+.payMethod label span.bank_0070c {
+  background-position: 0 -360px;
+}
+/*浦发银行*/
+.payMethod label span.bank_0012 {
+  background-position: 0 -396px;
+}
+/*北京农村商业银行*/
+.payMethod label span.bank_0013,
+.payMethod label span.bank_0069c {
+  background-position: 0 -432px;
+}
+/*中国民生银行*/
+.payMethod label span.bank_0014,
+.payMethod label span.bank_0059c {
+  background-position: 0 -468px;
+}
+/*交通银行*/
+.payMethod label span.bank_0015 {
+  background-position: 0 -504px;
+}
+/*鍖椾含閾惰*/
+.payMethod label span.bank_0016 {
+  background-position: -132px 0;
+}
+/*华夏银行*/
+.payMethod label span.bank_0017 {
+  background-position: -132px -36px;
+}
+/*温州银行*/
+.payMethod label span.bank_0018 {
+  background-position: -132px -72px;
+}
+/*涓婃捣鍐滄潙鍟嗕笟閾惰*/
+.payMethod label span.bank_0019 {
+  background-position: -132px -108px;
+}
+/*渤海银行*/
+.payMethod label span.bank_0020 {
+  background-position: -132px -144px;
+}
+/*鏅嬪煄甯傚晢涓氶摱琛�*/
+.payMethod label span.bank_0021,
+.payMethod label span.bank_0057c {
+  background-position: -132px -180px;
+}
+/*汉口银行*/
+.payMethod label span.bank_0022,
+.payMethod label span.bank_0058c {
+  background-position: -132px -216px;
+}
+/*广东发展银行*/
+.payMethod label span.bank_0023 {
+  background-position: -132px -543px;
+}
+/*支付宝*/
+.payMethod label span.bank_0024 {
+  background-position: -132px -468px;
+}
+/*绉诲姩绁炲窞琛屽崱*/
+.payMethod label span.bank_0032 {
+  background-position: -132px -252px;
+}
+/*浙商银行*/
+.payMethod label span.bank_0033 {
+  background-position: -132px -288px;
+}
+/*宁波银行*/
+.payMethod label span.bank_0034 {
+  background-position: -132px -324px;
+}
+/**/
+.payMethod label span.bank_0155,
+.payMethod label span.bank_0063c {
+  background-position: -132px -360px;
+}
+/*杭州银行*/
+.payMethod label span.bank_0036 {
+  background-position: -132px -396px;
+}
+/*BEA东亚银行*/
+.tj li label img {
+  border: 1px solid #fff;
+}
+.payTab {
+  overflow: hidden;
+  _zoom: 1;
+}
+.payTab li {
+  float: left;
+  width: 120px;
+  height: 29px;
+  line-height: 29px;
+  font-family: "宋体";
+  _font-family: Tahoma;
+  border: 1px solid #e9e9e9;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.payTab li.active {
+  font-weight: bold;
+  position: relative;
+  z-index: 3;
+  border-bottom: 1px solid #fff;
+}
+/* 兑换券支付 */
+.couponList li table {
+  width: 930px;
+}
+.couponList li .poster {
+  width: 101px;
+  height: 93px;
+}
+.couponList li dl {
+  width: 812px;
+}
+.couponList li dl dt {
+  padding-bottom: 20px;
+  overflow: hidden;
+  zoom: 1;
+}
+.couponList li dl dt h2 {
+  float: left;
+  width: auto;
+}
+.couponList li dl dt span {
+  float: left;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+.couponList li table tr td.q_name .wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  _height: 28px;
+  _padding-top: 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.couponList li table tr td.q_name .wrap i.triangle{
+	border-width:6px;border-color:#9f9e9e transparent transparent transparent;
+	position:relative;left:2px;right:auto;top:-2px;
+}
+
+.notransform .couponList li table tr td.q_name .wrap i.triangleToUp{
+	border-color:transparent transparent #9f9e9e transparent;border-style:none dashed solid dashed;	
+}
+.couponList li table tr td.q_name .wrap b {
+  display: inline-block;
+  width: 9px;
+  height: 5px;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 5px;
+  overflow: hidden;
+  background: url("../../images/icon.png?v=20130905") left -112px no-repeat;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -ms-transition: -ms-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+}
+.couponList li table tr td .active b {
+  -webkit-transform: rotate(180deg);
+  /* Saf3.2+, Chrome */
+
+  -moz-transform: rotate(180deg);
+  /* FF4+ */
+
+  -ms-transform: rotate(180deg);
+  /* IE10 */
+
+  -o-transform: rotate(180deg);
+  /* Opera 10.5+ */
+
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.couponList li table tr td.q_name .pop_coupon {
+  display:none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  background: #fff;
+  border: 1px solid #bbbbbb;
+  z-index: 10;
+}
+.couponList li table tr td.q_name .active .pop_coupon{
+	display:block;}
+.couponList li table tr td.q_name .iFrameGround{
+	display:none;}
+.couponList li table tr td.q_name .active .iFrameGround{
+	display:block;}
+.couponList li table tr td.q_name .pop_coupon table {
+  width: 560px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #fff;
+}
+.couponList li table tr td.q_name .pop_coupon table thead th {
+  height: 29px;
+  line-height: 29px;
+  font-size: 12px;
+  background: #ebebeb;
+  cursor: default;
+}
+.couponList li table tr td.q_name .pop_coupon table tbody td {
+  height: 45px;
+  font-size: 12px;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.couponList li table tr td.q_name .pop_coupon table tbody tr.last td {
+  border: 0;
+}
+.couponList li table tr td .active .pop_coupon {
+  display: block;
+}
+.couponList li table tr td .notes {
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: -38px;
+  width: 100px;
+  padding: 5px;
+  line-height: 14px;
+  white-space: nowrap;
+  font-size: 12px;
+  border: 1px solid #dedede;
+  color: #999999;
+  background: #fff4c8;
+  text-align: center;
+}
+.couponList li table tr td .notes em {
+  display: block;
+  position: absolute;
+  left: 45px;
+  bottom: -7px;
+  width: 12px;
+  height: 7px;
+  overflow: hidden;
+  background: url("../../images/detail/btn_show.png?v=20130905") 0 -305px no-repeat;
+  z-index: 6;
+}
+.couponList li table tr td .active .notes {
+  display: block;
+}
+.cp_tel_box {
+  padding-right: 29px;
+  padding-top: 17px;
+  padding-bottom: 30px;
+  border-bottom: 1px dotted #d2d2d2;
+  height: 32px;
+  line-height: 32px;
+  font-family: "宋体";
+  _font-family: Tahoma;
+  clear: both;
+}
+.cp_tel_box h3 {
+  position: relative;
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 36px;
+  padding-left: 20px;
+  background: url("../../images/detail/btn_show.png?v=20130905") no-repeat left -268px;
+}
+.cp_tel_box h3 a {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+}
+.cp_tel_box .input {
+  position: relative;
+  float: right;
+}
+.cp_tel_box .input input {
+  width: 136px;
+  padding: 7px 8px 5px 8px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #d8d8d8;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ea4727;
+}
+.cp_tel_box .input .phoneErr {
+  border: 1px solid #f00;
+}
+.cp_tel_box .input .tip {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  _top: -29px;
+  width: 175px;
+  padding: 0 8px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f00;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+}
+.cp_tel_box .meg {
+  display: none;
+  float: right;
+  width: 269px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-right: 7px;
+  color: #686868;
+  overflow: hidden;
+  background: url("../../images/detail/tip_bg.gif?v=20130905") left 0 no-repeat;
+}
+.numUpDown {
+  position: relative;
+  width: 72px;
+  height: 19px;
+  margin: 0 auto;
+}
+.numUpDown a {
+  float: left;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #d3d3d3;
+  overflow: hidden;
+  margin-top: 5px;
+  background: url("../../images/detail/tab_bg.gif?v=20130905") -86px -223px no-repeat;
+}
+.numUpDown a:hover {
+  border: 1px solid #ffb098;
+}
+.numUpDown input {
+  float: left;
+  display: inline;
+  width: 34px;
+  height: 17px;
+  line-height: 17px;
+  margin-left: 7px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #ffb098;
+  color: #e83a18;
+  background: url("../../images/detail/tab_bg.gif?v=20130905") -73px -205px no-repeat;
+}
+.numUpDown .add {
+  float: right;
+  background-position: -74px -223px;
+}
+/* 	支付页面优化--支付方式为弹出层内选择
+	2013-03-31
+	xuying
+ */
+.selPayMethod {
+  padding-right: 29px;
+  overflow: hidden;
+  zoom: 1;
+}
+.selPayMethod h3,
+.selPayMethod .box,
+.selPayMethod .edit {
+  float: right;
+  margin-left: 4px;
+}
+.selPayMethod h3,
+.selPayMethod .edit {
+  height: 37px;
+  line-height: 37px;
+}
+.selPayMethod h3 {
+  font-weight: bold;
+  font-size: 14px;
+}
+#cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  background: #000;
+  display: none;
+  opacity: 0.6;
+  z-index: 10000;
+}
+#payment {
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 940px;
+  min-height: 420px;
+  _height: 420px;
+  margin-left: -470px;
+  margin-top: 0;
+  z-index: 10001;
+  background: #fff;
+}
+.sureEdit {
+  width: 151px;
+  height: 37px;
+  line-height: 37px;
+  border: 0 none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background: url("../../images/btns.png?v=20130905") no-repeat 0 -96px;
+}
+a.cancleEdit {
+  color: #333333;
+  text-decoration: none;
+}
+a.cancleEdit:hover {
+  text-decoration: underline;
+}
+a.cancleEdit:visited {
+  color: #333333;
+}
+.payMeg {
+  position: relative;
+  padding-bottom: 40px;
+  background: #fff;
+}
+.payMeg h2 {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid #6e6e6e;
+  color: #333333;
+}
+.payDialog .iDialogClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: url("../../images/detail/code/btns.gif?v=20130905") 0 -73px;
+}
+.payDialog .iDialogCloseDown,
+.payDialog .iDialogCloseDown:hover {
+  top: 20px;
+  right: 20px;
+}
+.payMeg .main {
+  padding: 20px 0 40px 60px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.payMeg .btn {
+  text-align: center;
+}
+.payMeg .btn input {
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  border: 0 none;
+  color: #000;
+  background: url("../../images/btns.png?v=20130905") no-repeat left -134px;
+  cursor: pointer;
+}
+/* 支付页面增加使用优惠券 */
+.coupon_num {
+  width: 918px;
+  margin-left: 14px;
+  border: 1px solid #eaeaea;
+  border-top: 0;
+  clear: both;
+  background: #f9f9f9;
+  overflow: hidden;
+  padding: 10px;
+  padding-right: 0;
+  padding-top: 17px;
+}
+.coupon_num .title {
+  float: left;
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+  _line-height: 22px;
+  text-align: right;
+}
+.coupon_num .rd_css {
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-right: 3px;
+  margin-top: 3px;
+  margin-top: 1px\9;
+  *margin-top: -3px;
+}
+.coupon_num label {
+  float: left;
+}
+.coupon_num .select {
+  display: none;
+  float: left;
+  width: 210px;
+  height: 22px;
+  margin-left: 10px;
+  margin-top: -1px;
+}
+.coupon_num .use_coupon_row {
+  overflow: hidden;
+  zoom: 1;
+  height: 25px;
+  padding-top: 3px;
+}
+.coupon_num .coupon_num_left {
+  float: left;
+  width: 650px;
+  text-align: left;
+}
+.coupon_num .coupon_num_left2 {
+  float: right;
+  width: 750px;
+  text-align: right;
+  height: 22px;
+  line-height: 22px;
+}
+.coupon_num .codeTip1 {
+  width: 95px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: url("../../images/detail/tip_bg.gif?v=20130905") #fefaea -184px -52px no-repeat;
+}
+.coupon_num .codeTip2 {
+  width: 232px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: url("../../images/detail/tip_bg.gif?v=20130905") #fefaea -47px -26px no-repeat;
+}
+.coupon_num .coupon_input {
+  height: 38px;
+  line-height: 38px;
+  _height: 34px;
+  _padding-top: 4px;
+  _font-family: Tahoma;
+  text-align: right;
+}
+.coupon_num .fav_err {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  color: #B91313;
+}
+.coupon_num .fav_self {
+  padding-bottom: 5px;
+  padding-right: 265px;
+  color: #000;
+  text-align: right;
+}
+.coupon_num .fav_self a,
+.coupon_num .fav_self a:hover,
+.coupon_num .fav_self a:visited {
+  color: #1e50a2;
+}
+.coupon_num .check {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.coupon_num .text {
+  display: none;
+  float: left;
+  width: 110px;
+  padding: 4px 17px 4px 3px;
+  height: 14px;
+  line-height: 14px;
+  border: 1px solid #beced8;
+  margin-left: 10px;
+  margin-top: -2px;
+  background: #fff;
+}
+.coupon_order {
+  float: left;
+  padding-top: 2px;
+}
+.coupon_order .title {
+  float: left;
+  display: inline-block;
+  width: 80px;
+  line-height: 18px;
+  text-align: right;
+}
+.coupon_num_true .text {
+  border: 1px solid #beced8;
+  background: url("../../images/detail/btn_show.png?v=20130905") #ffffff right -128px no-repeat;
+}
+.coupon_num_error .text {
+  border: 1px solid #f00;
+  background: url("../../images/detail/btn_show.png?v=20130905") #ffffff right -96px no-repeat;
+}
+.coupon_num_disabled .text {
+  background: #ece9d8;
+  border: 1px solid #beced8;
+}
+.coupon_num_true .fav_err {
+  display: none;
+}
+.coupon_num_disabled .fav_err {
+  display: none;
+}
+.coupon_num_disabled #favTip {
+  visibility: hidden;
+}
+.coupon_num .textGray {
+  color: #C1C1C1;
+}
+.coupon_num .price {
+  float: right;
+  display: inline-block;
+  width: 123px;
+  line-height: 22px;
+  margin-left: 22px;
+  font-weight: bold;
+  color: #E83A18;
+  text-align: left;
+}
+.coupon_num .price em {
+  font-weight: bold;
+  color: #e83a18;
+}
+.coupon_count {
+  padding: 20px 0 40px 0;
+  line-height: 24px;
+  text-align: right;
+  clear: both;
+}
+.coupon_count .m {
+  font-size: 14px;
+}
+.coupon_count .m em {
+  font-size: 30px;
+  color: #e83a18;
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+}
+.coupon_count .m em i {
+  font-size: 20px;
+}
+.coupon_count .tip {
+  color: #a09f9f;
+  padding-left: 748px;
+  text-align: left;
+}
+.coupon_count_rebate {
+  width: 928px;
+  margin-left: 14px;
+  padding: 10px 0px 10px 0;
+  line-height: 24px;
+  text-align: right;
+  clear: both;
+  background: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-top: 0;
+}
+.coupon_count_rebate b {
+  color: #ff0000;
+  font-weight: bold;
+}
+.coupon_count_rebate em {
+  font-size: 30px;
+  color: #e83a18;
+  display: inline-block;
+  width: 121px;
+  text-align: left;
+}
+.coupon_count_rebate em i {
+  font-size: 20px;
+}
+.coupon_count_rebate .amount {
+  font-size: 14px;
+  margin-left: 30px;
+}
+.coupon_count_rebate .tip {
+  padding-left: 737px;
+  color: #A09F9F;
+  font-size: 12px;
+  text-align: left;
+}
+.rebate_dialog .iDialogFoot {
+  padding-bottom: 40px;
+  border: 0;
+  background: #fff;
+  text-align: center;
+}
+/* 支付页面增加使用优惠券--手动输入优惠券 */
+.meg {
+  position: relative;
+  padding: 40px 0;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+.codeDialog .iDialogClose {
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../../images/detail/code/btns.gif?v=20130905") 0 -73px no-repeat;
+}
+.codeDialog .iDialogClose:hover {
+  top: 20px;
+  right: 20px;
+}
+.meg ul {
+  padding-left: 65px;
+}
+.meg ul li {
+  height: 26px;
+  line-height: 26px;
+  color: #333333;
+}
+.meg ul li .th {
+  display: inline-block;
+  width: 90px;
+}
+.meg ul li .text {
+  width: 198px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #bcbcbc;
+}
+.meg ul li .err {
+  color: #ce3a00;
+}
+.btn_meg_charge {
+  display: inline-block;
+  width: 65px;
+  height: 26px;
+  line-height: 26px;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  background: url("../../images/detail/code/btns.gif?v=20130905") 0 -45px no-repeat;
+}
+/* 不可编辑状态 */
+.couponList li .isFromOrder table tr td.q_name .wrap {
+  cursor: default;
+}
+.couponList li .isFromOrder table tr td.q_name .wrap b {
+  display: none;
+}
+.couponList li .isFromOrder .numUpDown a {
+  display: none;
+}
+.couponList li .isFromOrder .numUpDown {
+  width: auto;
+  height: auto;
+}
+.couponList li .isFromOrder .numUpDown input {
+  float: none;
+  width: auto;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: 0;
+}
+.couponList li .isFromOrder .cp_tel_box .input input {
+  font-size: 20px;
+  border: 0;
+  background: #fff;
+}
+.couponList li .isFromOrder .cp_tel_box .meg {
+  display: none;
+  padding: 0;
+}
+/* 搜索页面 */
+/* Tab切换 */
+.searchTab li {
+  width: 129px;
+  background-position: 0 -34px;
+}
+.searchTab li.first {
+  background-position: 0 -68px;
+}
+.searchTab li.active {
+  background-position: 0 0;
+}
+.searchList h2 {
+  height: 52px;
+  line-height: 52px;
+  padding-left: 10px;
+  border-top: 1px dashed #c5c4c4;
+  font-size: 14px;
+  font-weight: normal;
+  background: none;
+}
+.searchList h2 em {
+  color: #ff4b29;
+}
+.searchList h2 em.bold {
+  font-weight: bold;
+}
+.searchList h2 em.res {
+  font-weight: bold;
+  margin: 0 3px;
+}
+.searchList .bdtNone {
+  margin-top: -1px;
+}
+.searchList #part1 {
+  margin-top: -1px;
+}
+.searchList ul {
+  overflow: hidden;
+}
+.searchList ul li {
+  border: 0;
+}
+.searchList .movieList li {
+  padding-top: 0;
+  background: none;
+}
+.searchList .cinemaList {
+  width: 691px;
+  margin: 0 auto;
+  border: 0;
+}
+.searchList .cinemaList li {
+  padding: 5px 14px 24px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #c5c4c4;
+  background: none;
+}
+.searchList .cinemaList li ol.left {
+  width: 480px;
+  padding: 0;
+  padding-top: 21px;
+}
+.searchList .cinemaList li ol.right {
+  *padding-top: 5px;
+  _padding-top: 5px;
+  padding-top: 5px\9;
+}
+/* 支付成功页面 */
+.paySucc {
+  padding: 50px 0 60px 240px;
+  background:#fff url("../../images/detail/icon_suc.gif?v=20130905") no-repeat 180px 57px;
+}
+.paySucc .offer {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 178px;
+  height: 38px;
+  color: #666666;
+}
+.paySucc .offer img {
+  border: 1px solid #ddd;
+  color: #c8c8c8;
+  margin: 0 2px;
+  vertical-align: text-bottom;
+}
+.paySucc dt {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font: bold 22px "微软雅黑", "Microsoft YaHei", "黑体";
+  color: #333333;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+.paySucc dt em {
+  color: #f00;
+  font-family: Arial;
+}
+.paySucc dt h3 {
+  font: 12px "宋体";
+  margin-top: 10px;
+}
+.paySucc dd em.num {
+  color: #999999;
+  font: 14px "宋体";
+}
+.paySucc dd {
+  line-height: 30px;
+  color: #343434;
+}
+.paySucc dd em {
+  margin: 0 5px;
+}
+.paySucc dd a.lookDetail {
+  display: inline-block;
+  width: 148px;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "宋体";
+  _font-family: Tahoma;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: url("../../images/detail/pay.gif?v=20130905") -73px -210px no-repeat;
+}
+.paySucc .groupName {
+  font-size: 14px;
+  font-weight: bold;
+}
+.paySucc_HotList {
+  display: none;
+  border: 1px solid #E9E9E9;
+  overflow: hidden;
+  background: #fff;
+}
+.paySucc_HotList .title {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #E9E9E9;
+  font-size: 18px;
+  font-family: "微软雅黑", "Microsoft YaHei";
+  height: 40px;
+  line-height: 34px;
+  padding-left: 20px;
+}
+.paySucc_HotList ul li {
+  background: none;
+}
+.paySucc_HotList .hotList {
+  margin: 0 auto;
+  padding-left: 30px;
+}
+/* 电影票二期
+*  影院详情增加兑换券
+*  20121219 by 徐莹
+*/
+.movie_s_tab {
+  height: 36px;
+  border-top: 1px solid #EBEBEB;
+  background: #f8f8f8;
+}
+.movie_s_tab li {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 135px;
+  height: 34px;
+  line-height: 30px;
+  border-right: 1px solid #ebebeb;
+  border-top: 3px solid #F8F8F8;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color: #444444;
+  cursor: pointer;
+}
+.movie_s_tab li.active {
+  background: #fff;
+  border-top: 3px solid #ff4b29;
+  position: relative;
+}
+.movie_s_tab li .new {
+  position: absolute;
+  right: -14px;
+  top: -12px;
+  width: 43px;
+  height: 30px;
+  overflow: hidden;
+  background: url("../../images/tab_play_bg.gif?v=20130905") no-repeat -122px -210px;
+}
+.movie_s_tab li .dhq {
+  display: block;
+}
+.movie_s_tab li .pq {
+  display: none;
+}
+.movie_s_tab li.other .new {
+  display: none;
+}
+.movie_s_tab li.other .dhq {
+  display: none;
+}
+.movie_s_tab li.other .pq {
+  display: block;
+}
+.movie_s_cont {
+  padding-top: 13px;
+  border-top: 1px solid #ebebeb;
+  _margin-top: -1px;
+}
+#subPart2 .btn_orange61 {
+  width: 80px;
+}
+#subPart1,
+#subPart2 {
+  display: none;
+}
+#change_cont {
+  border-bottom: 1px solid #ebebeb;
+}
+.time_cont_list {
+  width: 683px;
+  padding: 14px 0 17px 6px;
+  margin-left: 9px;
+  background: url("../../images/detail/s_hot_split.gif?v=20130905") -3px bottom repeat-x;
+}
+.time_cont_list dt {
+  height: 28px;
+  line-height: 28px;
+}
+.time_cont_list dt em {
+  font-weight: bold;
+  color: #ff5a29;
+}
+.time_cont_list dd {
+  padding-top: 14px;
+  padding-left: 46px;
+  overflow: hidden;
+  zoom: 1;
+}
+.time_cont_list dd label {
+  float: left;
+  display: inline;
+  margin-left: -46px;
+  margin-top: 0;
+}
+.time_cont_list dd span {
+  float: left;
+  height: 12px;
+  line-height: 12px;
+  font-family: "宋体";
+  padding: 0 10px 0 9px;
+  margin: 2px 0;
+  white-space: nowrap;
+  word-spacing: normal;
+  border-right: 1px solid #ccc;
+}
+.time_cont_list dd span.l {
+  border-right: 0;
+}
+.time_cont_list dd span.out {
+  color: #9c9c9c;
+}
+.sel_copy {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: 62px;
+  border: 1px solid #bbb;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+}
+.sel_copy li {
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.sel_copy li a {
+  display: inline-block;
+  width: 62px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.sel_copy li a:hover {
+  color: #1E50A2;
+  text-decoration: none;
+  background: #f2f2f2;
+}
+.active .sel_copy {
+  display: block;
+}
+.copy {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.copy b {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  width: 9px;
+  height: 5px;
+  overflow: hidden;
+  background: url("../../images/icon.png?v=20130905") left -112px no-repeat;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -ms-transition: -ms-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+}
+#subPart1 .active b {
+  -webkit-transform: rotate(180deg);
+  /* Saf3.2+, Chrome */
+
+  -moz-transform: rotate(180deg);
+  /* FF4+ */
+
+  -ms-transform: rotate(180deg);
+  /* IE10 */
+
+  -o-transform: rotate(180deg);
+  /* Opera 10.5+ */
+
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.change_tip {
+  border-top: 1px solid #e9e9e9;
+  padding: 10px 20px;
+  line-height: 22px;
+  color: #333333;
+}
+/* 电影票二期
+*  云图活动确认支付
+*  20130129 by 徐莹
+*/
+.yt_com {
+  padding: 100px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 26px;
+}
+.yt_com em {
+  font-weight: bold;
+  color: #B91313;
+}
+.yt_com .yt_anew {
+  display: inline-block;
+  width: 89px;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  background: #e0e0e0;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.yt_com .yt_sure {
+  display: inline-block;
+  width: 89px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background: #ff4b29;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.yt_com .yt_anew:hover,
+.yt_com .yt_anew:visited {
+  color: #000;
+  text-decoration: none;
+}
+.yt_com .yt_sure:hover,
+.yt_com .yt_sure:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.act_note_box {
+  height: 27px;
+}
+.act_note {
+  width: 960px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background: #f4d265;
+  color: #4b4b4b;
+}
+.act_note em {
+  font-weight: bold;
+  color: #B91313;
+}
+/*
+影院排期优化 by 田刚
+*/
+dl.scheduleAll {
+  width: 685px;
+  padding: 0 0 0px 20px;
+  text-align: left;
+  font: 12px/1.5 arial, "宋体";
+  border-top: 1px solid #EBEBEB;
+  color: #333333;
+  background: url("../../images/border_line.gif?v=20130905") repeat-x scroll left bottom transparent;
+}
+dl.noBorder {
+  background: none;
+}
+.scheduleAll dt {
+  line-height: 65px;
+  font-size: 14px;
+  color: #333333;
+}
+.scheduleAll dd {
+  margin-bottom: 6px;
+  overflow: hidden;
+  zoom: 1;
+}
+.scheduleAll dd p {
+  position: relative;
+  padding-left: 35px;
+  line-height: 18px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+  font-family: "宋体";
+  overflow: hidden;
+  zoom: 1;
+}
+.scheduleAll dd .date {
+  float: left;
+  width: 88px;
+  height: 18px;
+  margin-top: 5px;
+  border: 1px solid #e8e8e8;
+  color: #333333;
+  text-align: center;
+}
+.scheduleAll dd .date em {
+  font-weight: bold;
+  color: #ff5a29;
+  margin-right: 8px;
+}
+.scheduleAll dd .time {
+  float: left;
+  width: 570px;
+  margin-left: 20px;
+}
+.scheduleAll dd p label {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.scheduleAll dd p span {
+  display: inline-block;
+  width: 62px;
+  height: 26px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #666666;
+  text-align: center;
+  margin: 2px 15px 10px 0;
+  white-space: nowrap;
+  word-spacing: normal;
+  background: url("../../images/detail/tab_bg.gif?v=20130905") no-repeat -63px -395px;
+}
+.scheduleAll dd p span.out {
+  color: #999999;
+  background-position: left -395px;
+}
+.scheduleAll dd p span.l {
+  border-right: none;
+}
+/*
+影院四期优化之排期优化 by 田刚
+*/
+.movieTabC a.moreDate {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid #e3e3e3;
+  background: #f6f6f6;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  display: block;
+}
+.movieTabC a.moreDate i {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 4px 4px 0;
+  border-color: #666666 transparent transparent;
+  border-style: solid;
+  _border-style: solid dotted;
+}
+.movieTabC a.moreDate:hover {
+  border: 1px solid #ffcebf;
+  background: #ffe6df;
+}
+.movieTabC a.moreDate:hover i {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 4px 4px 0;
+  border-color: #ff5a29 transparent transparent;
+  border-style: solid;
+  _border-style: solid dotted;
+}
+.movieTabC a.on {
+  top: auto;
+  bottom: 5px;
+}
+#date a.on {
+  top: auto;
+  bottom: 10px;
+  _bottom: 12px;
+}
+.movieTabC a.on i {
+  left: 4px\9;
+  top: 6px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent #666666;
+  border-style: solid;
+  _border-style: solid dotted;
+  border-width: 0 5px 5px\9;
+  _border-width: 0 5px 5px;
+}
+.movieTabC a.on:hover i {
+  left: 4px\9;
+  top: 6px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  zoom: 1;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent #ff5a29;
+  border-style: solid;
+  _border-style: solid dotted;
+  border-width: 0 5px 5px\9;
+  _border-width: 0 5px 5px;
+}

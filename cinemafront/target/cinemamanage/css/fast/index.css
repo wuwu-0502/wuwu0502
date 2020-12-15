@@ -1,0 +1,139 @@
+﻿/*快速购票*/
+html,body{background: #fff;}
+a:hover{text-decoration:none;}
+.schedule{margin:0 auto;padding:0 auto;}
+.schedule,.schedule2,.schedule3,.schedule4{}
+
+
+/*汇总信息样式 end*/
+
+/*快速购票入口*/
+.fast_top{padding:15px 0 6px 20px;}
+#f_switchCity{z-index:10;}
+.fast_sel{position:relative;display:inline-block;height:24px;line-height:24px;padding:0 30px 0 15px;color:#fff;background:#f05335;cursor:pointer;z-index:5;}
+.fast_sel .cityListBox{width:905px;height:400px;margin-top:0;overflow:hidden;}
+.fast_sel .cityList{width: 905px;padding-right: 0;left:0;top:24px;border:1px solid #f05335;height:400px;z-index:5;}
+.fast_sel .cityList .cityListBox dl{border-top: 0;}
+.fast_sel .cityList .cityListBox dl dd{width: 830px;}
+.fast_sel .curDate,.fast_sel .curDate:hover,.fast_sel .curDate:visited,.fast_sel .curTime,.fast_sel .curTime:hover,.fast_sel .curTime:visited{color:#fff;}
+.fast_top .fast_sel b{position:absolute;right:11px;top:10px;width:0;height:0;overflow:hidden;zoom:1;border-width:4px 4px 0;border-color:#fff transparent transparent;border-style:solid;_border-style:solid dotted;-moz-transition:-moz-transform .2s ease-in;-ms-transition:-ms-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;}
+.fast_top .active b{width:0;height:0;overflow:hidden;zoom:1;border-width:0 4px 4px;border-color:transparent transparent #fff;border-style:#808080 transparent transparent;_border-width:0 5px 5px;_border-style:solid dotted;}
+
+.ul_sel{display:none;position:absolute;left:0;top:22px;padding:2px;border:1px solid #f05335;background:#fff;}
+.ul_sel li{height:24px;line-height:24px;font-size:12px;font-weight:normal;text-align:center;}
+.ul_sel li a{display:inline-block;width:100%;height:24px;text-align:center;color:#000;}
+.ul_sel li a:hover,.fast_top .fast_sel ul li a.active{background:#fef7f6;color:#000;}
+.ul_sel li a:visited{color:#000;}
+.active .ul_sel{display:block;}
+#cityFastList{left:0;top:24px;border:2px solid #f05335;}
+/*主体部分 height:500px;*/
+
+.noThing{padding-top:120px;text-align:center;color:#999;}
+.noThing img{width:107px;height:90px;margin-bottom:10px;}
+
+.fast_main{}
+/*正在热映影片*/
+.fast_movie{float:left;margin-left:9px;padding-top:6px;_display:inline;width:256px;}
+.fast_main h2{position:relative;height:40px;line-height:40px;border-bottom:1px dashed #b5b5b5;font-size:14px;font-weight:bold;color:#333;z-index:3;}
+.fast_main h2 .notes{font-size:12px;display:none;background:#FFF4C8;border:1px solid #DEDEDE;color:#999;position:absolute;left:120px;top:38px;width:180px;line-height:22px;font-weight:normal;text-align:center;}
+.fast_main h2.active .notes{}
+.fast_main h2 .notes em{display:block;overflow:hidden;position:absolute;left:100px;top:-7px;width:12px;height:7px;background:url("../../images/icon8.png?v=20130527") -14px -102px no-repeat;z-index:6;}
+.fast_main h2 .notes em.close{background:url("../../images/fastBuy/icon.png?v=20130606") -75px -378px no-repeat;width:9px;height:9px;display:inline-block;left:166px;top:6px;cursor:pointer;}
+.fast_main h2 b.change{background:url("../../images/fastBuy/icon.png?v=20130603") 0 -393px no-repeat;width:59px;height:24px;display:inline-block;position:absolute;right:0;top:8px;cursor:pointer;}
+
+.fast_main h2 a,.fast_main h2 a:hover{color:#000;}
+.fast_main h2 em{font-size:16px;font-weight:bold;color:#f05335;}
+.fast_main h2 .arrow{float:left;margin-top:19px;margin-left:5px;width:0;height:0;overflow:hidden;zoom:1;border-width:4px 4px 0;border-color:#ccc transparent transparent;border-style:solid;_border-style:solid dotted;-moz-transition:-moz-transform .2s ease-in;-ms-transition:-ms-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;}
+.fast_main .active .arrow{width:0;height:0;overflow:hidden;zoom:1;border-width:0 4px 4px;border-color:transparent transparent #ccc;border-style:#808080 transparent transparent;_border-width:0 5px 5px;_border-style:solid dotted;}
+/*.fast_main .fast_cinema .active .arrow{border-color:transparent transparent #ccc;border-style:none solid solid;border-width:0 4px 4px;}*/
+
+.fast_movie_box{width:100%;height:383px;overflow:hidden;margin-top:8px;}
+.fast_movie_list{width:240px;}
+.fast_movie_list li{width:238px;height:116px;overflow:hidden;}
+
+
+.fast_movie_list li{width:238px;height:116px;overflow:hidden;}
+
+.fast_movie_list li a.movie_block{position:relative;display:inline-block;width:212px;height:94px;border:2px solid #fff;padding:9px;}
+.fast_movie_list li a.movie_block:hover{background:#fef5f3;border:2px solid #fef5f3;}
+.fast_movie_list li a.movie_block b{display:none;position:absolute;right:0;bottom:0;width:20px;height:19px;background:url(../../images/fastBuy/fast_icon.gif) left top no-repeat;}
+
+.fast_movie_list li.active a.movie_block b{display:block;}
+.fast_movie_list li.active a.movie_block,.fast_movie_list li.active a.movie_block:hover{border:2px solid #f05335;background:#fff;}
+
+.fast_movie_list li .poster{position:relative;float:left;width:70px;height:93px;}
+.fast_movie_list li .poster i{position:absolute;left:-2px;top:-2px;width:33px;height:33px;}
+.fast_movie_list li .poster i.sanD{background:url(../../images/icon.png?v=20130401) -33px -286px no-repeat;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD_s.png?v=20130407'); _background-image:none;}
+.fast_movie_list li .poster i.imax{background:url(../../images/icon.png?v=20130401) 0 -286px no-repeat;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax_s.png?v=20130407'); _background-image:none;}
+
+.fast_movie_list li dl{width:132px;margin-left:79px;_margin-left:76px;}
+.fast_movie_list li dl dt{position:relative;height:22px;font:14px/22px "微软雅黑";color:#000;}
+.fast_movie_list li dl dt em{position:absolute;right:-10px;top:0px;font:italic bold 20px/22px Arial;color:#FF4B29;}
+.fast_movie_list li dl dt em i{font-size:16px;}
+.fast_movie_list li dl dd{height:18px;line-height:18px;color:#666;overflow:hidden;}
+.fast_movie_list li dl dd.summary{line-height:18px;height:36px;color:#999;overflow:hidden;}
+/*所有影院*/
+.fast_cinema{position:relative;float:left;margin-left:20px;padding-top:6px;_display:inline;width:216px;}
+.fast_cinema .curDistrict{color:#000;padding:4px 0px;}
+.fast_cinema .curDistrict:link,
+.fast_cinema .curDistrict:visited,
+.fast_cinema .curDistrict:hover{color:#000;}
+.fast_cinema .curDistrict span{float:left;_font-family:Tahoma;cursor:pointer;}
+.fast_cinema_box{position:relative;margin-top:8px;height:382px;width:100%;coverflow:hidden;}
+.fast_search{position:absolute;left:0;top:50px;z-index:2;width:162px;height:16px;line-height:16px;padding: 6px 20px 6px 10px;margin-bottom:4px;border:1px solid #d5d5d5;background:#fff url(../../images/icon_norepeat8.png) right -174px no-repeat;color:#333;}
+.textGray{color:#b6b6b6;}
+.fast_cinema_list{margin-top:30px;}
+.fast_cinema_list li{width:193px;color:#333;cursor:pointer;}
+.fast_cinema_list li a{position:relative;display:inline-block;width:176px;padding-left:14px;height:26px;line-height:26px;border:2px solid #fff;color:#333;}
+.fast_cinema_list li a,
+.fast_cinema_list li a:link,
+.fast_cinema_list li a:visited,
+.fast_cinema_list li a:hover{color:#333;}
+.fast_cinema_list li a b{display:none;position:absolute;right:0;bottom:0;width:20px;height:19px;background:url(../../images/fastBuy/fast_icon.gif) left top no-repeat;}
+.fast_cinema_list li.active a b{display:block;}
+.fast_cinema_list li a:hover{border:2px solid #fef5f3;color:#333;background:#fef5f3;}
+.fast_cinema_list li.active a,.fast_cinema_list li.active a:hover{color:#333;background:#fff;border:2px solid #f05335;}
+.fast_cinema_list li.noResult{text-align:center;color:#999;cursor:default;}
+.fast_cinema_list li.noResult img{width:107px;height:90px;margin-bottom:10px;}
+
+#districtList{width:70px;top:30px;overflow:hidden;}
+#districtList li{*margin-left:-16px;}
+/*排期*/
+.fast_sch{float:left;margin-left:20px;padding-top:6px;_display:inline;width:206px;position:relative;}
+.fast_sch p{color:#999;text-align:center;padding-top:20px;line-height:20px;}
+.fast_sch_box{margin-top:8px;width:100%;height:383px;overflow:hidden;}
+.fast_sch_list{text-align:center;}
+.fast_sch_list li{/*padding-left:14px;*/height:29px;margin-bottom:15px;}
+.fast_sch_list li a{display:inline-block;width:176px;height:29px;line-height:29px;text-align:center;color:#999;background:url(../../images/fastBuy/fast_bg2.gif?v=20130509) left -29px no-repeat;cursor:pointer;}
+.fast_sch_list li a:link,
+.fast_sch_list li a:visited,
+.fast_sch_list li a:hover{color:#999;}
+.fast_sch_list li a strong{color:#333;}
+.fast_sch_list li a em{display:inline-block;width:70px;text-align:center;}
+.fast_sch_list li.active a em{color:#fff;}
+.fast_sch_list li a:hover{background-position:0 -58px;color:#999;}
+.fast_sch_list li.active a,.fast_sch_list li.active a:hover,.fast_sch_list li.active a strong{color:#fff;background-position:0 0;}
+.fast_sch .noTicket{width:107px;height:90px;margin:10px 46px 0;display:inline-block;}
+/*选中电影*/
+.fast_sel_movie{float:left;margin-left:16px;margin-top:-18px;zoom:1;overflow:hidden;position:relative;width:209px;height:457px;text-align:center;background:url(../../images/fastBuy/fast_movie_bg.jpg) left top no-repeat;}
+.fast_buy,.fast_buy:link,.fast_buy:visited{display:inline-block;width:183px;height:45px;margin-top:22px;border-radius:5px;font:22px/45px "微软雅黑";color:#fff;background:#f05335;text-align:center;}
+.fast_buy:hover{color:#fff;background:#ff5c3d;}
+.fast_buy_disabled,.fast_buy_disabled:link,.fast_buy_disabled:visited,.fast_buy_disabled:hover{color:#fff;background:#cdcdcd;cursor:default;}
+.fast_sel_main{height:354px;padding-top:35px;}
+.fast_sel_main h2{height:25px;line-height:25px;border:0;}
+.fast_sel_main .starbg{display:inline-block;width:75px;height:14px;text-align:left;background:url(../../images/icon.png?v=20130110) no-repeat 0 -14px;}
+.fast_sel_main .star{display:inline-block;width:75px;height:14px;background:url(../../images/icon.png?v=20130110) no-repeat 0 0;}
+.fast_sel_main .score{font:italic bold 18px/22px Arial;color:#FF4B29;}
+.fast_sel_main .score i{font-size:14px;}
+.fast_sel_main img{margin-top:6px;}
+.fast_sel_main .cinema_info{margin-top:10px;line-height:22px;}
+.cinema_info_no{margin-top:125px;margin-top:140px\9;font:bold 18px/30px "微软雅黑";color:#333;}
+.cinema_info em,.cinema_info_no em{font:bold 20px Arial;color:#f05335;}
+.cinema_info span,.cinema_info_no span{color:#f05335;}
+.cinema_info span.overTime,.cinema_info_no span.overTime{display:inline-block;height:16px;line-height:16px;}
+.cinema_info_no span.overTime{font-size:14px;}
+.fast_sel_movie_no{margin-left:123px;*margin-top:-36px;}
+
+
+.triangle{border-color:#fff transparent transparent transparent;top:10px;right:16px;}
+.notransform .triangleToUp{border-color:transparent transparent #fff transparent;_border-width:5px;}

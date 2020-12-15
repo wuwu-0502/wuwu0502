@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cinema.dao.OrderMapper">
+
+    <select id="getAll" resultType="com.cinema.entity.Order">
+      SELECT o_id,od.h_id,h_name,m_name,od_price,o_paytime,od_seat,o_no,o_subtime,s_data,o_status
+        FROM `order` o,hall h,movie m,`schedule`s,order_detail od
+        WHERE od.m_id=m.m_id AND od.h_id=h.h_id AND od.s_id=s.s_id and od.od_id=o.o_id and od.u_id=#{u_id}
+    </select>
+
+</mapper>

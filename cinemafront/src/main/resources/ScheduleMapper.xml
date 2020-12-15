@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cinema.dao.ScheduleMapper">
+
+
+    <!--获取所有的场次-->
+    <select id="getAllSchedules" resultType="com.cinema.entity.Schedule">
+        SELECT s_id,s_data,s_starttime,s_endtime,s_language,s_price,m_name,h_name,hall.h_id
+FROM schedule,movie,hall where schedule.m_id=movie.m_id and schedule.h_id=hall.h_id and s_data like concat("%",#{date},"%") and schedule.m_id=#{m_id}
+    </select>
+
+    <select id="passSchedule" resultType="com.cinema.entity.Schedule">
+        select s_id,s_data,s_starttime,s_seatuse,s_price ,hall.h_id,h_name,h_row,h_column,h_empty from schedule,hall where s_id=#{s_id} and schedule.h_id=hall.h_id
+    </select>
+
+    <select id="selectOid" resultType="com.cinema.entity.Order">
+        select * from `order` where o_no=#{o_no}
+    </select>
+
+    <update id="updateSeatuse">
+        update schedule set s_seatuse=#{s_seatuse} where s_id=#{s_id}
+    </update>
+
+    <delete id="delOrder">
+        delete from `order` where o_no=#{o_no}
+    </delete>
+
+    <delete id="delOrderDetail">
+        delete from order_detail where od_id=#{o_id}
+    </delete>
+
+
+
+</mapper>

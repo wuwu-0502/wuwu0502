@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 接口在dao包下
+namespace:接口全限定名-->
+<mapper namespace="com.cinema.dao.UserMapper">
+    <select id="selectStatic" resultType="com.cinema.entity.User">
+        select * from user where u_static=1
+    </select>
+    <select id="selectPwd" resultType="com.cinema.entity.User">
+        select u_pwd from user where u_name=#{u_name}
+    </select>
+    <update id="insertUser">
+        insert into user (u_name,u_pwd,u_sex,u_phone,u_email,u_qus,u_anw,u_time) values(#{u_name},#{u_pwd},#{u_sex},#{u_phone},#{u_email},#{u_qus},#{u_anw},#{u_time})
+    </update>
+    <update id="updateStatic">
+        update user set u_static=#{u_static} where u_name=#{u_name}
+    </update>
+    <select id="selectUser" resultType="com.cinema.entity.User">
+        select * from user where u_name=#{u_name}
+    </select>
+    <update id="insertOrder">
+        insert into `order` (o_no,o_status,o_subtime) values(#{o_no},#{o_status},#{o_subtime})
+    </update>
+    <update id="insertOrderDetail">
+        insert into order_detail (h_id,m_id,u_id,s_id,od_price,od_seat) values(#{h_id},#{m_id},#{u_id},#{s_id},#{od_price},#{od_seat})
+    </update>
+    <update id="updateScheduleSeat">
+        update schedule set s_seatuse=#{s_seatuse} where s_id=#{s_id}
+    </update>
+    <update id="updateStatus">
+        update `order` set o_status=#{o_status},o_paytime=#{o_subtime} where o_no=#{o_no}
+    </update>
+</mapper>

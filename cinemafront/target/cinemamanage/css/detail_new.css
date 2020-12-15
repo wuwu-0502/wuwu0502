@@ -1,0 +1,4236 @@
+/**************************************************************************************************************
+*@Description:影片列表页+详情页、影院列表页+详情页样式
+*@Author:xy
+*@Update:2013-8-27
+*/
+/* 影片详情页样式 end *************************************************************************/
+/* 按钮 */
+.btn_e34551, .btn_e34551:link, .btn_e34551:visited {
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	background: #f65864;
+}
+.btn_e34551:hover {
+	background: #e34551;
+	text-decoration: none;
+	color: #fff;
+}
+.btn_e34551:active {
+	background: #d93e4a;
+	text-decoration: none;
+	color: #fff;
+}
+.btn_45a2e3, .btn_45a2e3:link, .btn_45a2e3:visited, .btn_45a2e3:hover {
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	background: #45a2e3;
+}
+.btn_89_29 {
+	width: 89px;
+	height: 29px;
+	line-height: 29px;
+}
+.disabled, .disabled:link, .disabled:visited, .disabled:hover {
+	cursor: default;
+	background: #bbb;
+}
+
+/* 导航改版后删除此样式 */
+.searchBoxInd {
+	margin-bottom: 0;
+}
+body {
+	background: #f4f4f4;
+}
+.wrap990 {
+	width: 990px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+/* 上面电影详情模块 */
+.mv_info_box {
+	position: relative;
+	border: 1px solid #e9e9e9;
+	padding: 20px;
+	padding-right: 0;
+	background: #fff;
+}
+.mv_info_box .poster {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 267px;
+}
+.mv_info {
+	float: left;
+	padding-left: 19px;
+}
+.mv_info .mv_name {
+	display: inline-block;
+	padding-right: 18px;
+}
+.mv_info .mv_name h2 {
+	font: 28px "Microsoft YaHei";
+}
+.mv_info .summary {
+	font: normal 16px "Microsoft YaHei", "黑体";
+	line-height: 23px;
+	height: 23px;
+	margin-top: 8px;
+	margin-bottom: 28px;
+	color: #969696;
+	overflow: hidden;
+}
+.mv_info .des {
+	width: 465px;
+	padding-left: 35px;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
+	color: #545454;
+	overflow: hidden;
+}
+.mv_info .des .des_comming {
+	color: #FF6633;
+	font-weight: bold;
+	font-size: 14px;
+}
+.mv_info .other {
+	width: 465px;
+	padding-left: 35px;
+}
+.mv_info .other span {
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+	margin-top: 13px;
+	margin-right: 8px;
+	font-size: 12px;
+	padding: 0 6px;
+	text-align: center;
+	color: #9e9e9e;
+	font-family: Tahoma;
+	border-radius: 3px;
+	border: 1px solid #efefef;
+	background: #f3f3f3;
+}
+.mv_info .role {
+	width: 434px;
+	height: auto;
+	font-family: "SimSun";
+}
+.role_list {
+	overflow: hidden;
+	margin-left: 36px;
+}
+.role_list span {
+	float: left;
+	padding-right: 5px;
+	white-space: nowrap;
+}
+.player {
+	position: absolute;
+	right: 17px;
+	top: 150px;
+	width: 201px;
+	height: 118px;
+	line-height: 118px;
+	background: #000;
+	color: #fff;
+	font-size: 0;
+	cursor: pointer;
+	text-align: center;
+	background: #000;
+}
+.player .ieSpan {
+	display: inline-block;
+}
+.player a {
+	color: #fff;
+	text-decoration: underline;
+}
+.player .player_btn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 44px;
+	height: 44px;
+	overflow: hidden;
+	margin-left: -22px;
+	margin-top: -22px;
+	background: url('../../images/detail/poster_btn24.png?v=201309041541') 0 -207px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/player_btn_ie6.png?v=201309041541');
+	_background-image: none;
+}
+.playerMore {
+	position: absolute;
+	right: 17px;
+	top: 268px;
+	width: 201px;
+	height: 20px;
+	line-height: 20px;
+	color: #1e50a2;
+	outline: none;
+	text-align: center;
+}
+.playerMore:hover {
+	color: #1e50a2;
+	text-decoration: underline;
+}
+
+/* 评分 */
+.star_bg {
+	display: inline-block;
+	width: 151px;
+	height: 24px;
+	background: url('../images/detail/icon_1.png') 0 -26px no-repeat;
+}
+.star {
+	display: inline-block;
+	width: 90%;
+	height: 24px;
+	background: url('../images/detail/icon_1.png') 2px 0 no-repeat;
+}
+.star_bg_s {
+	display: inline-block;
+	width: 88px;
+	height: 14px;
+	background: url('../images/detail/icon_1.png') -29px -351px no-repeat;
+}
+.star_s {
+	display: inline-block;
+	width: 90%;
+	height: 14px;
+	background: url('../images/detail/icon_1.png') -29px -337px no-repeat;
+}
+.score_big {
+	display: inline-block;
+	font: italic 30px Arial;
+	color: #ffc041;
+}
+.score_big .s {
+	font-size: 24px;
+	font-style: italic;
+}
+.score {
+	display: inline-block;
+	font: italic 26px Arial;
+	color: #ffc041;
+}
+.score .s {
+	font-size: 20px;
+	font-style: italic;
+}
+.score_s {
+	display: inline;
+	font: italic 20px Arial;
+	color: #ffc041;
+}
+.score_s .s {
+	font-size: 15px;
+	font-style: italic;
+}
+
+/* 海报 */
+.poster i {
+	position: absolute;
+	left: -5px;
+	top: 1px;
+}
+.poster i {
+	display: inline-block;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+i.sanD {
+	width: 57px;
+	height: 57px;
+	background: url("../../images/icon.png?v=20130723") 0 -171px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD.png?v=20130723');
+	_background-image: none;
+}
+i.imax {
+	width: 57px;
+	height: 57px;
+	background: url("../../images/icon.png?v=20130723") 0 -228px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax.png?v=20130723');
+	_background-image: none;
+}
+
+/* 想看 */
+.want_see {
+	display: inline-block;
+	padding-left: 36px;
+	margin-top: 6px;
+	height: 29px;
+	line-height: 29px;
+	vertical-align: top;
+	cursor: pointer;
+	background: url("../../images/detail/icon_1.png?v=20140709") 0 -181px no-repeat;
+}
+.want_see span {
+	display: inline-block;
+	width: auto;
+	padding-right: 10px;
+	height: 29px;
+	font: 16px/29px "Microsoft YaHei";
+	color: #fff;
+	cursor: pointer;
+	overflow: hidden;
+	background: url('../images/detail/icon_1.png') right -241px no-repeat;
+}
+.want_see_active {
+	background: url('../images/detail/icon_1.png') 0 -211px no-repeat;
+}
+.want_see:link, .want_see:visited, .want_see:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/**/
+.mainContent {
+	width: 748px;
+	border: 1px solid #e6e6e6;
+	background: #fff;
+}
+/* 电影详情--增加影评修改tab切换效果 */
+*html {
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+
+/* 排期& 剧情tab悬浮定位 */
+.tab_fixed {
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+	_position: absolute;
+	_top: expression(eval(document.documentElement.scrollTop));
+}
+.act_fixed {
+	position: fixed;
+	top: 27px;
+	z-index: 10;
+	_position: absolute;
+	_top: expression(eval(document.documentElement.scrollTop+27));
+}
+
+/* 影院排期\剧情&影评 tab */
+#pq {
+	height: 42px;
+}
+.mv_detail_tab {
+	height: 40px;
+	width: 748px;
+	border-bottom: 2px solid #e34551;
+	background: #fff;
+}
+.mv_detail_tab li {
+	float: left;
+	width: 144px;
+	height: 40px;
+	font: 18px/40px "Microsoft YaHei";
+	color: #2c2c2c;
+	border-right: 1px solid #e9e9e9;
+	background: #fff;
+	cursor: pointer;
+	text-align: center;
+}
+.mv_detail_tab li.active {
+	background: #e34551;
+	color: #fff;
+}
+.tab_fixed {
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+	_position: absolute;
+	_top: expression(eval(document.documentElement.scrollTop));
+}
+.mv_cinema_sch {
+	width: 690px;
+	margin: 0 auto;
+	zoom: 1;
+}
+#part2 {
+	min-height: 725px;
+}
+.orangeLine {
+	line-height: 25px;
+	padding: 26px 0 20px 12px;
+	font-size: 14px;
+	color: #545454;
+}
+.orangeLine h3 a, .orangeLine h3 a:link, .orangeLine h3 a:visited {
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+	font-weight: normal;
+	color: #2c2c2c;
+	vertical-align: middle;
+}
+.orangeLine .icon_z, .orangeLine .icon_q, .orangeLine .icon_t, .orangeLine .mtype_imax {
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.orangeLine .add {
+	font-size: 12px;
+}
+.warningInfo {
+	font-size: 12px;
+	color: #FF4B29;
+}
+
+/* 电影票二期
+*  影院详情增加兑换券
+*  20121219 by 徐莹
+*/
+.movieTabC {
+	border: none;
+}
+.movieTabC_in {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	background: #f8f8f8;
+	zoom: 1;
+}
+.movieTabC_in .notesTip {
+	left: auto;
+	right: -66px;
+	top: -25px;
+}
+.movieTabC_in .notesTip em.left {
+	top: 24px;
+	left: 50px;
+	width: 19px;
+	height: 9px;
+	background: url('../../images/detail/icon_1.png?v=20140709') -46px -323px no-repeat;
+}
+.areaList li.active .notesTip {
+	right: -82px;
+}
+.areaList li.active .all_type_box {
+	right: -526px;
+}
+.movie_s_tab {
+	height: 36px;
+	border: 1px solid #f2f2f2;
+	border-bottom: none;
+	background: #f8f8f8;
+}
+.movie_s_tab li {
+	position: relative;
+	z-index: 1;
+	float: left;
+	width: 135px;
+	height: 34px;
+	border-right: 1px solid #ebebeb;
+	border-top: 3px solid #F8F8F8;
+	font-weight: bold;
+	font: 16px/30px "Microsoft YaHei";
+	text-align: center;
+	color: #2c2c2c;
+	cursor: pointer;
+}
+.movie_s_tab li.active {
+	background: #fff;
+	border-top: 3px solid #e34551;
+	position: relative;
+}
+.movie_s_tab li .new {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	width: 32px;
+	height: 17px;
+	overflow: hidden;
+	background: url("../../images/detail/icon_png8.png?v=20130924") no-repeat 0 0;
+}
+.movie_s_tab li span.seat {
+	height: 33px;
+	border-right: 1px solid #fff;
+	display: block;
+}
+.movie_s_tab li .dhq {
+	height: 33px;
+	border-right: 1px solid #fff;
+	display: block;
+}
+.movie_s_tab li .pq {
+	height: 33px;
+	border-right: 1px solid #fff;
+	display: block;
+}
+.movie_s_tab li.other {
+	width: 158px;
+	padding-right: 20px;
+}
+.movie_s_cont {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #ebebeb;
+	_margin-top: -1px;
+}
+#subPart2 .btn_orange61 {
+	width: 80px;
+}
+#subPart1, #subPart2 {
+	display: none;
+}
+
+/* 电影详情--选择影院 */
+.cinemaAdd thead tr th {
+	height: 30px;
+	line-height: 30px;
+	font-family: Tahoma;
+	text-align: center;
+	color: #969696;
+	border-bottom: 1px solid #ebebeb;
+	background: #f8f8f8 url("../../images/detail/icon_1.png?v=20140709") 0 -84px repeat-x;
+}
+.cinemaAdd tbody tr.hide {
+	display: none;
+}
+.cinemaAdd tbody tr.hide td {
+	display: none;
+}
+.cinemaAdd tbody tr td {
+	height: 51px;
+	background: #fff;
+	text-align: center;
+	color: #666666;
+	border: none;
+	background: #fff url("../../images/detail/s_hot_split.gif?v=20130723") repeat-x 0 top;
+}
+.cinemaAdd tbody tr.nobg td {
+	background: none;
+}
+.cinemaAdd tbody tr.active td {
+	border: none;
+	background: #f9f9f9 url("../../images/detail/s_hot_split.gif?v=20130723") repeat-x 0 top;
+}
+.cinemaAdd tbody tr td.time {
+	line-height: 18px;
+	font-size: 18px;
+}
+.cinemaAdd tbody tr td.time .time_end {
+	font-size: 12px;
+	color: #a9a9a9;
+}
+.cinemaAdd tbody tr td.name {
+	text-align: left;
+	font-size: 14px;
+	padding: 4px 0;
+}
+.cinemaAdd tbody tr td.current {
+	background: #ffffff url("../../images/detail/btn_show.png?v=20130723") 0 -503px no-repeat;
+}
+.cinemaAdd tbody tr.active td.current {
+	background: #d5f2ff url("../../images/detail/btn_show.png?v=20130723") 0 -503px no-repeat;
+}
+.cinemaAdd tbody tr td em.old {
+	text-decoration: line-through;
+	font-size: 14px;
+}
+.cinemaAdd tbody tr td em.fav {
+	font-size: 18px;
+	color: #e34551;
+}
+.cinemaAdd tbody tr td em.fav i {
+	font-size: 12px;
+}
+.cinemaAdd tbody tr td p.nobuy {
+	line-height: 18px;
+}
+.cinemaAdd tbody tr td span.tip {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	overflow: hidden;
+	margin-left: 5px;
+	cursor: pointer;
+	vertical-align: middle;
+	background: url("../../images/icon8.png?v=20130723") 0 -85px no-repeat;
+}
+.cinemaAdd tbody td.preview_seat{
+	/*修改ie11 黑线bug*/
+	color: transparent;
+}
+.cinemaAdd tbody tr.evening_sch td {
+	padding-left: 10px;
+	height: 32px;
+	line-height: 32px;
+	font-weight: bold;
+	border: 1px solid #eaeaea;
+	text-align: left;
+	background: url("../../images/detail/icon_1.png?v=20140709") repeat-x 0 -80px;
+}
+.cinemaAdd tbody tr.evening_sch td b {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right: 8px;
+	overflow: hidden;
+	vertical-align: middle;
+	background: url("../../images/detail/icon_1.png?v=20140709") no-repeat -46px -303px;
+}
+
+/* 选座页面--座位区域 */
+.seatWarp_hall {
+	float: left;
+	width: 719px;
+	border: 1px solid #f4f4f4;
+	border-right: 0;
+	background: #fff;
+}
+.seatWarp_buy {
+	float: left;
+	width: 210px;
+	padding: 18px 15px 0 15px;
+	color: #333;
+}
+.seat_info .legend {
+	width: 647px;
+	height: 31px;
+	padding-top: 23px;
+	margin: 0 auto;
+	text-align: center;
+}
+.seat_info .legend span {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 30px;
+	margin: 0 12px;
+	background: url('../../images/detail/seat.gif?v=20130723') 0 0 no-repeat;
+}
+.seat_info .legend span.able {
+	background-position: 0 0;
+}
+.seat_info .legend span.disable {
+	background-position: 0 -20px;
+}
+.seat_info .legend span.ql {
+	background-position: 0 -60px;
+}
+.seat_info .legend span.sel {
+	background-position: 0 -40px;
+}
+.seat_info .legend span.shake {
+	background-position: 0 -80px;
+}
+.seat_info .hall_name {
+	width: 559px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	margin: 12px auto 25px;
+	font-size: 14px;
+	color: #333;
+	background: url('../../images/detail/screen.gif?v=20130723') 0 0 no-repeat;
+}
+.seat_area {
+	position: relative;
+	width: 680px;
+	height: 510px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	overflow: auto;
+}
+.seat_area .ableSeat, .seat_area .disableSeat, .seat_area .selSeat, .seat_area .aisle, .seat_area .qlSeat, .seat_area .ShakeSeat, .seat_area .ShakeSeat_sel {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 21px;
+	height: 20px;
+	margin-top: 10px;
+	background: url('../../images/detail/seat.gif?v=20130723') 0 0 no-repeat;
+	cursor: pointer;
+}
+.seat_area .ableSeat {
+	background-position: 0 0;
+}
+.seat_area .disableSeat {
+	background-position: 0 -20px;
+	cursor: default;
+}
+.seat_area .selSeat {
+	background-position: 0 -40px;
+}
+.seat_area .aisle {
+	background: none;
+	cursor: default;
+}
+.seat_area .qlSeat {
+	background-position: 0 -60px;
+}
+.seat_area .ShakeSeat {
+	background-position: 0 -80px;
+}
+.seat_area .ShakeSeat_sel {
+	background-position: 0 -40px;
+}
+.selSeatBox {
+	margin-top: 4px;
+	border-bottom: 1px dashed #d7d7d7;
+}
+.selSeatBox dt {
+	height: 36px;
+	line-height: 36px;
+	font-weight: bold;
+}
+.selSeatBox dd p {
+	text-align: center;
+	color: #666;
+	padding: 10px 0 18px;
+}
+.selSeatBox dd ul {
+	overflow: hidden;
+	zoom: 1;
+	margin-left: -10px;
+	font-size: 0px;
+	*padding-bottom: 10px;
+}
+.selSeatBox dd ul li {
+	float: left;
+	display: inline;
+	width: 65px;
+	height: 26px;
+	line-height: 26px;
+	margin-bottom: 10px;
+	margin-left: 8px;
+	overflow: hidden;
+	font-size: 12px;
+	text-align: center;
+	background: url('../../images/detail/pay.gif?v=20130723') no-repeat left -239px;
+}
+.selSeatBox dd ul li b {
+	float: left;
+	display: inline-block;
+	width: 17px;
+	height: 15px;
+	margin-top: 10px;
+	background: url('../../images/detail/seat.gif?v=20130723') 0 -30px no-repeat;
+}
+.selSeatBox dd ul li .txt {
+	text-align: center;
+}
+.seatWarp_buy .tel dt {
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.seatWarp_buy .tel dd .telnum {
+	float: left;
+	width: 60px;
+	margin-top: 5px;
+}
+.seatWarp_buy .tel dd input {
+	width: 208px;
+	height: 36px;
+	line-height: 36px;
+	margin: 7px 0 20px 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	color: #f05335;
+	border: 1px solid #ededed;
+	border-top: 1px solid #cacaca;
+	border-bottom: 0;
+	box-shadow: 0px 1px 1px #ededed inset;
+	background: #fff;
+}
+.seatWarp_buy .tel dd .btn {
+	position: relative;
+}
+.seatWarp_buy .tel dd .btn a.btn_buy, .seatWarp_buy .tel dd .btn .btn_buy {
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+	height: 45px;
+	line-height: 45px;
+	border: 0 none;
+	font: 22px/45px "Microsoft YaHei", "Microsoft YaHei";
+	text-align: center;
+	background: #ff4b29 url('../../images/btns.png?v=20130723') 0 -166px;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+}
+.seatWarp_buy .tel dd .btn a.btn_buy:hover {
+	background: #ff6143;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+.seatWarp_buy .tel dd .btn .btn_buy_gray {
+	background: #cccccc url('../../images/btns.png?v=20130723') 0 -211px;
+	border-radius: 0;
+	cursor: default;
+}
+.seatWarp_buy .tel dd .btn .tip {
+	position: absolute;
+	width: 222px;
+	left: -10px;
+	top: 60px;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 6px;
+	color: #999999;
+	border: 1px solid #dedede;
+	background: #fff4c8;
+}
+.seatWarp_buy .tel dd .btn .tip .up {
+	position: absolute;
+	left: 115px;
+	top: -7px;
+	width: 13px;
+	height: 7px;
+	background: url('../../images/detail/pay.gif?v=20130723') -113px -200px no-repeat;
+	overflow: hidden;
+}
+.seatShow {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 65px;
+	height: 26px;
+	line-height: 26px;
+	overflow: hidden;
+	text-align: center;
+	background: url('../../images/detail/pay.gif?v=20130723') no-repeat left -239px;
+}
+
+/* 影片详情--座位缩略图 */
+.seat_mini_wrap {
+	display: inline-block;
+	padding: 10px;
+	background: #fffcfb;
+}
+.seat_area_mini_title {
+	width: 170px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	color: #666;
+	text-align: center;
+}
+.seat_area_mini_title em {
+	font-weight: bold;
+	color: #ff4b29;
+}
+.seat_area_mini {
+	position: relative;
+	margin: 0 auto;
+}
+.seat_area_mini .ableSeat, .seat_area_mini .disableSeat, .seat_area_mini .selSeat, .seat_area_mini .aisle, .seat_area_mini .qlSeat, .seat_area_mini .ShakeSeat, .seat_area_mini .ShakeSeat_sel {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 3px;
+	height: 3px;
+	margin-top: 2px;
+	background: #aaa;
+	overflow: hidden;
+}
+.seat_area_mini .ableSeat {
+	background: #999;
+}
+.seat_area_mini .disableSeat {
+	background: #ff4b29;
+}
+.seat_area_mini .aisle {
+	background: none;
+}
+.seat_area_mini .selSeat {
+	background: #999;
+}
+.seat_area_mini .qlSeat {
+	background: #999;
+}
+.seat_area_mini .ShakeSeat {
+	background: #999;
+}
+.seat_area_mini .ShakeSeat_sel {
+	background: #999;
+}
+.hallShow {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin-top: 16px;
+	background: url("../../images/detail/icon_png8.png?v=20130924") 0 -19px no-repeat;
+}
+.hallWrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	z-index: 10;
+}
+.hallTip {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 170px;
+	height: 98px;
+	margin-left: -52px;
+	margin-top: -98px;
+	background: #fffcfb;
+	border: 1px solid #e34551;
+}
+.hallTip i {
+	position: absolute;
+	left: 50%;
+	bottom: -7px;
+	width: 12px;
+	height: 7px;
+	margin-left: -6px;
+	zoom: 1;
+	overflow: hidden;
+	background: #ffffff url("../../images/detail/btn_show.png?v=20130723") 0 -481px no-repeat;
+}
+.load_text {
+	width: 100%;
+	padding-top: 30px;
+	line-height: 22px;
+	color: #666;
+}
+.hallBar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.change_tip {
+	border-top: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	padding: 10px 20px;
+	line-height: 25px;
+	color: #333333;
+}
+
+/* 影院排期优化 by 田刚 */
+dl.scheduleAll {
+	text-align: left;
+	font: 12px/1.5 arial, "SimSun";
+	border-top: 1px solid #EBEBEB;
+	color: #333333;
+}
+dl.noBorder {
+	background: none;
+}
+.scheduleAll dt {
+	line-height: 65px;
+	font-size: 14px;
+	color: #333333;
+}
+.scheduleAll dd {
+	margin-bottom: 6px;
+	overflow: hidden;
+	zoom: 1;
+}
+.scheduleAll dd p {
+	position: relative;
+	padding-left: 35px;
+	line-height: 18px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+	font-family: "SimSun";
+	overflow: hidden;
+	zoom: 1;
+}
+.scheduleAll dd .date {
+	float: left;
+	width: 88px;
+	height: 18px;
+	margin-top: 5px;
+	border: 1px solid #e8e8e8;
+	color: #333333;
+	text-align: center;
+}
+.scheduleAll dd .date em {
+	font-weight: bold;
+	color: #ff5a29;
+	margin-right: 8px;
+}
+.scheduleAll dd .time {
+	float: left;
+	width: 570px;
+	margin-left: 20px;
+}
+.scheduleAll dd p label {
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+.scheduleAll dd p span {
+	display: inline-block;
+	width: 62px;
+	height: 26px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #666666;
+	text-align: center;
+	margin: 2px 15px 10px 0;
+	white-space: nowrap;
+	word-spacing: normal;
+	background: url("../../images/detail/tab_bg.gif?v=20130723") no-repeat -63px -395px;
+}
+.scheduleAll dd p span.out {
+	color: #999999;
+	background-position: left -395px;
+}
+.scheduleAll dd p span.l {
+	border-right: none;
+}
+
+/* 版本过滤 */
+.sel_copy {
+	position: absolute;
+	left: 5px;
+	top: 30px;
+	width: 62px;
+	border: 1px solid #bbb;
+	background: #fff;
+	overflow: hidden;
+	display: none;
+}
+.sel_copy li {
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+.sel_copy li a {
+	display: inline-block;
+	width: 62px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+.sel_copy li a:hover {
+	color: #1E50A2;
+	text-decoration: none;
+	background: #f2f2f2;
+}
+.active .sel_copy {
+	display: block;
+}
+.copy {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.copy b {
+	position: absolute;
+	right: 10px;
+	top: 14px;
+	width: 9px;
+	height: 5px;
+	overflow: hidden;
+	background: url("../../images/icon.png?v=20130723") left -112px no-repeat;
+	-webkit-transition: -webkit-transform 0.2s ease-in;
+	-moz-transition: -moz-transform 0.2s ease-in;
+	-ms-transition: -ms-transform 0.2s ease-in;
+	-o-transition: -o-transform 0.2s ease-in;
+	transition: transform 0.2s ease-in;
+}
+
+/* 选择日期 影院 */
+.movieTabC .area {
+	padding: 14px 0;
+	margin: 0 9px;
+	background: url("../../images/detail/mv_comm_split.png?v=20130723") left bottom repeat-x;
+}
+.movieTabC .area dt {
+	float: left;
+	width: 65px;
+	color: #545454;
+	text-align: center;
+	padding-top: 6px;
+	font-weight: bold;
+	font-family: "SimSun";
+	_font-family: Tahoma;
+}
+.movieTabC .area dd {
+	float: left;
+	width: 663px;
+	_margin-right: -3px;
+}
+.areaList {
+	margin-left: -15px;
+	margin-top: -5px;
+	padding-bottom: 5px;
+	_zoom: 1;
+}
+#timeTabs li {
+	width: 128px;
+}
+.areaList li {
+	position: relative;
+	float: left;
+	_display: inline;
+	margin: 10px 15px 0 15px;
+	font-family: "SimSun";
+	_font-family: Tahoma;
+}
+.areaList li .low {
+	position: absolute;
+	right: 2px;
+	top: -5px;
+	width: 15px;
+	height: 19px;
+	z-index: 1;
+	background:url("../images/tab_play_bg.gif") no-repeat -161px -240px;
+
+}
+.areaList li .low_area {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	width: 15px;
+	height: 19px;
+	margin-top: -10px;
+	margin-bottom: 2px;
+	margin-left: -5px;
+	background: url("../../images/tab_play_bg.gif?v=20130723") no-repeat -161px -240px;
+}
+.areaList li .sub {
+	display: none;
+	position: absolute;
+	right: 0px;
+	_right: -1px;
+	bottom: 0px;
+	_bottom: -1px;
+	width: 14px;
+	height: 14px;
+	background: url("../images/detail/icon_png8.png") no-repeat -34px -3px;
+}
+.areaList li .lowPrice {
+	position: absolute;
+	left: 70px;
+	top: -2px;
+	top: -1px\9;
+	cursor: pointer;
+}
+.areaList li.active .sub {
+	display: block;
+}
+.areaList li em {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #8db016;
+}
+.areaList li a {
+	position: relative;
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	padding: 0 5px;
+	border: 1px solid #f5f5f5;
+	color: #545454;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.areaList_new li a {
+	padding: 0 15px 0 5px;
+	float: left;
+}
+.areaList li a:link, .areaList li a:visited {
+	color: #545454;
+	text-decoration: none;
+}
+.areaList li a:hover {
+	color: #e34551;
+}
+.areaList li.active a, .areaList li.active a:hover {
+	border: 1px solid #e34551;
+	color: #545454;
+}
+.areaList li.active a:link, .areaList li.active a:visited {
+	color: #545454;
+	background-color: #fff;
+}
+.areaList li .icon_z, .areaList li .icon_q, .areaList li .icon_t {
+	margin-right: 5px;
+	margin-top: -1px;
+	vertical-align: middle;
+	_vertical-align: top;
+}
+.areaList li .a_icon_z:link, .areaList li .a_icon_z:hover, .areaList li .a_icon_z:visited, .areaList li .a_icon_q:link, .areaList li .a_icon_q:hover, .areaList li .a_icon_q:visited, .areaList li .a_icon_t:link, .areaList li .a_icon_t:hover, .areaList li .a_icon_t:visited {
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	padding: 0;
+	padding-right: 5px;
+	border: 2px solid #fff;
+	color: #666666;
+	background: #fff;
+}
+.areaList li.active .a_icon_z:link, .areaList li.active .a_icon_z:hover, .areaList li.active .a_icon_z:visited {
+	border: 2px solid #e22500;
+	color: #545454;
+	background: #fff;
+}
+.areaList li.active .a_icon_q:link, .areaList li.active .a_icon_q:hover, .areaList li.active .a_icon_q:visited {
+	border: 2px solid #008ccc;
+	color: #545454;
+	background: #fff;
+}
+.areaList li.active .a_icon_t:link, .areaList li.active .a_icon_t:hover, .areaList li.active .a_icon_t:visited {
+	border: 2px solid #ff8400;
+	color: #545454;
+	background: #fff;
+}
+.areaList_hidden {
+	position: relative;
+	height: 30px;
+	padding-right: 20px;
+	overflow: hidden;
+}
+.areaList li.active .all_type_box a.active, .areaList li.active .all_type_box a:hover {
+	color: #CF424D;
+}
+.areaList li.active .all_type_box a, .areaList li.active .all_type_box a:hover {
+	border: none;
+}
+
+/* 日期更多 */
+.movieTabC a.moreDate {
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+	bottom: 3px\9;
+	width: 34px;
+	height: 18px;
+	padding: 0;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	display: block;
+	background: #F8F8F8;
+}
+.movieTabC a.moreDate:hover {
+	color: #1E50A2;
+	background: #F8F8F8;
+}
+.movieTabC a.moreDate i {
+	right: 0;
+}
+.movieTabC a.on {
+	top: auto;
+	bottom: 5px;
+}
+#date a.on {
+	top: auto;
+	bottom: 10px;
+	_bottom: 12px;
+}
+
+/* 选择影院--搜索影院 */
+.cinema_search_box {
+	position: relative;
+	float: right;
+	width: 197px;
+	height: 28px;
+	margin-right: 20px;
+	line-height: 26px;
+	color: #d4d4d4;
+	_display: inline;
+}
+.cinema_search_box .cinema_search {
+	width: 167px;
+	height: 16px;
+	line-height: 16px;
+	padding: 5px 22px 5px 8px;
+	border-top: 1px solid #b9b9b9;
+	border-left: 1px solid #b9b9b9;
+	border-right: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+	box-shadow: 1px 1px 0 0 #fafafa, 1px 1px 0 #eeeeee inset;
+}
+.cinema_search_box .textGray {
+	color: #c3c3c3;
+}
+.cinema_search_box .cinema_search_btn {
+	position: absolute;
+	right: -2px;
+	top: 0;
+	_top: 2px;
+	width: 29px;
+	height: 28px;
+	background: url("../images/detail/icon_1.png") no-repeat 0 -449px;
+}
+.cinema_search_box .cinema_search_btn:hover {
+	background-position: -29px -449px
+}
+.cinema_search_box .cinema_search_btn:active {
+	background-position: -58px -449px
+}
+.cinema_search_box .cinema_search_list {
+	position: absolute;
+	left: 1px;
+	top: 28px;
+	background: #fff;
+	width: 195px;
+	border: 1px solid #FF632D;
+	z-index: 100;
+}
+.cinema_search_box .cinema_search_list a {
+	text-decoration: none;
+	padding: 0 0 0 7px;
+	color: #2B2B2B;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	display: block;
+}
+.cinema_search_box .cinema_search_list a.on {
+	color: #333;
+	background: #e5e5e5;
+}
+.cinema_search_box .cinema_search_list a em {
+	color: #FF4B29
+}
+
+/* 选择影院--全部影院 */
+.all_cinema {
+	z-index: 15;
+}
+.all_cinema .triangle {
+	_right: 10px;
+}
+.all_cinema .triangleToUp {
+	_border-width: 5px;
+}
+.all_cinema .sel_cinema:hover {
+	color: #e34551;
+}
+.all_cinema .sel_cinema_left {
+	display: inline-block;
+	width: 48px;
+	height: 20px;
+	overflow: hidden;
+	vertical-align: middle;
+	position: relative;
+	right: 14px;
+	top: 3px;
+	color: #4575b7;
+	cursor: pointer;
+}
+.areaList li.active .sel_cinema_left {
+	right: -2px;
+}
+.sel_cinema .sub {
+	display: none;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 14px;
+	height: 14px;
+	background: url("../../images/detail/icon_png8.png?v=20130924") no-repeat -34px -3px;
+}
+.all_type_box {
+	position: absolute;
+	right: -510px;
+	top: 32px;
+	width: 688px;
+	border: 2px solid #e34551;
+	background: #fff;
+	z-index: 100;
+}
+.all_type_box i {
+	display: inline-block;
+	position: absolute;
+	left: 130px;
+	top: -11px;
+	width: 23px;
+	height: 11px;
+	background: url("../../images/detail/icon_1.png?v=20131012") no-repeat -111px -449px;
+}
+.all_type_box  a {
+	color: #545454;
+	padding: 0;
+}
+.all_type_box a.close {
+	display: inline-block;
+	position: absolute;
+	right: 14px;
+	top: 13px;
+	width: 12px;
+	height: 11px;
+	padding: 0;
+	background: url("../../images/detail/icon_1.png?v=20131012") no-repeat -87px -449px;
+}
+.all_type_box a.close:hover {
+	background-position: -99px -449px;
+}
+.all_type_box .type_module {
+	padding: 8px 0 8px 20px;
+	background: url("../../images/detail/s_hot_split.gif?v=20130723") repeat-x -2px top;
+}
+.all_type_box .noBack {
+	background: none;
+}
+.all_type_box .type_name {
+	float: left;
+	width: 42px;
+	padding-top: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #545454;
+}
+.all_type_box .type_detail {
+	margin-left: 42px;
+}
+.all_type_box .type_detail a, .all_type_box .type_detail a:link, .all_type_box .type_detail a:visited {
+	float: left;
+	position: static;
+	border: 0;
+	padding: 0;
+	width: 120px;
+	height: 28px;
+	line-height: 28px;
+	text-align: left;
+	text-decoration: none;
+}
+.all_type_box .type_detail a:hover, .all_type_box .type_detail a.active {
+	color: #cf424d;
+	text-decoration: none;
+}
+.all_type_box .type_detail a em {
+	color: #bababa;
+	font-size: 12px;
+}
+.all_type_box .type_detail a:hover em, .all_type_box .type_detail a.active em {
+	color: #cf424d;
+}
+
+/* 选择影院结果 */
+.mv_cinema_rs {
+	position: relative;
+	width: 688px;
+	margin: 0 auto;
+	padding-bottom: 12px;
+	border: 1px solid #e8e8e8;
+	background: #fff;
+}
+.mv_cinema_rs .arrow {
+	position: absolute;
+	top: -9px;
+	left: 90px;
+	width: 17px;
+	height: 9px;
+	overflow: hidden;
+	background: url("../images/detail/icon_png8.png") no-repeat -60px -8px;
+}
+.mv_cinema_rs .arrow2 {
+	left: 240px;
+}
+.mv_cinema_rs .arrow3 {
+	left: 366px;
+}
+.mv_cinema_rs .arrow4 {
+	left: 560px;
+}
+.mv_cinema_list {
+	margin-top: 0;
+	margin-left: -8px;
+	padding-bottom: 0
+}
+.mv_cinema_list li {
+	width: 190px;
+	padding-left: 39px;
+	margin: 10px 0 0;
+}
+.mv_cinema_list li a {
+	border: 1px solid #fff;
+}
+
+/* 影院列表翻页样式 */
+.cinema_page {
+	height: 21px;
+	margin-top: 8px;
+	text-align: center;
+}
+.cinema_page .page_num {
+	display: inline-block;
+	height: 21px;
+	line-height: 21px;
+	font-size: 16px;
+	font-family: Arial;
+	vertical-align: middle;
+	color: #333;
+}
+.cinema_page .page_left {
+	display: inline-block;
+	width: 22px;
+	height: 21px;
+	margin-left: 11px;
+	overflow: hidden;
+	vertical-align: middle;
+	cursor: pointer;
+	background: url("../../images/detail/icon_1.png?v=20140709") no-repeat 0 -271px;
+}
+.cinema_page .page_left:active {
+	background-position: 0 -293px;
+}
+.cinema_page .page_left_end, .cinema_page .page_left_end:active {
+	background-position: 0 -315px;
+}
+.cinema_page .page_right {
+	display: inline-block;
+	width: 22px;
+	height: 21px;
+	margin-left: 8px;
+	overflow: hidden;
+	vertical-align: middle;
+	cursor: pointer;
+	background: url("../../images/detail/icon_1.png?v=20140709") no-repeat -23px -271px;
+}
+.cinema_page .page_right:active {
+	background-position: -23px -293px;
+}
+.cinema_page .page_right_end, .cinema_page .page_right_end:active {
+	background-position: -23px -315px;
+}
+
+/* 影院列表翻页样式 end **********************************/
+/* 电影详情--剧情影评 */
+.mv_comment_box {
+	padding: 0 38px;
+	padding-bottom: 37px;
+	min-height: 655px;
+}
+.mt35 {
+	margin-top: 35px;
+}
+.mv_comm_plot .title {
+	border-left: 3px solid #cf424d;
+	margin: 33px 0 14px 0;
+	height: 20px;
+	line-height: 20px;
+}
+.mv_comm_plot .title h2 {
+	float: left;
+	padding-left: 8px;
+	font-size: 20px;
+	font-family: "Microsoft YaHei";
+	color: #545454;
+}
+.mv_comm_plot .title .tip {
+	color: #a9a9a9;
+}
+.mv_comm_plot .title .tip em {
+	color: #cf424d;
+}
+.mv_comm_plot p {
+	font-family: "SimSun";
+	line-height: 27px;
+	color: #545454;
+	text-indent: 2em;
+}
+.mv_comm_plot .couponInfo {
+	font-family: "SimSun";
+	color: #545454;
+	line-height: 25px;
+}
+
+/* 电影详情--剧照 */
+.mv_comm_stills {
+	padding-top: 7px;
+	padding-bottom: 41px;
+	border-top: 1px solid #E9E9E9;
+}
+.mv_comm_photo {
+	width: 672px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.mv_comm_photo .photo_list_box {
+	float: left;
+	width: 600px;
+	height: 102px;
+	overflow: hidden;
+}
+.mv_comm_photo .photo_list {
+	width: 10000px;
+	height: 102px;
+}
+.mv_comm_photo .photo_list li {
+	float: left;
+	_display: inline;
+	width: 102px;
+	height: 102px;
+	padding: 0 9px;
+}
+.mv_comm_photo .photo_list li a {
+	display: inline-block;
+	width: 102px;
+	height: 102px;
+	line-height: 102px;
+}
+.mv_comm_photo .photo_list li a img {
+	border: 1px solid #fff;
+	vertical-align: top;
+}
+.mv_comm_photo .photo_list li a span {
+	display: inline-block;
+}
+.mv_comm_photo .photo_list li a:hover img, .mv_comm_photo .photo_list li.active a img {
+	border: 1px solid #fe6245;
+}
+
+/* 详情页 剧照 */
+.photo_bar {
+	float: left;
+	position: relative;
+	width: 35px;
+	height: 102px;
+}
+.photo_bar a {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 22px;
+	height: 21px;
+	background: url(../images/icon_1.png)left -271px no-repeat;
+}
+.photo_bar a.photo_bar_left {
+	background-position: 0 -271px;
+}
+.photo_bar a.photo_bar_left:hover {
+	background-position: 0 -293px;
+}
+.photo_bar a.noLeft, .photo_bar a.noLeft:hover {
+	background-position: 0 -315px;
+}
+.photo_bar a.photo_bar_right {
+	left: 13px;
+	background-position: -23px -271px;
+}
+.photo_bar a.photo_bar_right:hover {
+	background-position: -23px -293px;
+}
+.photo_bar a.noRight, .photo_bar a.noRight:hover {
+	background-position: -23px -315px;
+}
+
+/* 详情页 剧照 *******************************/
+.show_poster {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 900px;
+	height: 600px;
+	text-align: center;
+	line-height: 600px;
+	margin-left: -450px;
+	margin-top: -300px;
+	z-index: 10000;
+	_position: absolute;
+	_left: 50%;
+	_top: expression(eval(document.documentElement.scrollTop + (document.documentElement.clientHeight-600)/2));
+	_margin-top: 0;
+}
+.show_poster .span_ie6 {
+	display: inline-block;
+}
+.show_loading {
+	background: url(../../images/detail/loading.gif) no-repeat center center;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+	z-index: 0;
+}
+.show_poster .close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 3;
+	width: 29px;
+	height: 29px;
+	background: url("../../images/detail/poster_btn24.png?v=201309041541") -2px -130px no-repeat;
+	_background: url("../../images/detail/poster_btn8.png?v=20130723") 0 -132px no-repeat;
+}
+.show_poster .close:hover {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 29px;
+	height: 29px;
+	background: url("../../images/detail/poster_btn24.png?v=201309041541") -2px -168px no-repeat;
+	_background: url("../../images/detail/poster_btn8.png?v=20130723") 0 -170px no-repeat;
+}
+.show_poster .show_left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 450px;
+	height: 600px;
+	outline: none;
+	background: url(blank.gif);
+	z-index: 1;
+}
+.show_poster .show_left b {
+	visibility: hidden;
+	position: absolute;
+	left: 5px;
+	top: 270px;
+	width: 60px;
+	height: 60px;
+	background: url("../../images/detail/poster_btn24.png?v=201309041541") 0 -60px no-repeat;
+	_background: url("../../images/detail/poster_btn8.png?v=20130723") 20px -40px #000000 no-repeat;
+	_filter: alpha(opacity=50);
+}
+.show_poster .show_left:hover {
+	zoom: 1;
+}
+.show_poster .show_left:hover b {
+	visibility: visible;
+}
+.show_poster .show_right {
+	position: absolute;
+	left: 450px;
+	top: 0;
+	width: 450px;
+	height: 600px;
+	outline: none;
+	background: url(blank.gif);
+	z-index: 1;
+}
+.show_poster .show_right b {
+	visibility: hidden;
+	position: absolute;
+	right: 5px;
+	top: 270px;
+	width: 60px;
+	height: 60px;
+	background: url("../../images/detail/poster_btn24.png?v=201309041541") 0 0px no-repeat;
+	_background: url("../../images/detail/poster_btn8.png?v=20130723") 25px 15px #000000 no-repeat;
+	_filter: alpha(opacity=50);
+}
+.show_poster .show_right:hover {
+	zoom: 1;
+}
+.show_poster .show_right:hover b {
+	visibility: visible;
+}
+.iDialogHead h1 .addCommentIcon {
+	float: left;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right: 5px;
+	margin-top: 7px;
+	vertical-align: middle;
+	overflow: hidden;
+	background: url("../../images/detail/meg_icon.gif?v=20130723") left -206px no-repeat;
+}
+
+/* 电影详情--短篇影评 */
+.mv_comm_short {
+	margin-top: 37px;
+	border-top: 1px solid #e9e9e9;
+	zoom: 1;
+}
+.mv_comm_short .title {
+	position: relative;
+	height: 20px;
+	line-height: 20px;
+	margin: 39px 0 11px;
+	border-left: 3px solid #CF424D;
+}
+.mv_comm_short .title h2 {
+	float: left;
+	padding-left: 8px;
+	font-size: 20px;
+	color: #545454;
+	font-family: 'Microsoft YaHei';
+}
+.mv_comm_short .title a {
+	position: absolute;
+	top: -5px;
+	right: 0;
+}
+.mv_comm_short .tip {
+	float: left;
+	color: #9c9c9c;
+	padding-top: 1px;
+	vertical-align: bottom;
+}
+.mv_comm_short .tip em {
+	color: #CF424D;
+}
+.mv_comm_short .more {
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	border: 1px solid #e8e8e8;
+	border-bottom: 1px solid #d8d8d8;
+	color: #545454;
+	overflow: hidden;
+	zoom: 1;
+	cursor: pointer;
+	background: url("../../images/detail/icon_1.png?v=20140709") left -77px repeat-x;
+}
+.mv_comm_short .more a, .mv_comm_short .more a:hover {
+	color: #545454;
+	text-decoration: none;
+}
+.mv_comm_short .more em {
+	padding: 0 5px;
+	color: #cf424d;
+}
+.mv_comm_short .noMore {
+	height: 3px;
+	overflow: hidden;
+	zoom: 1;
+	background: url("../../images/detail/repeat.png?v=20130723") left -42px repeat-x;
+}
+.mv_comm_short .list dd {
+	padding-bottom: 18px;
+	overflow: hidden;
+	font-family: "SimSun";
+	background: url("../../images/detail/mv_comm_split.png?v=20130723") left bottom repeat-x;
+}
+.mv_comm_short .list dd.last {
+	background: none;
+}
+.mv_comm_short .list dd .infor {
+	height: 20px;
+	line-height: 20px;
+	padding-top: 14px;
+	overflow: hidden;
+}
+.mv_comm_short .list dd .infor .name {
+	float: left;
+	color: #717171;
+	width: 490px;
+	overflow: hidden;
+}
+.mv_comm_short .list dd .infor .time {
+	float: right;
+	color: #717171;
+	overflow: hidden;
+}
+.mv_comm_short .list dd .detail {
+	padding-top: 8px;
+	line-height: 20px;
+	color: #333333;
+	word-break: break-all;
+}
+
+/* 电影详情--短篇影评--暂无任何评论 */
+.no_short_warp {
+	display: none;
+	padding-top: 6px;
+	padding-bottom: 32px;
+}
+.no_short_box {
+	width: 668px;
+	margin: 0 auto;
+	padding-top: 29px;
+	padding-bottom: 29px;
+	background: #f6f6f6;
+	text-align: center;
+}
+.no_short_box .icon_no {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	vertical-align: middle;
+	background: url("../images/detail/meg_icon.gif") 0 0 no-repeat;
+}
+.no_short_box .text {
+	display: inline-block;
+	line-height: 20px;
+	margin-left: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+.no_short_box .text .h {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	background: none;
+}
+.no_short_box .text .s {
+	display: block;
+	font-size: 12px;
+	color: #333333;
+}
+
+/* 电影详情--短篇影评 end************************************************** */
+/* 电影详情--长评/短评弹框样式 */
+.commDialog {
+	background: #fff;
+	color: #545454;
+	font-size: 12px;
+	width: 680px;
+	position: relative;
+}
+.commDialog .textGray {
+	color: #a9a9a9;
+}
+.commDialog a.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 23px;
+	background: url('../../images/detail/icon_1.png?v=20140709') -94px -271px no-repeat;
+}
+.commDialog ul.typeTab {
+	background: #e34551;
+	color: #fff;
+	height: 41px;
+	padding-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.commDialog ul.typeTab li {
+	background: #e96a74;
+	width: 133px;
+	height: 41px;
+	line-height: 40px;
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+}
+.commDialog ul.typeTab li.active {
+	background: #fff;
+	color: #868686;
+}
+.commDialog .commDialog_L, .commDialog .commDialog_S {
+	padding: 20px 33px
+}
+.commDialog .commDialog_L ul.commentLevel {
+}
+.commDialog .commDialog_L ul.commentLevel li {
+	float: left;
+	width: 69px;
+	height: 69px;
+	position: relative;
+	margin-right: 26px;
+}
+.commDialog .commDialog_L ul.commentLevel input {
+	position: absolute;
+	top: 34px;
+	left: 0;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace {
+	display: block;
+	width: 48px;
+	padding-left: 20px;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace i {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background: url("../../images/detail/face.png?v=20130830") left top no-repeat;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace i.level5 {
+	background-position: 0 0;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace i.level4 {
+	background-position: 0 -48px;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace i.level3 {
+	background-position: 0 -96px;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace i.level2 {
+	background-position: 0 -144px;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace i.level1 {
+	background-position: 0 -192px;
+}
+.commDialog .commDialog_L ul.commentLevel .levelFace span {
+	width: 48px;
+	margin-top: 5px;
+	height: 20px;
+	font-size: 12px;
+	overflow: hidden;
+	zoom: 1;
+}
+.commDialog .comm_title, .commDialog .comm_area {
+	width: 606px;
+	height: 33px;
+	line-height: 33px;
+	border: 1px solid #D4D0D0;
+	margin-top: 20px;
+	padding: 0 2px;
+}
+.commDialog .comm_area {
+	height: 170px;
+	resize: none;
+	margin-bottom: 12px;
+}
+.commDialog .note {
+	width: 100%;
+	overflow: hidden;
+}
+.commDialog .note .shareComment {
+	width: 250px;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+}
+.commDialog .note .shareComment input {
+	margin-right: 4px;
+}
+.commDialog .note .shareComment a {
+	color: #545454;
+	vertical-align: bottom;
+}
+.commDialog .note .numTip {
+	width: 346px;
+	display: inline-block;
+	text-align: left;
+	padding-right: 8px;
+}
+.commDialog .note .err {
+	float: right;
+	line-height: 35px;
+	color: #cf424d;
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+}
+.commDialog .note a.sub {
+	float: right;
+	background: #e34551;
+	color: #fff;
+	font-family: "Microsoft YaHei", "Microsoft YaHei";
+	font-size: 18px;
+	display: inline-block;
+	width: 113px;
+	height: 35px;
+	line-height: 33px;
+	border-radius: 3px;
+	text-align: center;
+}
+.commDialog .note a.disabled {
+	background: #b5b5b5;
+	cursor: default;
+}
+.commDialog a:hover {
+	text-decoration: none;
+}
+.commDialog .commDialog_S p {
+	text-align: right;
+}
+.commDialog .commDialog_S p em {
+	color: #cf424d;
+}
+.commDialog .commDialog_S .comm_area {
+	margin-top: 10px;
+}
+
+/* 电影详情--影评发表结果--成功 */
+.commDialog_result {
+	position: relative;
+	width: 280px;
+	padding: 55px 45px 45px 105px;
+	color: #868686;
+	font-size: 14px;
+}
+.commDialog_result .closeBtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 23px;
+	overflow: hidden;
+	background: url('../../images/detail/icon_1.png?v=20140709') -119px -271px no-repeat;
+}
+.commDialog_result b {
+	width: 48px;
+	height: 48px;
+	vertical-align: top;
+	background: url('../../images/detail/face.png?v=20130904') left top no-repeat;
+	position: absolute;
+	top: 55px;
+	left: 45px;
+}
+.commDialog_result h3 {
+	line-height: 48px;
+	font-weight: normal;
+}
+.commDialog_result .msg {
+	padding: 0;
+	margin-top: 8px;
+	margin-bottom: 25px;
+	font-size: 12px;
+}
+.commDialog_result .msg em {
+	font-weight: bold;
+	color: #bf2626;
+}
+.commDialog_result a.btn {
+	display: inline-block;
+	width: 248px;
+	height: 35px;
+	background: #e34551;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	font-family: "Microsoft YaHei", "Microsoft YaHei";
+	font-size: 18px;
+	border: none;
+	border-radius: 3px;
+}
+.commDialog_result a:hover {
+	text-decoration: none;
+}
+
+/* 电影详情--影评发表失败 */
+.commDialog_fail b {
+	background-position: 0 -144px;
+}
+.commDialog_fail .msg {
+	font-size: 14px;
+}
+.feedbackDialog_result {
+	padding: 45px 50px;
+	text-align: center;
+}
+.feedbackDialog_result h3 {
+	padding: 0 0 20px 70px;
+	font-weight: bold;
+}
+.feedbackDialog_result b {
+	background-position: 0 -48px;
+	top: 30px;
+	left: 100px;
+}
+.feedbackDialog_result a.btn {
+	width: 113px;
+}
+
+/* 电影详情--剧情影评 样式 end **************************************************/
+/* 暂无排期/数据 */
+.noWaiting2 {
+	color: #999999;
+	text-align: center;
+	background: url("../../images/border_line.gif?v=20130711") repeat-x scroll left top transparent;
+}
+.noWaiting {
+	position: relative;
+	vertical-align: middle;
+	font: normal 14px/94px "Microsoft YaHei", "Microsoft YaHei";
+	color: #666666;
+	text-align: center;
+	background: none;
+}
+.noWaiting b {
+	display: inline-block;
+	width: 77px;
+	height: 74px;
+	margin-right: 10px;
+	_margin-top: 20px;
+	_margin-bottom: 20px;
+	vertical-align: middle;
+	background: url("../../images/tip_bg.gif?v=20130723") 0 0 no-repeat;
+}
+.noWaiting .imp {
+	color: #E83A18;
+	font-weight: bold;
+}
+.noWaiting #see {
+	position: absolute;
+	right: 13px;
+	top: 33px;
+}
+.noWaiting #wantBtn {
+	margin-left: 50px;
+}
+.noWaiting .many {
+	display: inline-block;
+	height: 47px;
+	line-height: 22px;
+	text-align: left;
+	vertical-align: middle;
+}
+.noWaiting .many span {
+	float: left;
+	margin-top: 2px;
+	font-size: 16px;
+}
+.noWaiting .many span em {
+	float: left;
+	margin-top: 2px;
+	font-size: 14px;
+}
+.noWaiting .many i {
+	font-weight: bold;
+	color: #FF5A29;
+}
+#noWaiting a.disabled {
+	display: inline-block;
+	width: 113px;
+	height: 34px;
+	vertical-align: middle;
+	background: url("../../images/detail/btn.gif?v=20130723") 0 -120px no-repeat;
+}
+.noTop {
+	border-top: 0;
+}
+.noBg {
+	background: none;
+}
+
+/* 暂无排期 end ****************************************/
+/* 弹框样式 */
+.pop {
+	padding: 40px;
+	background: #fff;
+	text-align: center;
+	font: normal 18px/24px "Microsoft YaHei";
+}
+.pop i {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	vertical-align: top;
+	background: url('../../images/detail/face.png?v=20130730') left top no-repeat;
+}
+.pop .face_no {
+	background-position: 0 -144px;
+}
+.pop .msg {
+	display: inline-block;
+	text-align: left;
+	margin-left: 20px;
+	color: #313131;
+	vertical-align: middle;
+}
+.pop .msg i {
+	color: #f87b00;
+}
+.pop .msg .orange {
+	color: #f67a34;
+	font-size: 24px;
+}
+.pop a.btn {
+	display: inline-block;
+	padding: 0 22px;
+	margin-top: 20px;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	text-decoration: none;
+	background: #f67a34;
+	vertical-align: middle;
+	position: relative;
+	font-family: "SimSun";
+	font-size: 14px;
+	font-weight: bold;
+}
+.pop a.btn:hover, a.btn:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.pop a i {
+	background: url('../images/icon_norepeat8.png?v=20130730') 0 -285px no-repeat;
+	width: 12px;
+	height: 15px;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* 影片分享样式 （影片详情页） */
+.share {
+	position: absolute;
+	right: 16px;
+	top: 24px;
+	width: 97px;
+	height: 50px;
+	text-decoration: none;
+	background: none;
+}
+.share .share_inner {
+	display: inline-block;
+	width: 97px;
+	height: 24px;
+	line-height: 24px;
+	_height: 20px;
+	_padding-top: 4px;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+	color: #545454;
+	cursor: pointer;
+	background: url('../images/detail/icon_1.png') 0 -90px repeat-x;
+}
+.share .share_inner b {
+	display: inline-block;
+	width: 13px;
+	height: 14px;
+	margin-left: 8px;
+	vertical-align: middle;
+	overflow: hidden;
+	background: url('../images/detail/icon_1.png') -1px -337px no-repeat;
+}
+.share .share_inner .shareDiv {
+	display: none;
+	position: absolute;
+	right: -3px;
+	top: 30px;
+	width: 135px;
+}
+.share .on {
+	background: url('../../images/detail/icon_1.png?v=20140709') 0 -115px repeat-x;
+}
+.share .on b {
+	background: url('../../images/detail/icon_1.png?v=20140709') -15px -337px no-repeat;
+}
+.share .on .shareDiv {
+	display: block;
+}
+
+/* 分享样式 end ****************************************************************/
+/**************************************************************************************************************
+*@Description:影院列表改版
+*@Author:xy
+*@Update:2013-9-11
+*/
+/* 影院列表 **/
+.cinema_search {
+	padding-left: 21px;
+	height: 62px;
+	line-height: 62px;
+	overflow: hidden;
+	zoom: 1;
+	border: 1px solid #eaeaea;
+	background: #fff;
+}
+.cinema_search h3 {
+	float: left;
+	_display: inline;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+.textGray {
+	color: #a9a9a9;
+}
+.cinema_search_input {
+	float: left;
+	_display: inline;
+	width: 396px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 14px;
+	padding: 8px 0 9px 7px;
+	margin-top: 13px;
+	margin-left: 7px;
+	font-family: 'Microsoft YaHei';
+	border: 1px solid #b9b9b9;
+	vertical-align: middle;
+	border-right: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+	box-shadow: 1px 1px 0 0 #fafafa, 1px 1px 0 #eeeeee inset;
+}
+.cinema_search .cinema_search_btn, .cinema_search .cinema_search_btn:link {
+	float: left;
+	_display: inline;
+	width: 66px;
+	height: 34px;
+	line-height: 34px;
+	margin-top: 13px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	border-bottom: 1px solid #d3313a;
+	background: #e34551;
+}
+.cinema_search .cinema_search_btn:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.cinema_search_hot {
+	float: left;
+	_display: inline;
+	margin-top: 8px;
+	margin-left: 18px;
+}
+.cinema_search_hot span {
+	color: #a2a2a2
+}
+.cinema_search_hot a {
+	padding: 0 7px;
+	color: #4575b7;
+}
+.cinema_search_hot a:visited, .cinema_search_hot a:hover {
+	background: none;
+}
+.cinema_left {
+	background: #fff;
+	position: relative;
+	float: left;
+	_display: inline;
+	width: 269px;
+	height: 638px;
+	border: 1px solid #eaeaea;
+	border-right: 0;
+	border-top: 0;
+	z-index: 2;
+}
+.cinema_right {
+	float: left;
+	_display: inline;
+	width: 720px;
+	height: 639px;
+}
+.shadow_top {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 5px;
+	background: url('../../images/detail/shadow_top.png?v=20131008') 0 0 repeat-x;
+	overflow: hidden;
+	z-index: 1;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/shadow_top.png?v=20131008');
+	_background-image: none;
+}
+.shadow_bottom {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background: url('../../images/detail/shadow_bottom.png?v=20131008') 0 0 repeat-x;
+	overflow: hidden;
+	z-index: 1;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/shadow_bottom.png?v=20131008');
+	_background-image: none;
+}
+.shadow_left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 100%;
+	background: url('../../images/detail/shadow_left.png?v=20131008') 0 0 repeat-y;
+	overflow: hidden;
+	z-index: 1;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/shadow_left.png?v=20131008');
+	_background-image: none;
+}
+.shadow_right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	overflow: hidden;
+	background: #d3d7d9;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	overflow: hidden;
+	z-index: 1;
+}
+.cinema_tab li {
+	float: left;
+	width: 66px;
+	height: 35px;
+	line-height: 35px;
+	color: #333;
+	text-align: center;
+	cursor: pointer;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	background: #f9f9f9;
+}
+.cinema_tab li.active {
+	border-bottom: 1px solid #fff;
+	background: #fff;
+}
+.cinema_tab li a {
+	color: #333;
+	display: inline-block;
+	width: 100%;
+	heigth: 100%;
+}
+.cinema_tab li a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.cinema_tab li a:hover {
+	text-decoration: none;
+}
+.cinema_sel {
+	position: absolute;
+	left: 0;
+	top: 36px;
+	width: 229px;
+	padding: 0 12px 0 16px;
+	_padding-right: 0;
+	background: #fff;
+	z-index: 10;
+}
+.cinema_sel .cinema_sel_left {
+	float: left;
+	line-height: 40px;
+	color: #545454;
+}
+.cinema_sel .cinema_sel_left em {
+	font-weight: bold;
+	font-family: 'SimSun';
+	color: #e34551;
+}
+.cinema_sel .cinema_sel_right {
+	position: relative;
+	float: right;
+	height: 26px;
+	text-align: right;
+	margin-top: 8px;
+}
+.cinema_sel .cinema_sel_right .sel_cinema {
+	color: #4575b7;
+	background: #fff;
+	border: 1px solid #e9e9e9;
+	display: inline-block;
+	padding: 3px 21px 3px 10px;
+}
+.cinema_sel .cinema_sel_right .sel_cinema:hover {
+	text-decoration: none;
+}
+.cinema_sel .cinema_sel_right .sel_cinema_border {
+	border: 2px solid #E34551;
+	border-bottom: none;
+	padding: 2px 20px 2px 16px;
+}
+.cinema_sel .cinema_sel_right .sel_cinema .triangle {
+	top: 11px;
+}
+.cinema_sel .cinema_sel_right .sel_cinema .triangleToUp {
+	_border-width: 5px;
+	_top: 9px;
+}
+.cinema_sel .cinema_sel_right .all_type_box {
+	left: 0;
+	top: 22px;
+	z-index: -1;
+}
+.bubble_red {
+	display: inline-block;
+	width: 21px;
+	height: 30px;
+	line-height: 25px;
+	overflow: hidden;
+	text-align: center;
+	text-indent: 0;
+	color: #fff;
+	font-weight: bold;
+	vertical-align: middle;
+	background: url('../../images/detail/icon_png24.png?v=20130923') -57px 0 no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/ie/map_icon24_bubble_red.png?v=20130923');
+	_background-image: none;
+}
+.bubble_blue {
+	display: inline-block;
+	width: 21px;
+	height: 30px;
+	line-height: 25px;
+	overflow: hidden;
+	text-align: center;
+	text-indent: 0;
+	color: #fff;
+	font-weight: bold;
+	vertical-align: middle;
+	background: url('../../images/detail/icon_png24.png?v=20130923') -80px 0 no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/ie/map_icon24_bubble_blue.png?v=20130923');
+	_background-image: none;
+}
+.cinema_list {
+	padding-left: 1px;
+	padding-right: 8px;
+	margin-top: -5px;
+	border-bottom: 1px solid #eaeaea;
+	background: #fff;
+}
+.cinema_list li {
+	line-height: 20px;
+	padding: 15px 14px 16px 33px;
+	cursor: default;
+	background: url("../../images/detail/s_hot_split.gif?v=20130923") repeat-x left bottom;
+}
+.cinema_list li.active {
+	background-color: #f8f8f8;
+}
+.cinema_list li.last {
+	background: none;
+}
+.cinema_list li.last a {
+	color: #4575b7;
+}
+.cinema_list li.last a:visited, .cinema_list li.last a:hover {
+	background: none;
+}
+.cinema_list li.cinema_goback {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	zoom: 1;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.cinema_list li.cinema_noRS span {
+	display: inline-block;
+	height: 74px;
+	line-height: 74px;
+	color: #545454;
+	vertical-align: middle;
+}
+.cinema_list li.cinema_noRS b {
+	display: inline-block;
+	width: 77px;
+	height: 74px;
+	vertical-align: middle;
+	background: url("../../images/tip_bg.gif?v=20130917") no-repeat 0 0;
+}
+.c_name {
+	position: relative;
+	color: #545454;
+}
+.c_name a, .c_name a:link, .c_name a:visited {
+	color: #545454;
+}
+.c_name a:hover {
+	background: none;
+	text-decoration: underline;
+}
+.c_name .bubble_blue, .c_name .bubble_red {
+	position: absolute;
+	left: -25px;
+	top: -2px;
+	top: -5px\9;
+}
+.c_name a em {
+	color: #e34551;
+}
+.c_name .score_s {
+	vertical-align: middle;
+	margin-bottom: 4px;
+}
+.c_add, .c_tel {
+	text-indent: -37px;
+	margin-left: 37px;
+	color: #a2a2a2;
+	word-break: break-all;
+}
+.c_price {
+	margin-top: 9px;
+	margin-bottom: 7px;
+	overflow: hidden;
+	zoom: 1;
+}
+.c_price em {
+	float: left;
+	font-family: Arial;
+	font-size: 22px;
+	color: #e34551;
+	vertical-align: middle;
+}
+.c_price i {
+	float: left;
+	margin-top: 1px;
+	*margin-top: 4px;
+	_margin-top: 5px;
+	color: #545454;
+}
+#cinema_right .c_price i {
+	margin-top: 2px\9;
+	_margin-top: 4px;
+}
+.c_price span {
+	float: left;
+	margin-left: 3px;
+}
+.cinema_left_overflow {
+	position: relative;
+	height: 602px;
+	width: 269px;
+	padding-top: 41px;
+	overflow: hidden;
+}
+.splitPages {
+	overflow: hidden;
+	background: #F4F4F4;
+	height: 60px;
+	margin-top: 0;
+	padding-top: 10px;
+}
+.splitPages em {
+	padding-left: 0;
+}
+.cinema_map_info {
+	position: relative;
+	width: 317px;
+	line-height: 22px;
+	padding: 1px;
+	background: #e2e0dd;
+}
+.cinema_map_info .map_arrow {
+	position: absolute;
+	left: 130px;
+	bottom: -39px;
+	width: 42px;
+	height: 40px;
+	overflow: hidden;
+	z-index: 10;
+	background: url("../../images/detail/icon_png24.png?v=20130923") no-repeat left top;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/ie/map_icon24_arrow.png?v=20130917');
+	_background-image: none;
+}
+.cinema_map_info .map_shadow {
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	width: 412px;
+	height: 129px;
+	overflow: hidden;
+	z-index: 0;
+	background: url("../../images/detail/icon_png24.png?v=20130923") no-repeat left -40px;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/detail/ie/map_icon24_shadow.png?v=20130917');
+	_background-image: none;
+}
+.cinema_map_info .map_close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 12px;
+	height: 11px;
+	overflow: hidden;
+	z-index: 10;
+	background: url("../../images/detail/icon_png8.png?v=20130924") no-repeat left -136px;
+}
+.cinema_map_info .map_close:hover {
+	background-position: -13px -136px;
+}
+.cinema_map_info .cinema_map_top {
+	position: relative;
+	z-index: 5;
+	border: 1px solid #fff;
+	background: #fff;
+	padding: 20px 35px 5px 20px;
+}
+.cinema_map_bottom {
+	position: relative;
+	z-index: 5;
+	height: 36px;
+	border: 1px solid #fff;
+	padding-top: 7px;
+	padding-right: 8px;
+	text-align: right;
+	background: #efefef;
+}
+.cinema_float {
+	position: absolute;
+	left: 25%;
+	top: 10px;
+	width: 50%;
+	height: 26px;
+	line-height: 26px;
+	color: #fff;
+	text-align: center;
+}
+.cinema_float span {
+	display: inline-block;
+	*vertical-align: middle;
+	font-family: Verdana;
+	_font-family: Tahoma;
+}
+.cinema_float_mid em {
+	_vertical-align: middle;
+	font-family: Verdana;
+	_font-family: Tahoma;
+}
+.cinema_float_left {
+	width: 30px;
+	height: 26px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	background: url("../../images/detail/icon_png8.png?v=20130924") no-repeat left -54px\9;
+}
+:root .cinema_float_left {
+	background: #000;
+	filter: none;
+}
+.cinema_float_mid {
+	background: #000;
+	background: rgba(0, 0, 0, 0.5); /* IE9 IE10 及所有支持css3的浏览器 */
+	*filter: alpha(opacity=50); /* IE7 IE8 */
+	filter: alpha(opacity=50)\0; /* IE8 IE9 */
+}
+
+/* IE9重设 */
+:root .cinema_float_mid {
+	filter: none;
+}
+.cinema_float_mid em {
+	color: #ffe990;
+}
+.cinema_float_mid * {
+	position: relative;
+}
+.cinema_float_right {
+	width: 30px;
+	height: 26px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	background: url("../../images/detail/icon_png8.png?v=20130924") no-repeat right -82px\9;
+}
+:root .cinema_float_right {
+	background: #000;
+	filter: none;
+}
+
+/* 地图标注 */
+.marker {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.marker a {
+	color: #fff;
+}
+.marker a:hover {
+	text-decoration: none;
+}
+.marker a label {
+	-moz-user-select: none;
+	cursor: inherit;
+	padding-top: 4px;
+	font: bold 14px arial, simsun;
+	z-index: 80;
+	color: #fff;
+	display: block;
+	text-align: center;
+}
+
+/* 重设滚动条样式，整站改版后可直接修改jquery.jscrollpane.codrops.css */
+#cinema_left_overflow .jspVerticalBar {
+	width: 8px;
+	border: 1px solid #d8d8d8;
+	_overflow: hidden;
+}
+#cinema_left_overflow .jspDrag {
+	left: -2px;
+	width: 8px;
+	padding: 1px;
+	border: 1px solid #d4d4d4;
+	background: #f6f6f6 url("../../images/scroll_v_bar.png?v=20130917") no-repeat center center;
+}
+
+/* 影片详情--热门影片 ************************************************************/
+.sHotMovie {
+	padding: 0 10px;
+	overflow: hidden;
+}
+.sHotMovie ul {
+	margin-top: -1px;
+}
+.sHotMovie ul li {
+	padding: 15px 5px 13px 0;
+	background: url("../../images/detail/s_hot_split.gif?v=20130905") 0 top repeat-x;
+}
+.sHotMovie ul li .name {
+	height: 26px;
+	line-height: 26px;
+	color: #333333;
+	position: relative;
+}
+.sHotMovie ul li .name a:link, .sHotMovie ul li .name a:visited {
+	color: #333333;
+}
+.sHotMovie ul li .name .score_big {
+	font-size: 18px;
+	font-style: normal;
+	position: relative;
+	left: 0;
+	top: 2px;
+}
+.sHotMovie ul li .name .score_big em {
+	font-size: 16px;
+}
+.sHotMovie ul li .price {
+	height: 24px;
+	line-height: 24px;
+}
+.sHotMovie ul li .price span {
+	margin-left: 4px;
+	font-size: 14px;
+	color: #333;
+	vertical-align: top;
+	*vertical-align: middle;
+	_vertical-align: text-bottom;
+}
+.sHotMovie ul li .add {
+	/* height: 48px;
+	*/
+	line-height: 20px;
+	overflow: hidden;
+	color: #858585;
+}
+.sHotMovie ul li .tel {
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	color: #858585;
+}
+
+/* 电影详情--正在热映 ******************************************************/
+.sider_hot_box {
+	border: 1px solid #e9e9e9;
+	background: #fff;
+}
+.sider_hot_box .title {
+	height: 45px;
+	line-height: 45px;
+	padding-left: 12px;
+	font: 16px/45px "Microsoft YaHei";
+	color: #2c2c2c;
+}
+.sider_hot_box dd {
+	overflow: hidden;
+	zoom: 1;
+	padding-bottom: 30px;
+}
+.sider_hot_mv {
+	margin-top: -10px;
+}
+.sider_hot_mv li {
+	height: 93px;
+	padding: 12px 14px;
+	*zoom: 1;
+	background: url("../../images/detail/s_hot_split.gif?v=20130723") 0 top repeat-x;
+}
+.sider_hot_mv li .poster {
+	position: relative;
+	float: left;
+	width: 70px;
+	height: 93px;
+}
+.sider_hot_mv li dl {
+	float: left;
+	_display: inline;
+	width: 120px;
+	margin-left: 10px;
+	margin-top: -4px;
+}
+.sider_hot_mv li dl dd {
+	padding-bottom: 0;
+	font-family: "SimSun";
+}
+.sider_hot_mv li dl dt {
+	position: relative;
+	padding-top: 0;
+	border: 0;
+	height: 20px;
+}
+.sider_hot_mv li dl dt h2 {
+	display: inline-block;
+	height: 20px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #545454;
+}
+.sider_hot_mv li dl dt h2 a:link, .sider_hot_mv li dl dt h2 a:visited, .sider_hot_mv li dl dt h2 a:hover {
+	color: #545454;
+	text-decoration: none;
+}
+.sider_hot_mv li dl dt em {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #ffc041;
+	width: 35px;
+	height: 20px;
+	overflow: hidden;
+	font: italic normal 25px/22px Arial;
+}
+.sider_hot_mv li dl dt em .s {
+	font-size: 16px;
+}
+.sider_hot_mv li dl dd.summary {
+	color: #999;
+	line-height: 21px;
+	height: 42px;
+	overflow: hidden;
+}
+.sider_hot_mv li dl dd.des {
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	color: #666666;
+	overflow: hidden;
+}
+.sider_hot_mv li dl dd.mv_star {
+	height: 14px;
+	line-height: 14px;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.sider_hot_mv li .poster i {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+}
+.sider_hot_mv li .sanD {
+	width: 33px;
+	height: 33px;
+	background: url("../../images/icon.png?v=20130723") -33px -286px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD_s.png?v=20130723');
+	_background-image: none;
+}
+.sider_hot_mv li .imax {
+	width: 33px;
+	height: 33px;
+	background: url("../../images/icon.png?v=20130723") 0 -286px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax_s.png?v=20130723');
+	_background-image: none;
+}
+
+/* 电影详情--正在热映 end ******************************************************/
+/* 影片详情页样式 end *************************************************************************/
+
+/* 影院详情页样式 *************************************************************************/
+.cinemaInfo {
+	color: #333;
+	padding: 12px 20px 20px;
+	width: 950;
+	position: relative;
+	margin-bottom: 10px;
+}
+.cinemaInfo .title {
+	position: relative;
+	height: 36px;
+	line-height: 36px;
+	padding-right: 74px;
+	display: inline-block;
+	overflow: hidden;
+}
+.cinemaInfo .title .mv_name {
+	font: 28px "Microsoft YaHei";
+	float: left;
+	width: auto;
+	position: relative;
+	display: inline-block;
+}
+.cinemaInfo .title .mv_name span {
+	margin-right: 4px;
+}
+.cinemaInfo .title .mv_name h1 {
+	display: inline;
+	margin-right: 4px;
+}
+.cinemaInfo .title .mv_name i {
+	margin-left: 4px;
+	margin-top: 10px;
+}
+.cinemaInfo .title .star_bg {
+	margin-left: 4px;
+}
+.cinemaInfo .title .score_big {
+	margin-top: 4px;
+	margin-top: 6px\9;
+	*margin-top: 2px;
+}
+.cinemaInfo .title .collect {
+	display: inline-block;
+	text-align: center;
+	background-color: #fff;
+	color: #666;
+	border: 1px solid #d0d0d0;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	height: 22px;
+	line-height: 20px;
+	line-height: 22px\9;
+	width: 56px;
+	position: absolute;
+	top: 10px;
+	*top: 8px;
+	right: 0;
+}
+.cinemaInfo .title .collected {
+	background-color: #f6f6f6
+}
+.cinemaInfo .feedback {
+	position: absolute;
+	right: 20px;
+	top: 25px;
+}
+.cinemaInfo .details {
+	padding-top: 12px;
+	position: relative;
+}
+.cinemaInfo .details .poster {
+	float: left;
+	width: 200px;
+	height: 174px;
+}
+.cinemaInfo .details .poster img {
+	width: 200px;
+	height: 174px;
+	border: none;
+}
+.cinemaInfo .details dl {
+	padding: 0 40px 0 24px;
+	width: 464px;
+	float: left;
+}
+.cinemaInfo .details dl dd.des {
+	color: #666;
+	height: auto;
+	line-height: 22px;
+	position: relative;
+}
+.cinemaInfo .details dl dd.des p {
+	width: 420px;
+	position: relative;
+	left: 36px;
+	top: -22px;
+	_top: -23px;
+}
+.cinemaInfo .details dl dd.des p a.more {
+	display: inline-block;
+	position: relative;
+	right: 0;
+	bottom: 0;
+}
+.cinemaInfo .details dl dd.traffic p {
+	max-height: 42px;
+	overflow: hidden;
+}
+.cinemaInfo .details dl dd.more {
+	background: url("../../images/border_line.gif?v=20121126") repeat-x scroll left top;
+}
+.cinemaInfo .details dl dd.more span {
+	margin: 4px 0 10px;
+	display: inline-block;
+	width: 100%;
+}
+.cinemaInfo .details dl dd.more a {
+	margin-right: 36px;
+	display: inline-block;
+}
+.cinemaInfo .details dl dd.more a h2 {
+	display: inline;
+	vertical-align: middle;
+}
+.cinemaInfo .details dl dd.more a, .cinemaInfo .details dl dd.more a:hover, .cinemaInfo .details dl dd.more a:active {
+	color: #666;
+	background: #fff;
+}
+.cinemaInfo .details dl dd.more a i {
+	display: inline-block;
+	vertical-align: middle;
+	background: url("../../images/detail/icon_2.png?v=20131218") 0 0 no-repeat #fff;
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+	_margin-bottom: 3px;
+}
+.cinemaInfo .details dl dd.more a i.ticket {
+	background-position: 0 -20px;
+}
+.cinemaInfo .details dl dd.more a i.special {
+	background-position: 0 -60px;
+}
+.cinemaInfo .details dl dd.more a i.coupon {
+	background-position: 0 -40px;
+}
+.cinemaInfo .details .map {
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.cinemaInfo .details .map .mapDiv {
+	border: 1px solid #ccccdd;
+	width: 218px;
+	height: 120px;
+	margin-bottom: 4px;
+}
+.cinema .areaList {
+	margin-left: 0;
+	padding-right: 0;
+}
+.cinema .areaList li {
+	margin: 10px 10px 0
+}
+.cinema .areaList li a {
+	border-color: #fff;
+}
+.cinema .areaList li.active a {
+	border-color: #E34551;
+}
+.cinema .movieTabC {
+	width: 748px;
+	border-top: 1px solid #EBEBEB;
+	_margin-top: -1px;
+}
+.cinema .movieTabC .area {
+	margin: 0;
+	padding: 14px 20px 14px 30px;
+}
+.cinema .movieTabC .area dt {
+	width: auto;
+}
+.cinema .movieTabC .area dd {
+	width: 655px;
+}
+.cinema .movieTabC a.moreDate {
+	right: 0;
+	background: #fff;
+}
+.cinema .movieTabC a.moreDate:hover {
+	background: #fff;
+}
+
+/* 上映影片 */
+.c_detail_movie {
+	padding: 13px 20px 13px 30px;
+	background: url("../../images/detail/mv_comm_split.png?v=20130723") repeat-x scroll left bottom #f8f8f8;
+}
+.c_detail_movie .c_detail_title {
+}
+.c_detail_movie .c_detail_title h2 {
+	color: #545454;
+	font-size: 18px;
+	float: left;
+	height: 26px;
+	line-height: 26px;
+}
+.c_detail_movie .c_detail_title .right {
+	float: right;
+}
+.c_detail_movie .c_detail_title .right li {
+	float: left;
+}
+.c_detail_movie .c_detail_title .right li a {
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	color: #444;
+	font-family: SimSun;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	text-decoration: none;
+	width: 80px;
+}
+.c_detail_movie .c_detail_title .right li.active a {
+	background: #E34551;
+	color: #fff;
+	border-color: #E34551;
+}
+.c_detail_movie .c_detail_poster {
+	background: #FBFAFA;
+	height: 200px;
+	padding: 12px 0 0;
+	position: relative;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar {
+	position: absolute;
+	left: -15px;
+	top: 50%;
+	margin-top: -17px;
+	width: 17px;
+	height: 34px;
+	background: url("../../images/detail/btn_show.png?v=20140106") 0 -548px no-repeat;
+	cursor: pointer;
+}
+.c_detail_movie .noBoth .c_photo_bar {
+	display: none;
+}
+.c_detail_movie .c_detail_poster .c_photo_bar_right {
+	left: auto;
+	right: -2px;
+	background-position: 0 -582px;
+}
+.c_detail_movie .c_detail_poster .noLeft {
+	background-position: -1px -615px;
+	cursor: default;
+}
+.c_detail_movie .c_detail_poster .noRight {
+	background-position: 1px -649px;
+	cursor: default;
+}
+.c_detail_movie .c_detail_poster .photo_list_box {
+	float: left;
+	width: 670px;
+	height: 200px;
+	margin: 0 3px;
+	position: relative;
+	overflow: hidden;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list {
+	height: 200px;
+	width: 10000px;
+	padding-top: 1px;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li {
+	float: left;
+	width: 139px;
+	height: 184px;
+	padding: 0 5px;
+	_padding: 0 4px;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a {
+	border: 3px solid #FBFAFA;
+	display: inline-block;
+	position: relative;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li img {
+	vertical-align: top;
+}
+
+/* ie6下上部有缝隙 */
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a:hover, .c_detail_movie .c_detail_poster .photo_list_box .photo_list li.active a {
+	border-color: #e34551;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a i {
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a:hover em, .c_detail_movie .c_detail_poster .photo_list_box .photo_list li.active a em {
+	position: absolute;
+	left: 60px;
+	bottom: -10px;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	zoom: 1;
+	border-width: 8px 8px 0;
+	border-color: #ff5a29 transparent transparent;
+	border-style: solid;
+	_border-style: solid dotted;
+}
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a img {
+	width: 135px;
+	height: 180px;
+}
+
+/* 电影详情 */
+.movie_detail {
+	padding: 20px 30px;
+}
+.movie_detail .left {
+	float: left;
+	width: 440px;
+	padding-right: 10px;
+}
+.movie_detail dt {
+	position: relative;
+}
+.movie_detail dt h2 {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	/* width: 680px;
+	*/
+	height: 30px;
+	font: bold 16px/30px "微软雅黑", "Microsoft YaHei", "黑体";
+	line-height: 26px;
+	color: #e83a18;
+	background: none;
+	vertical-align: middle;
+}
+.movie_detail dt h2 a {
+	color: #2c2c2c;
+}
+.movie_detail dt .star_bg {
+	margin-bottom: 8px;
+	vertical-align: middle;
+	*display: inline;
+	*zoom: 1;
+}
+.movie_detail dt .score_big {
+	font-size: 27px;
+	position: relative;
+	top: 4px;
+}
+.movie_detail dt .score_big .s {
+	font-size: 20px;
+}
+.movie_detail .summary {
+	font: normal 16px "微软雅黑", "Microsoft YaHei", "黑体";
+	line-height: 23px;
+	height: 23px;
+	margin: 8px 0;
+	color: #999999;
+	overflow: hidden;
+}
+.movie_detail .des {
+	font-size: 12px;
+	height: 24px;
+	line-height: 24px;
+	color: #666666;
+	overflow: hidden;
+}
+.movie_detail dd.price {
+	color: #dd4325;
+	overflow: hidden;
+}
+.movie_detail dd.price em {
+	text-decoration: line-through;
+	font-size: 14px;
+}
+.movie_detail dd .favorable {
+	margin-left: 28px;
+}
+.movie_detail dd .favorable i {
+	color: #e83a18;
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 2px;
+}
+
+/* 电影详情 end */
+.cinema .docBody {
+	width: 990px;
+	background: none;
+}
+.cinema .mainContent {
+	background: none;
+	border: none;
+	width: 750px;
+}
+
+/* 影院详情--团购&优惠券样式 */
+.mainContent .groupCoupon {
+	padding-bottom: 10px;
+	zoom: 1;
+}
+.groupCoupon .boxWrap {
+	position: relative;
+	zoom: 1;
+}
+.groupCoupon .boxs {
+	height: 82px;
+	width: 748px;
+	margin-bottom: 0;
+	overflow: hidden;
+	zoom: 1;
+	position: relative;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.groupCoupon .box {
+	position: relative;
+	padding: 16px 0 16px 70px;
+	border-right: 1px solid #DBDBDB;
+	border-bottom: 1px solid #DBDBDB;
+	float: left;
+	width: 303px;
+	height: 50px;
+	background-color: #fff;
+}
+.groupCoupon .box_noborderB {
+	border-bottom: none;
+}
+.groupCoupon .box_right {
+	/* float: none;
+	margin-left: 374px;
+	border-right: none;
+	*/ float: left;
+	border-right: none;
+}
+.groupCoupon .box i {
+	display: inline-block;
+	background: url("../../images/detail/icon_1.png?v=20131218") 0 -477px no-repeat;
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	left: 20px;
+	top: 18px;
+}
+.groupCoupon .box_tuan i {
+	background-position: -38px -477px;
+}
+.groupCoupon .box p {
+	height: 24px;
+	width: 292px;
+	line-height: 24px;
+}
+.groupCoupon .box p.title {
+	font-size: 14px;
+	font-weight: bold;
+	color: #545454;
+	position: relative;
+}
+.groupCoupon .box p.title span.couponHelp {
+	display: inline-block;
+	background: url("../../images/detail/icon_1.png?v=20131218") -89px -463px no-repeat;
+	width: 14px;
+	height: 14px;
+	position: relative;
+	right: 0;
+	top: 1px;
+	*top: -2px;
+	_top: 0px;
+	cursor: pointer;
+}
+.groupCoupon .box span.desc {
+	color: #999;
+	display: block;
+	position: relative;
+	height: 24px;
+	line-height: 24px;
+}
+.groupCoupon a.btn {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #DBDBDB;
+	-webkit-border-radius: 4px;
+	border-radius: 2px;
+	background: #fff;
+	background: -webkit-linear-gradient(top, #ffffff, #f1f1f1);
+	background: -moz-linear-gradient(top, #ffffff, #f1f1f1);
+	background: -ms-linear-gradient(top, #ffffff, #f1f1f1);
+	background: -o-linear-gradient(top, #ffffff, #f1f1f1);
+	background: linear-gradient(top, #ffffff, #f1f1f1);
+	color: #666;
+	height: 22px;
+	line-height: 20px;
+	_line-height: 22px;
+	width: 60px;
+	position: relative;
+	left: 10px;
+	top: 0;
+}
+.groupCoupon a.btn:hover, .groupCoupon a.btn:link, .groupCoupon a.btn:visited, .groupCoupon a.btn:active {
+	text-decoration: none;
+	color: #666;
+}
+.groupCoupon .box_one {
+	width: auto;
+	border: none;
+	margin-left: 0;
+	float: none;
+}
+.groupCoupon .box_one p {
+	width: auto;
+}
+.groupCoupon .couponIntro {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 496px;
+	border: 1px solid #d7b179;
+	background-color: #fffee4;
+	font-size: 12px;
+	font-family: "SimSun";
+	font-weight: normal;
+	color: #3e3e3e;
+	z-index: 100;
+	padding: 8px 20px;
+	zoom: 1;
+}
+.groupCoupon .couponIntro p {
+}
+.groupCoupon .couponIntro ul {
+	list-style: disc;
+	padding-left: 16px;
+}
+.groupCoupon .couponIntro ul li.first {
+	font-weight: bold;
+}
+.groupCoupon .couponIntro i {
+	display: inline-block;
+	background: url("../../images/detail/icon_1.png?v=20131223") -88px -322px no-repeat;
+	width: 13px;
+	height: 7px;
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	overflow: hidden;
+}
+.groupCoupon a.moreBtn {
+	color: #666;
+	width: 60px;
+	position: relative;
+	bottom: 0;
+	top: auto;
+	left: 688px;
+}
+.groupCoupon a.moreBtn i {
+	display: inline-block;
+	cursor: pointer;
+	background: url("../../images/detail/btn_show.png?v=20140106") 0 -696px no-repeat;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 6px;
+	top: 3px;
+}
+.groupCoupon_showMore {
+}
+.groupCoupon_showMore .boxs {
+	height: auto;
+}
+.groupCoupon_showMore a.moreBtn i {
+	background-position: 0 -683px
+}
+.cinema .mv_cinema_sch {
+	padding-top: 14px;
+}
+
+/* 影讯排期样式 ****************************************************/
+.filmsSchedule {
+	background-color: #fff;
+	background: #fff;
+	padding-left: 22px;
+	position: relative;
+	overflow: hidden;
+	zoom: 1;
+}
+.filmsSchedule .date {
+	position: relative;
+	border: 1px solid #f00;
+	color: #666666;
+	padding-top: 10px;
+	padding-left: 42px;
+	text-indent: -42px;
+	_padding-left: 0;
+	_text-indent: 0;
+	height: 30px;
+	overflow: hidden;
+	zoom: 1;
+	border: 1px solid #fff;
+}
+.filmsSchedule .filmInfo_box {
+	position: relative;
+}
+.filmsSchedule .filmInfo {
+	background: url("../../images/border_line.gif?v=20130905") repeat-x scroll left bottom transparent;
+	padding: 20px 0;
+	zoom: 1;
+}
+.filmsSchedule .filmInfoNoborder {
+	background: none;
+}
+.filmsSchedule .filmInfo img {
+	width: 70px;
+	height: 93px;
+	float: left;
+}
+.filmsSchedule .filmInfo .info {
+	padding-left: 16px;
+	position: relative;
+	float: left;
+	width: 630px;
+}
+.filmsSchedule .filmInfo h3.name {
+	color: #333333;
+	margin-bottom: 0;
+	margin-top: -5px;
+	_margin-top: -3px;
+	font-family: "微软雅黑", "Microsoft YaHei";
+	font-size: 16px;
+	margin-right: 4px;
+}
+.filmsSchedule .filmInfo h3.name .score {
+	color: #ff6143;
+	position: relative;
+	font-size: 14px;
+}
+.filmsSchedule .filmInfo h3.name .score em {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+}
+.filmsSchedule .filmInfo p.desc {
+	color: #999999;
+	padding-bottom: 6px;
+}
+.filmsSchedule .filmInfo .schedule {
+	color: #666666;
+	margin-bottom: 4px;
+	padding-left: 24px;
+	position: relative;
+}
+.filmsSchedule .filmInfo .schedule p.label {
+	font-weight: bold;
+	color: #333;
+	margin-left: -24px;
+}
+.filmsSchedule .filmInfo .schedule i {
+	display: inline-block;
+	background: url("../../images/detail/icon_1.png?v=20131220") -76px -477px no-repeat;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	top: 28px;
+	margin-left: -20px;
+	margin-top: 10px;
+	margin: 10px 4px 0 -24px;
+	vertical-align: top;
+}
+.filmsSchedule .filmInfo .schedule i.evening {
+	background-position: -76px -497px;
+}
+.filmsSchedule .filmInfo .schedule span {
+	height: 30px;
+	width: 90px;
+	line-height: 14px;
+	margin: 4px 6px 4px 0;
+	padding: 3px 0;
+	font-size: 18px;
+	text-align: center;
+	white-space: nowrap;
+	word-spacing: normal;
+	display: inline-block;
+	background: url("../../images/detail/icon_1.png?v=20131220") 0 -553px no-repeat;
+}
+.filmsSchedule .filmInfo .schedule span.out {
+	background-position: 0 -517px;
+}
+.filmsSchedule .filmInfo .schedule span em {
+	color: #c0c0c0;
+	font-size: 12px;
+}
+.filmsSchedule .filmInfo .schedule span em.endTime {
+	font-size: 14px;
+}
+.status_sanD, .status_imax {
+	display: inline-block;
+	position: absolute;
+	left: -73px;
+	top: -2px;
+	width: 33px;
+	height: 33px;
+}
+.status_sanD {
+	background: url("../../images/icon.png?v=20130905") -33px -286px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD_s.png?v=20130723');
+	_background-image: none;
+}
+.status_imax {
+	background: url("../../images/icon.png?v=20130905") 0 -286px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax_s.png?v=20130723');
+	_background-image: none;
+}
+
+/* 影院详情 -- 没有排期时的提示 **********************************/
+.recentMovie {
+}
+.recentMovie .noTicket {
+	position: relative;
+}
+.recentMovie .noTicket i {
+	display: inline-block;
+	background: url("../../images/noTicket1.jpg?v=20131223") 0 0 no-repeat;
+	width: 87px;
+	height: 59px;
+	position: absolute;
+	left: 200px;
+	top: 16px;
+}
+.recentMovie .noTicket p {
+	font-size: 14px;
+	color: #666;
+	padding: 20px 0 20px 300px;
+}
+
+/* 影院详情 -- 近期热映电影 end **********************************/
+/* 影院详情 -- 纠错样式 **********************************/
+.feedbackDialog{
+	font-family: "Microsoft YaHei", "黑体";
+}
+.feedbackDialog p.dialogTitle {
+	background: #e34551;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	padding-left: 20px;
+}
+.feedbackDialog .feedback {
+	padding: 10px 34px 20px;
+	zoom:1;
+}
+.feedbackDialog .title {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #545454;
+	font-size: 20px;
+}
+.feedbackDialog ul.feedbackLevel {
+}
+.feedbackDialog ul.feedbackLevel li {
+	float: left;
+	height: 26px;
+	line-height: 26px;
+	width: 122px;
+}
+.feedbackDialog ul.feedbackLevel li.last {
+	margin-right: 0;
+}
+.feedbackDialog ul.feedbackLevel input {
+	float: left;
+	height: 26px;
+	_margin-top: -1px;
+}
+.feedbackDialog ul.feedbackLevel label {
+	padding-left: 4px;
+	display: block;
+	height: 26px;
+	float: left;
+}
+.feedbackDialog ul.feedbackLevel label span {
+}
+.feedbackDialog .comm_area {
+	padding: 4px 10px;
+	width: 590px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+.feedbackDialog .note {
+	text-align: right;
+	width: auto;
+}
+
+/****************************************************************/
+/* 影院详情--周边影院 *********************************************/
+.siderBox {
+	width: 230px;
+}
+.siderBox a.promotion img {
+	width: 230px;
+}
+.sider_hot {
+	border-top: 1px solid #e9e9e9;
+	background: #fff;
+}
+.sider_hot .titleLine, .sider_hot .titlenoLine {
+	height: 36px;
+	line-height: 36px;
+}
+.sider_hot .titleLine h2, .sider_hot .titlenoLine h2 {
+	font: normal 16px/36px "微软雅黑", "Microsoft YaHei", "黑体";
+	color: #000;
+	background: none;
+}
+.sider_hot .titlenoLine {
+	border-bottom: 0;
+}
+.sider_hot .titleLine {
+	padding-left: 10px;
+	height: 28px;
+	overflow: hidden;
+}
+.sider_hot .titleLine h2 {
+	height: 21px;
+	line-height: 21px;
+	overflow: hidden;
+	padding-top: 5px;
+	_padding-top: 6px;
+	font-weight: bold;
+	color: #333333;
+}
+.sider_hot dd {
+	padding-bottom: 7px;
+	overflow: hidden;
+	zoom: 1;
+}
+.sider_hot_playList {
+	margin-top: -1px;
+}
+.sider_hot_playList li {
+	float: none;
+	width: auto;
+	height: 95px;
+	padding: 12px 0;
+	padding-top: 11px;
+	_overflow: hidden;
+	*zoom: 1;
+	border: 0;
+	background: url("../../images/detail/s_hot_split.gif?v=20130905") 0 top repeat-x;
+}
+.sider_hot_playList li .poster {
+	width: 72px;
+	height: 93px;
+	padding-left: 7px;
+	padding-top: 0;
+	background: none;
+	position: relative;
+}
+.sider_hot_playList li .poster img {
+	border: 1px solid #fff;
+}
+.sider_hot_playList li .poster i {
+	position: absolute;
+	left: 5px;
+	top: -1px;
+}
+.sider_hot_playList li dl {
+	float: left;
+	_display: inline;
+	margin-left: 8px;
+	margin-top: -4px;
+	width: 140px;
+}
+.sider_hot_playList li dl dd {
+	padding-bottom: 0;
+	font-family: "宋体";
+}
+.sider_hot_playList li dl dt {
+	padding-top: 0;
+	border: 0;
+	height: 20px;
+}
+.sider_hot_playList li dl dt h2 {
+	width: 110px;
+	font-size: 14px;
+	color: #000;
+	font-weight: normal;
+}
+.sider_hot_playList li dl dt em {
+	font-size: 20px;
+}
+.sider_hot_playList li dl dt em .s {
+	font-size: 16px;
+}
+.sider_hot_playList li dl dd.summary {
+	margin-bottom: 0px;
+	line-height: 18px;
+	margin-top: 5px;
+}
+
+/* 影院详情页 --  详情tab ************************************************/
+.cinema .mv_comm_plot {
+	padding-top: 46px;
+	overflow: hidden
+}
+.cinema .mv_comm_plot_first {
+	padding-top: 30px;
+}
+.cinema .mv_comm_plot .title {
+	margin-top: 0;
+}
+.cinema .mv_comm_plot .title h2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.cinema .mv_comm_plot .title strong {
+	font-size: 16px;
+	font-weight: bold;
+	color: #545454;
+	float: left;
+	font-family: "Microsoft YaHei";
+	padding-left: 8px;
+}
+.cinema .mv_comm_plot p {
+	text-indent: 0;
+}
+.cinema .special p {
+	position: relative;
+	line-height: 24px;
+	padding-left: 30px;
+	margin: 10px 0;
+	zoom: 1;
+}
+.cinema .special p b {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	background: url("../../images/detail/icon_2.png?v=2013122301") 0 -80px no-repeat;
+}
+.cinema .special p.p2 b {
+	background-position: 0 -104px;
+}
+.cinema .special p.p3 b {
+	background-position: 0 -80px;
+}
+.cinema .special p.p4 b {
+	background-position: 0 -104px;
+}
+.cinema .special p.p5 b {
+	background-position: 0 -128px;
+}
+.cinema .special p.p6 b {
+	background-position: 0 -152px;
+}
+.cinema .special p.p7 b {
+	background-position: 0 -176px;
+}
+.cinema .special p.p8 b {
+	background-position: 0 -200px;
+}
+.cinema .special p.p9 b {
+	background-position: 0 -224px;
+}
+.cinema .special p.p10 b {
+	background-position: 0 -248px;
+}
+/*seo 影院详情底部增加 相关影院等*/
+.aboutBox {
+	line-height: 26px;
+	padding: 14px 14px 24px 16px;
+	border: 1px solid #d9d9d9;
+	font-size: 14px;
+	color: #666;
+	background: #fff;
+}
+.aboutBox .aLine{
+	font-size: 0;
+}
+.aboutBox .aLine a,
+.aboutBox .aLine i{
+	color: #ff6666;
+	font-size: 14px;
+}
+.ti {
+	text-indent: 2em;
+}
+.relTitle {
+	margin-bottom: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+.relTitle .relCinemaBar {
+	float: right;
+	font-size: 14px;
+	font-weight: normal;
+	outline: none;
+	color: #ff6666;
+	cursor: pointer;
+}
+.relCinemaBox{
+	height: 26px;
+	overflow: hidden;
+}
+.relCinemaBox a,
+.relCinemaBox a:hover{
+	color: #666;
+}
+.relCinemaShow{
+	height: auto;
+	overflow: auto;
+}
+/* 影院详情页样式 end *************************************************************************/
+a, a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+.wrap {
+	width: 990px;
+	background: none;
+}
+.box_gray {
+	background-color: #fff;
+	border: 1px solid #DBDBDB;
+}
+.sanD {
+	width: 33px;
+	height: 33px;
+	background: url("../images/icon8.png") -33px -286px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_sanD_s.png?v=20130723');
+	_background-image: none;
+}
+.imax {
+	width: 33px;
+	height: 33px;
+	background: url("../../images/icon.png?v=20130905") 0 -286px no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://pimg1.126.net/movie/images/icon_imax_s.png?v=20130723');
+	_background-image: none;
+}
+
+/* 小图标 */
+.transition {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/* 短评修改为影评 20150701 */
+.comment-pic-small {
+	margin-left: -10px;
+	margin-top: 15px;
+	overflow: hidden;
+	_zoom:1;
+}
+.comment-pic-small li {
+	float: left;
+	width: 90px;
+	height: 90px;
+	margin-left: 10px;
+	cursor: url(//pimg1.126.net/movie/images/index/btn-big.cur?v=20131105),auto;
+}
+.comment-pic-small li img{
+	width: 90px;
+	height: 90px;
+}
+/*显示评论大图*/
+.photo_box {
+	position: relative;
+	width: 450px;
+	margin-top: 15px;
+	overflow: hidden;
+}
+
+.photo_box .photo_big li {
+	width: 450px;
+	text-align: center;
+}
+.photo_box .photo_big li img {
+	max-width: 450px;
+
+}
+.photo_box .photo_b_box{
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 953px;
+}
+
+.photo_box .photo_s_list {
+	position: relative;
+	width: 420px;
+	padding-left: 30px;
+	margin-top: 10px;
+	overflow: hidden;
+	zoom: 1;
+}
+.photo_box .show-small-left,
+.photo_box .show-small-right{
+	position: absolute;
+	left:0;
+	bottom:0;
+	width: 20px;
+	height: 90px;
+	outline: none;
+	background: url(../images/index/icon_1.png) left -204px no-repeat;
+}
+.photo_box .show-small-right{
+	left:auto;
+	right: 0;
+	background-position: -21px -204px;
+}
+.photo_box .show-small-left-disable{
+	background-position:  -49px -204px;
+}
+.photo_box .show-small-right-disable{
+	background-position:  -70px -204px;
+}
+.photo_box .photo_s_list li {
+	position: relative;
+	float: left;
+	_display: inline;
+	width: 90px;
+	height: 90px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.photo_box .photo_s_list li.last {
+	margin-right: 0;
+}
+.photo_box .photo_s_list li a.poster_s {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+}
+.photo_box .photo_s_list li a:hover {
+	border: none;
+}
+.photo_box .photo_s_list li a:hover b, .photo_box .photo_s_list li.active a b, .photo_box .photo_s_list li.active a:hover b {
+	visibility: visible;
+}
+.photo_box .photo_s_list li a b {
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 82px;
+	height: 82px;
+	border: 4px solid #fc4856;
+	cursor: pointer;
+	opacity: 0.7;
+	filter: alpha(opacity = 70);
+}
+.photo_box .photo_s_list li a.poster_s {
+	outline: none;
+}
+.photo_box .photo_s_list li a.poster_s img {
+	width: 90px;
+	height: 90px;
+}
+.photo_box .photo_box_b{
+	position: relative;
+	width: 450px;
+	overflow: hidden;
+}
+.photo_box .show_left,
+.photo_box .show_right,
+.photo_box .show_center {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: 100%;
+	_height: 9999px;
+	outline: none;
+	background: url(../../images/blank.gif);/*不加blank,win7 ie6及xp下 ie不可点*/
+	z-index: 10;
+	zoom:1;
+}
+.photo_box .show_left{
+	cursor: url(//pimg1.126.net/movie/images/index/btn-left.cur?v=20140542),auto;
+}
+.photo_box .show_right{
+	left: 300px;
+	cursor: url(//pimg1.126.net/movie/images/index/btn-right.cur?v=20131105),auto;
+}
+.photo_box .show_center {
+	left: 150px;
+	cursor: url(//pimg1.126.net/movie/images/index/btn-small.cur?v=20131105),auto;
+}

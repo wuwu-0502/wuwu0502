@@ -1,0 +1,702 @@
+﻿/**************************************************************************************************************
+	*@Description: 网易电影首页改版
+	*@Author:xy 
+	*@Update:2014-07-09
+*/
+/* 顶部banner */
+body{
+	min-width: 1190px;
+}
+.photo_box{
+	position:relative;
+	width:100%;
+	height:360px;
+	z-index: 2;
+}
+.photo_box .photo_b_box{
+	width:100%;
+	height: 100%;
+	overflow:hidden;
+	position:relative;
+}
+.photo_box .photo_b_list{
+	height: 100%;
+	overflow:hidden;}
+.photo_box .photo_b_list li{
+	float:left;
+}
+/*.photo_box .photo_b_list li img{
+	width:953px;
+	height: 100%;
+}
+
+.photo_box .photo_b_list li.scale img{	
+    -webkit-transform: scale(1.2);
+	   -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+         -o-transform: scale(1.2);
+            transform: scale(1.2);
+	-webkit-transition: all 5s ease-out;
+	   -moz-transition: all 5s ease-out;
+		-ms-transition: all 5s ease-out;
+		 -o-transition: all 5s ease-out;
+			transition: all 5s ease-out;
+}
+.photo_box .photo_b_list li.origin0 img{
+	-webkit-transform-origin: 475px 275px;
+	   -moz-transform-origin: 475px 275px;
+		-ms-transform-origin: 475px 275px;
+		 -o-transform-origin: 475px 275px;
+			transform-origin: 475px 275px;
+}
+.photo_box .photo_b_list li.origin1 img{
+	-webkit-transform-origin: 200px 160px;
+	   -moz-transform-origin: 200px 160px;
+		-ms-transform-origin: 200px 160px;
+		 -o-transform-origin: 200px 160px;
+			transform-origin: 200px 160px;
+}
+.photo_box .photo_b_list li.origin2 img{
+	-webkit-transform-origin: 750px 160px;
+	   -moz-transform-origin: 750px 160px;
+		-ms-transform-origin: 750px 160px;
+		 -o-transform-origin: 750px 160px;
+			transform-origin: 750px 160px;
+}
+.photo_box .photo_b_list li.origin3 img{
+	-webkit-transform-origin: 200px 380px;
+	   -moz-transform-origin: 200px 380px;
+		-ms-transform-origin: 200px 380px;
+		 -o-transform-origin: 200px 380px;
+			transform-origin: 200px 380px;
+}
+.photo_box .photo_b_list li.origin4 img{
+	-webkit-transform-origin: 750px 380px;
+	   -moz-transform-origin: 750px 380px;
+		-ms-transform-origin: 750px 380px;
+		 -o-transform-origin: 750px 380px;
+			transform-origin: 750px 380px;
+}*/
+
+.photo_box .photo_b_list_fixed{
+	/*position:relative;*/
+	width:100%;
+}
+.photo_box .photo_b_list_fixed li{
+	float:none;
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	visibility:hidden;
+	opacity:1;
+	z-index:1;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.photo_box .photo_b_list_fixed li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.photo_box .photo_b_list_fixed li img{
+	width: 100%;
+}
+.photo_box .photo_b_list_fixed li.active{
+	visibility:visible;
+	z-index:2;
+}
+.photo_box .photo_b_list_fixed li.preImg{
+	visibility:visible;
+	z-index:1;
+}
+.photo_box .photo_s_box{
+	width:912px;
+	margin:0 auto;
+	overflow:hidden;
+	text-align:center;
+	padding-top:20px;
+}
+.photo_box .photo_s_list{
+	display:inline-block;
+	height:91px;
+	width:92100px;
+}
+.photo_box .photo_s_list li{
+	float:left;
+	margin:0 4px;
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+}
+/*.photo_box .photo_s_list li a{
+	display:inline-block;
+	width:142px;
+	height:86px;
+	border:1px solid #151931;}
+.photo_box .photo_s_list li a{outline:none;}
+.photo_box .photo_s_list li a img{	
+	filter: alpha(opacity=70);
+	opacity:0.7;
+	width:142px;
+	height:86px;}
+.photo_box .photo_s_list li.active a,
+.photo_box .photo_s_list li a:hover,
+.photo_box .photo_s_list li.active a:hover{
+	border-color:#0a90d7;}
+.photo_box .photo_s_list li a:hover img,
+.photo_box .photo_s_list li.active a img,
+.photo_box .photo_s_list li.active a:hover img{
+	filter: alpha(opacity=100);
+	opacity:1.0;}*/
+
+/*左右点击切换*/
+.photo_box .photo_big_bar{
+	display: none;
+}
+.photo_box .photo_big_left{
+  position: absolute;  
+  left: 50%;
+  margin-left: -590px;
+  top: 115px;
+  width: 80px;
+  height: 100px;
+  outline: none;
+  z-index: 100;
+}
+.photo_box .photo_big_right{
+  position: absolute;  
+  left: 50%;
+  margin-left: 515px;
+  top: 115px;
+  width: 80px;
+  height: 100px;
+  outline: none;
+  z-index: 100;
+}
+.photo_box .photo_big_left b,
+.photo_box .photo_big_right b{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 100px;
+	background: url(../../images/index/icon24.png) 0 0 no-repeat;
+	_background: url(../../images/index/icon8_2.png) 0 -4px #000000 no-repeat;
+	_filter: alpha(opacity=50);
+	cursor: pointer;
+}
+.photo_box .photo_big_right b {
+	background-position:-82px 0;
+	_background-position:0 -113px;
+    _background-color: #000;
+}
+.photo_box .photo_big_left:hover,
+.photo_box .photo_big_right:hover{
+  	zoom: 1;
+}
+.photo_box .photo_big_left:hover b{
+  	background-position:0 -102px;
+  	_background-position:0 -4px;
+  	_background-color: #e34551;
+}
+
+.photo_box .photo_big_right:hover b{
+	background-position:-82px -102px;
+	_background-position:0 -113px;
+  	_background-color: #e34551;
+}
+.photo_box .photo_bar_list{
+	position: absolute;
+	top: 276px;
+	left:50%;
+	margin-left: -595px;
+	width: 1190px;
+	height: 14px;
+	text-align:right;
+	z-index: 10;
+}
+.photo_box .photo_bar_list a{ 
+	display:inline-block;
+	margin-left:14px;
+	width: 14px;
+	height: 14px;
+	background: #fff;
+	opacity: 0.5;
+	border-radius: 7px;
+	/*background: url(../../images/index/icon8.png?v=20140720) -21px -39px no-repeat\9;*/
+}
+.photo_box .photo_bar_list a.active{
+	background: #E34551;
+	opacity: 1;
+	/*background: url(../../images/index/icon8.png?v=20140720) -21px -59px no-repeat\9;*/
+}
+/* 顶部banner */
+/* 首页主体区域 */
+.bodyMain{
+	width: 1190px;
+	margin: 0 auto;
+	font-family: "Microsoft YaHei";
+}
+.mainLeft{
+	float: left;
+	width: 955px;
+	background: #fff;
+}
+.mainRight{
+	float: left;
+	width: 222px;
+	margin-left: 13px;
+	_display: inline;
+}
+.mainCont1{
+	position: relative;
+	margin-top: -40px;
+	z-index: 2;
+	clear: both;
+}
+.fr{
+	float: right;
+}
+.mt15{
+	margin-top: 15px;
+}
+.ml20{
+	margin-left: 20px;
+}
+.ml10{
+	margin-left: 10px;
+}
+.mr10{
+	margin-right: 10px;
+}
+
+/*智能挑选价最低*/
+.partner{
+	padding: 25px 20px 25px 0;
+	height: 50px;
+	background: #fff;
+}
+.partner dt{
+	float: left;
+	width: 160px;
+	padding-left: 40px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	text-align: left;
+}
+.partner dd{
+	float: left;
+	width:960px;
+	overflow: hidden; 
+}
+.partner dd img{
+	float: left;
+	width: 128px;
+	height: 48px;
+	margin-left: 30px;
+	border: 1px solid #e8e8e8;
+}
+/*智能挑选价最低*/
+/*热门影院*/
+.hotCinema{
+	padding: 0 20px;
+}
+.hotCinema li{
+	position: relative;
+	padding-right: 220px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 57px;
+	border-bottom:1px solid #e8e8e8;
+}
+.hotCinema .icon_z,
+.hotCinema .icon_q,
+.hotCinema .icon_t,
+.hotCinema .icon_i{
+	margin-top: 2px;
+}
+.lowPrice{
+	position: absolute;
+	right: 100px;
+	top: 35px;
+	width: 120px ;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+	font-size: 36px;
+	font-family: helvetica;
+	font-weight: bold;
+	color: #e34551;
+}
+.lowPrice i{
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	color: #3f3f3f;
+}
+
+
+.hotCinema .cName{
+	height: 24px;
+	line-height: 25px;
+	font-size: 18px;
+	overflow: hidden;
+}
+.btnView{
+	position: absolute;
+	right: 0;
+	top: 35px;
+}
+.cAdd{
+	position: relative;
+	height: 18px;
+	line-height: 18px;
+	margin-top: 15px;
+	padding-left: 25px;
+	color: #7f7f7f;
+	overflow: hidden;
+}
+.cAdd b{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 14px;
+	height: 17px;
+	background:#e5545f url(../../images/index/icon8.png?v=20140720) -20px -260px no-repeat;
+}
+/*热门影院*/
+/*热映电影推荐*/
+.hotMovie2{
+	padding: 15px 0 25px 20px;
+}
+.hotMovie2 .posterStyle{
+	border-bottom: 0;
+}
+.hotMovie2 .posterStyle li{
+	padding: 0;
+	padding-right: 11px;
+}
+.hotMovie{
+	padding: 15px 20px 0 20px;
+}
+.hotMovie .movie_con{
+	float: left;
+	padding: 0;
+	border-bottom: 0;
+}
+.hotMovie .movie_con .l1{
+	width: 220px;
+}
+.hotMovie .movie_con .l2{
+	position: relative;width: 213px;height: 250px;padding:30px 10px 20px 20px
+}
+.hotMovie .movie_con .l2 h3{
+	width: 100%;
+}
+.hotMovie .lowPrice{
+	top: 213px;
+	left: 0;
+	color: #e34551;
+	text-align: center;
+}
+.hotMovie .showBtn{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+/*预售*/
+.hotMovie .lowPrice_ys{
+	top: 213px;
+	left: 2px;
+	color: #0aa4ec;
+	text-align: center;
+}
+.hotMovie .showBtn_ys{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+.c0aa4ec{
+	color: #0aa4ec;
+}
+/*影讯*/
+.hotMovie .lowPrice_yx{
+	color: #686595;
+}
+.c686595{
+	color: #686595;
+}
+/*详情*/
+.hotMovie .lowPrice_det{
+	color: #ff6000;
+}
+.cff6000{
+	color: #ff6000;
+}
+/*APP*/
+.hotMovie .lowPrice_app{
+	top: 213px;
+	left: 116px;
+	color: #ff9c00;
+	text-align: center;
+}
+.hotMovie .showBtn_app{
+	position: absolute;
+	left: 135px;
+	bottom: 20px;
+}
+.posterStyle li .m_con strong.cff9c00{
+	color: #ff9c00;
+}
+.hotMovie .p2{
+	color: #7f7f7f;
+}
+/*即将上映*/
+.upIndex .showTitle{
+	height: 63px;
+	line-height: 63px;
+	overflow: hidden;
+}
+.upMovie{
+	padding-left: 20px;
+	padding-bottom: 24px;
+	font-size: 14px;
+}
+.upMovie .playTime{
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;	
+	color: #7f7f7f;
+	text-align: center;
+}
+.upMovie .wantNum{
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;	
+	color: #7f7f7f;
+	text-align: center;
+}
+.upMovie .wantNum em{
+	font-style: italic;
+	font-family: arial;
+	color: #e34551;
+}
+.upMovie .playTime2{
+	float: right;
+}
+.upMovie .posterStyle {
+	border-bottom: 0;
+}
+.upMovie .posterStyle li{
+	position: relative;
+	padding: 0;
+	padding-right: 11px;
+}
+.upMovie .posterStyle li .title .t1{
+	width: auto
+}
+.upMovie .posterStyle .dot{
+	position: absolute;
+	left: 100px;
+	top: -10px;
+	width: 15px;
+	height: 10px;
+	overflow: hidden;
+	background:#e34551 url(../../images/index/icon8.png?v=20140720) -20px -116px no-repeat;
+}
+
+/*中间小广告位轮播*/
+.photo_box_2{
+	position:relative;
+	width:1190px;
+	margin:0 auto;
+}
+.photo_box_2 .photo_b_box_2{
+	width:1190px;
+	height: 100px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+.photo_box_2 .photo_b_list_2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	*top: -1px;
+	height:95300px;
+	width:1190px;
+	overflow:hidden;}
+.photo_box_2 .photo_b_list_2 li{
+}
+.photo_box_2 .photo_b_list_2 li img{
+	width:1190px;
+	height:100px;
+}
+
+.photo_box_2 .photo_b_list_2 li.scale img{	
+    -webkit-transform: scale(1.2);
+	   -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+         -o-transform: scale(1.2);
+            transform: scale(1.2);
+	-webkit-transition: all 5s ease-out;
+	   -moz-transition: all 5s ease-out;
+		-ms-transition: all 5s ease-out;
+		 -o-transition: all 5s ease-out;
+			transition: all 5s ease-out;
+}
+.photo_box_2 .photo_b_list_2 li.origin0 img{
+	-webkit-transform-origin: 475px 275px;
+	   -moz-transform-origin: 475px 275px;
+		-ms-transform-origin: 475px 275px;
+		 -o-transform-origin: 475px 275px;
+			transform-origin: 475px 275px;
+}
+.photo_box_2 .photo_b_list_2 li.origin1 img{
+	-webkit-transform-origin: 200px 160px;
+	   -moz-transform-origin: 200px 160px;
+		-ms-transform-origin: 200px 160px;
+		 -o-transform-origin: 200px 160px;
+			transform-origin: 200px 160px;
+}
+.photo_box_2 .photo_b_list_2 li.origin2 img{
+	-webkit-transform-origin: 750px 160px;
+	   -moz-transform-origin: 750px 160px;
+		-ms-transform-origin: 750px 160px;
+		 -o-transform-origin: 750px 160px;
+			transform-origin: 750px 160px;
+}
+.photo_box_2 .photo_b_list_2 li.origin3 img{
+	-webkit-transform-origin: 200px 380px;
+	   -moz-transform-origin: 200px 380px;
+		-ms-transform-origin: 200px 380px;
+		 -o-transform-origin: 200px 380px;
+			transform-origin: 200px 380px;
+}
+.photo_box_2 .photo_b_list_2 li.origin4 img{
+	-webkit-transform-origin: 750px 380px;
+	   -moz-transform-origin: 750px 380px;
+		-ms-transform-origin: 750px 380px;
+		 -o-transform-origin: 750px 380px;
+			transform-origin: 750px 380px;
+}
+
+.photo_box_2 .photo_b_list_fixed{
+	/*position:relative;*/
+	width:1190px;
+}
+.photo_box_2 .photo_b_list_fixed li{
+	opacity:1;
+	z-index:1;
+}
+.photo_box_2 .photo_b_list_fixed li.active{
+	visibility:visible;
+	z-index:2;
+}
+.photo_box_2 .photo_b_list_fixed li.preImg{
+	visibility:visible;
+	z-index:1;
+}
+.photo_box_2 .photo_s_box_2{
+	width:912px;
+	margin:0 auto;
+	overflow:hidden;
+	text-align:center;
+	padding-top:20px;
+}
+.photo_box_2 .photo_s_list_2{
+	display:inline-block;
+	height:91px;
+	width:92100px;
+}
+.photo_box_2 .photo_s_list_2 li{
+	float:left;
+	margin:0 4px;
+}
+.photo_box_2 .photo_s_list_2 li a{
+	display:inline-block;
+	width:142px;
+	height:86px;
+	border:1px solid #151931;}
+.photo_box_2 .photo_s_list_2 li a{outline:none;}
+.photo_box_2 .photo_s_list_2 li a img{	
+	filter: alpha(opacity=70);
+	opacity:0.7;
+	width:142px;
+	height:86px;}
+.photo_box_2 .photo_s_list_2 li.active a,
+.photo_box_2 .photo_s_list_2 li a:hover,
+.photo_box_2 .photo_s_list_2 li.active a:hover{
+	border-color:#0a90d7;}
+.photo_box_2 .photo_s_list_2 li a:hover img,
+.photo_box_2 .photo_s_list_2 li.active a img,
+.photo_box_2 .photo_s_list_2 li.active a:hover img{
+	filter: alpha(opacity=100);
+	opacity:1.0;}
+
+/**´óÍ¼×óÓÒ¼ýÍ·ÑùÊ½**/
+.photo_box_2 .photo_big_left_2,
+.photo_box_2 .photo_big_right_2{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 480px;
+  height: 558px;
+  outline: none;
+  background: url(blank.gif);
+  z-index: 100;
+}
+.photo_box_2 .photo_big_right_2{
+  left: 480px;
+}
+.photo_box_2 .photo_big_left_2 b,
+.photo_box_2 .photo_big_right_2 b{
+  visibility: hidden;
+  position: absolute;
+  left: 5px;
+  top: 250px;
+  width: 60px;
+  height: 60px;
+  background: url("img/poster_btn24.png?v=2013072401") 0 -60px no-repeat;
+  _background: url("img/poster_btn8.png?v=2013072401") 20px -40px #000000 no-repeat;
+  _filter: alpha(opacity=50);
+}
+.photo_box_2 .photo_big_right_2 b {
+	left:auto;
+	right:5px;
+    background-position:0 0;
+    _background-position:25px 15px;
+}
+.photo_box_2 .photo_big_left_2:hover,
+.photo_box_2 .photo_big_right_2:hover{
+  zoom: 1;
+}
+.photo_box_2 .photo_big_left_2:hover b,
+.photo_box_2 .photo_big_right_2:hover b{
+  visibility: visible;
+}
+
+
+/*µ¼º½µãÑùÊ½*/
+.photo_box_2 .photo_bar_list{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	height: 10px;
+	overflow: hidden;
+	font-size: 0;
+	text-align:rigth;}
+.photo_box_2 .photo_bar_list a{ 
+	display:inline-block;
+	margin-left:10px;
+	width: 20px;
+	height: 10px;
+	background: #fff;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+}
+.photo_box_2 .photo_bar_list a.active{
+	background:#000;
+}

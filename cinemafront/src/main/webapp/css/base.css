@@ -1,0 +1,262 @@
+﻿/*
+ * 网易电商 前端基础样式表
+ *
+ * 所有电商前端项目通用，高度精简
+ * 维护人：
+ *
+ * [注意事项]
+ * 1、非维护人不得擅自修改此样式表！
+ * 2、样式命名尽量简洁，少用拼音或拼音缩写
+ * 3、命名采用驼峰为主，划线法为辅的原则（详见CSS规法）
+ * 4、按照模块划分，尽量降低耦合
+ * 5、每个模块都必须有详细的注释说明
+ */
+/****************************************************************************************
+ * CSS RESET, reference AliceUI : https://github.com/sofish/Alice/blob/master/base.css
+ */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+	color:#3f3f3f;
+	background:#f4f4f4;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th{
+	text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img{
+	border:0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+	display:block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{
+	border:0;font-variant:normal;
+}
+
+/* 一致的 del 样式 */
+del {
+	text-decoration:line-through;
+}
+address,caption,cite,code,dfn,em,th,var,i,b {
+	font-style:normal;
+	font-weight:500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,ul {
+	list-style:none;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6,b {
+	font-size:100%;
+	font-weight:500;
+}
+q:before,q:after {
+	content:'';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* 原有reset，上下居中显示，并恢复正确的inline-block */
+img,input,select{
+	vertical-align:middle;
+	display:inline-block;
+}
+
+/* 去掉flash的虚线 */
+embed,object{
+	outline:none;
+}
+
+/******************************************************************************************
+ * 基础通用样式
+ */
+/* 让高度真正100％ */
+html,body{
+	_height:100%;
+	min-height:100%;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea{
+	font:12px/1.5 arial,\5b8b\4f53;
+}
+input,select,textarea{
+	font-size:100%;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+	text-decoration:underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+	text-decoration:none;
+}
+
+/* 清理浮动 */
+.clearfix:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:"\20 ";
+	clear:both;
+	height:0;
+}
+.clearfix {
+	zoom:1; /* for IE6 IE7 */
+}
+.clearfix2:before {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:"\20 ";
+	clear:both;
+	height:0;
+}
+.clearfix2 {
+	zoom:1; /* for IE6 IE7 */
+}
+.none{display:none;}
+.hidden{visibility:hidden;}
+/* 禁止折行/允许折行 */
+.nowrap{
+	white-space:nowrap;
+	word-break:keep-all;
+}
+.wrap{
+	white-space:normal;
+	word-break:break-all;
+}
+
+/* 溢出隐藏，IE6下需要外容器设置宽度 */
+.ellipsis{
+	overflow:hidden;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	word-wrap:normal;
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .hide {
+	display:none;
+}
+body .hide2{
+	visibility:hidden;
+}
+body .hide3{
+	position:absolute;
+	left:-99999px;
+	top:-99999px;
+}
+
+/* 布局 */
+.fl{ float:left;}
+.fr{ float:right;}
+.pr{ position:relative;}
+
+/* 适宜数字的字体 */
+.tahoma{ font-family:tahoma;}
+
+/* 基础字体大小 */
+.fs14{ font-size:14px; }
+
+/******************************************************************************************
+ * 唯一元素noScript
+ * html代码
+ <noscript><div id="noScript">
+	<div>
+		<h2>请开启浏览器的Javascript功能</h2>
+		<p>亲，没它我们玩不转啊！求您了，开启Javascript吧！<br/>不知道怎么开启Javascript？那就请<a href="..">猛击这里</a>！</p>
+	</div>
+ </div></noscript>
+ */
+#noScript{
+	position:fixed;
+	_position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:999999;
+	background-color:#ccc;
+  	opacity:0.7;
+	filter:alpha(opacity=70);
+}
+#noScript div{
+	background-color:#222;
+	padding:10px;
+	border:1px solid #000;
+	position:absolute;
+	width:350px;
+	margin-left:-175px;
+	left:50%;
+	top:30%;
+	-webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
+          border-radius: 12px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+#noScript div:hover{
+	-webkit-transform: scale(1.5);
+     -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+       -o-transform: scale(1.5);
+          transform: scale(1.5);
+}
+#noScript h2{
+	font-size:18px;
+	font-weight:700;
+	color:#fff;
+}
+#noScript p{
+	margin:8px 0 0;
+	color:#CCC;
+}
+#noScript a{
+	color:#fff;
+	text-decoration:underline;
+}

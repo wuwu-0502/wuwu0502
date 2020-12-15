@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--扫描service  dao-->
+    <context:component-scan base-package="com.cinema.service,com.cinema.dao"/>
+
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!--spring整合mybatis:mybatis   spring-mybatis -->
+    <!-- 整合mybatis：数据源+mapper映射 -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}">
+        </property>
+        <property name="url" value="${jdbc.url}">
+        </property>
+        <property name="username" value="${jdbc.username}">
+        </property>
+        <property name="password" value="${jdbc.password}">
+        </property>
+    </bean>
+
+    <!-- 配置mapper扫描    Mapper接口所在的包   -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cinema.dao" />
+    </bean>
+    <!-- SqlSessionFactory    xxMapper.xml-->
+    <bean  id="sqlSessionFactory"
+           class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations"
+                  value="classpath:*Mapper.xml" />
+        <property name="configLocation"
+                  value="classpath:mybatis-config.xml" />
+    </bean>
+
+
+
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+        <property name="maxUploadSize" value="38000000" /><!-- 上传最大文件限制 -->
+        <property name="maxInMemorySize" value="4096" /><!-- 读取文件到内存中的最大字节数，默认1024字节 -->
+        <property name="defaultEncoding" value="utf-8" />
+    </bean>
+
+</beans>

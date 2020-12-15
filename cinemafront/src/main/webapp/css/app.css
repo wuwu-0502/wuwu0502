@@ -1,0 +1,162 @@
+
+/*#box .link{
+	float: left;
+	width: 205px;
+	height: 280px;
+	margin: 0 20px;
+	position: relative;
+}*/
+/*.link-miss .icon{
+	background-image:url(http://www.iuvo.si/sites/all/themes/iuvo/images/svg/icon-console.svg);
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position:center center;
+}
+.link-play .icon{
+	background: url(http://www.iuvo.si/sites/all/themes/iuvo/images/svg/icon-rocket.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position:center center;
+}
+.link-touch .icon{
+	background: url(http://www.iuvo.si/sites/all/themes/iuvo/images/svg/icon-location.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position:center center;
+}*/
+/*为了能设置宽高*/
+/*0.2秒的执行时间，执行类型为线形*/
+/*#box .link .icon{
+	display: inline-block;
+	
+	width:100%;
+	height: 190px;
+	transition: 0.2s linear;
+	
+	-webkit-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+}*/
+	/*过度，旋转360度 放大1.2倍*/
+	/*#box .link .icon:hover{
+		transform: rotate(360deg) scale(1.2);
+		-webkit-transform: rotate(360deg) scale(1.2);
+		-moz-transform: rotate(360deg) scale(1.2);
+		
+	}*/
+
+*{
+	padding: 0;margin: 0;
+}
+body{
+	background-color: #333;
+}
+
+
+#box .link .button{/*设置按钮*/
+	display: block;/*把a标签是块级标签*/
+	width: 180px;
+	height: 50px;
+	border: 2px solid rgba(255,255,255,0.7);
+	line-height: 45px;/*设置垂直居中*/
+	color: #2dcb70;
+	font-size: 18px;/*字体大小*/
+	font-weight:100;/*加粗*/
+	padding: 0 0 0 20px;/*外边距*/
+	box-sizing: border-box;/*盒子大小发生改变，我们让他不变，用怪异盒子*/
+	margin: auto;/*设置图片与按钮居中*/
+	background: url(http://www.iuvo.si/sites/all/themes/iuvo/images/svg/icon-button-arrow.svg) no-repeat 130px center;
+	background-size: 15%;
+	transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	position: relative;
+}
+a{
+	text-decoration: none;
+}
+ #box .link .button:hover{
+ 	background-position: 140px center;
+ 	border-color:rgba(255,255,255,1);
+ }
+ #box .link .button .line{
+ 	display: block;/*把span标签是块级标签*/
+ 	position: absolute;/*给线的绝对定位*/
+ 	-webkit-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	background: none;
+	transition: 0.4s ease;
+ }
+ #box .link .button:hover .line-top{
+ 	width: 80px;
+ 	background-color: #fff;
+ 	position: absolute;
+ 	left: -2px;
+ 	top: -2px;
+ }
+ #box .link .button .line-top{
+ 	left: -100%;/*线的起始位置*/
+ 	top: -2px;
+ 	width: 0;/*鼠标未滑过，初始化的时候*/
+ 	height: 2px;
+ }
+ #box .link .button .line-left{
+ 	bottom: -250%;/*线的起始位置*/
+ 	left: -2px;
+ 	width: 2px;
+ 	height:0;
+ }
+ #box .link .button:hover .line-left{
+ 	height: 50px;
+ 	background-color: #fff;
+ 	left: -2px;
+ 	bottom: -2px;
+ } 
+ 
+ 
+ #box .link .button .line-right{
+ 	width: 2px;
+ 	height:20px;
+ 	top: -250%;/*线的起始位置*/
+ 	right: -2px;
+ }
+ #box .link .button:hover .line-right{
+ 	width: 2px;
+ 	background-color: #fff;
+ 	right: -2px;
+ 	top: -2px;
+ }
+ #box .link .button .line-bottom{
+ 	right: -100%;/*线的起始位置*/
+ 	bottom: -2px;
+ 	width: 50px;
+ 	height: 2px;
+ }
+ #box .link .button:hover .line-bottom{
+ 	background-color: #fff;
+ 	bottom: -2px;
+ 	right: -2px;
+ }
+/* #box .tooltip{
+ 	position: absolute;
+ 	padding: 0 15px;
+ 	height: 35px;
+ 	background-color: #2DCB70;
+ 	border-radius:5px;
+ 	line-height: 35px;
+ 	margin: 0 auto;
+ 	color: #fff;
+ 	font-size: 18px;
+ 	font-weight: 700;
+ 	opacity: 0;
+ }
+ #box .tooltip span{
+ 	position: absolute;
+ 	width: 0;
+ 	height:0;
+ 	border: 8px solid transparent;
+ 	border-top-color: #2DCB70;
+    bottom:-15px;
+    left:50%;
+    margin-left: -4px;
+ }
+*/

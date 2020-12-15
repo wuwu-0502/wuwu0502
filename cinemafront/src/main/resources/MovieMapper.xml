@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 接口在dao包下
+namespace:接口全限定名-->
+<mapper namespace="com.cinema.dao.MovieMapper">
+    <select id="getSort" resultType="com.cinema.entity.Movie">
+        SELECT m.m_id,m_name,m_director,m_player,m_tip,m_sort,m_address,m_languge,m_time,m_img,avg(c_score) as c_score FROM movie m , comment c WHERE m.m_id=c.m_id group by m.m_id ORDER BY c.c_score desc
+    </select>
+
+    <select id="getUp" resultType="com.cinema.entity.Movie">
+        SELECT * from movie
+    </select>
+
+    <select id="search" resultType="com.cinema.entity.Movie">
+        SELECT m.m_id,m_name,m_director,m_player,m_tip,m_sort,m_address,m_languge,m_time,m_img,AVG(c_score) as c_score FROM movie m LEFT JOIN comment c on m.m_id = c.m_id  WHERE m_name like '%${m_name}%' GROUP BY m.m_id ;
+    </select>
+
+    <select id="detail" resultType="com.cinema.entity.Movie">
+        SELECT * from movie where m_id = #{m_id}
+    </select>
+
+</mapper>
